@@ -1,6 +1,6 @@
 import { randomBytes } from 'crypto';
 
-import { Prisma, PrismaClient } from '@discord.ts-monorepo/database';
+import { Prisma, PrismaClient } from '@akane/database';
 import {
   ApplicationCommandOptionType,
   ChatInputCommandInteraction,

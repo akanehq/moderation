@@ -1,6 +1,4 @@
-# @discord.ts-monorepo/client
-
-This is a template for creating a Discord bot with localization support. It uses the following packages to achieve this: [typesafe-i18n](https://github.com/ivanhofer/typesafe-i18n), [discord.js](https://github.com/discordjs/discord.js) and [discordx](https://github.com/discordx-ts/discordx).
+# @akane/client
 
 ## Configuration
 
@@ -10,13 +8,17 @@ Clone the `.env.example` file and rename it to `.env`. Then, fill in the require
 cp .env.example .env
 ```
 
-- `NODE_ENV`: The environment in which the bot will run (`development` or `production`)
+<details>
+  <summary>Environment Variables</summary>
 
-- `DISCORD_TOKEN`: Authorization token for your bot (see [here](https://discord.com/developers/docs/topics/oauth2#bots) for more information)
+| Environment Variable                                                      | Required |
+| ------------------------------------------------------------------------- | -------- |
+| `NODE_ENV`                                                                | No       |
+| `LOG_LEVEL`                                                               | No       |
+| `SAVE_LOGS`                                                               | No       |
+| [`DISCORD_TOKEN`](https://discord.com/developers/docs/topics/oauth2#bots) | Yes      |
 
-- `LOG_LEVEL`: Minimum log level (`debug`, `info`, `warn`, `error` or `silent`).
-
-- `SAVE_LOGS`: Whether to save the logs to a file or not.
+</details>
 
 ## How Localization Works
 
@@ -56,11 +58,11 @@ export default mergeTranslations('SLASH', {
 
 The commands are located in the [`source/modules`](source/modules) folder. The way to create a command is pretty much the same as in the [discordx](https://github.com/discordx-ts/discordx), the unique differences are the naming and the `name`/`description` fields, which are now localized.
 
-| discord.ts-template | discordx      |
-| ------------------- | ------------- |
-| `Command`           | `Slash`       |
-| `Option`            | `SlashOption` |
-| `Group`             | `SlashGroup`  |
+| akane     | discordx      |
+| --------- | ------------- |
+| `Command` | `Slash`       |
+| `Option`  | `SlashOption` |
+| `Group`   | `SlashGroup`  |
 
 **Example**
 

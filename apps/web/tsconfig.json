@@ -1,5 +1,5 @@
 {
-  "extends": "@discord.ts-monorepo/tsconfig/nextjs.json",
+  "extends": "@akane/tsconfig/nextjs.json",
   "compilerOptions": {
     "typeRoots": ["node_modules/@types", "src/types"]
   },

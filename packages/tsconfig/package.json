@@ -1,5 +1,5 @@
 {
-  "name": "@discord.ts-monorepo/tsconfig",
+  "name": "@akane/tsconfig",
   "private": true,
   "publishConfig": {
     "access": "public"

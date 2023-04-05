@@ -141,7 +141,7 @@ type DisallowNamespaces = {
 
 export type TranslationFunctions = {
 	/**
-	 * Hi {name}! Please leave a star if you like this project: https://github.com/mauriciobraz/discord.ts-monorepo
+	 * Hi {name}! Please leave a star if you like this project: https://github.com/mauriciobraz/akane
 	 */
 	HI: (arg: { name: string }) => LocalizedString
 	/**

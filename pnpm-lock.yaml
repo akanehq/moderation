@@ -14,8 +14,8 @@ importers:
 
   apps/client:
     specifiers:
-      '@discord.ts-monorepo/database': workspace:*
-      '@discord.ts-monorepo/tsconfig': workspace:*
+      '@akane/database': workspace:*
+      '@akane/tsconfig': workspace:*
       '@types/node': ^18.11.18
       discord.js: ^14.7.1
       discordx: ^11.6.0
@@ -28,7 +28,7 @@ importers:
       typescript: 4.9.4
       zod: ^3.20.2
     dependencies:
-      '@discord.ts-monorepo/database': link:../../packages/database
+      '@akane/database': link:../../packages/database
       discord.js: 14.7.1
       discordx: 11.6.0_discord.js@14.7.1
       reflect-metadata: 0.1.13
@@ -38,14 +38,14 @@ importers:
       typesafe-i18n: 5.24.0_typescript@4.9.4
       zod: 3.20.2
     devDependencies:
-      '@discord.ts-monorepo/tsconfig': link:../../packages/tsconfig
+      '@akane/tsconfig': link:../../packages/tsconfig
       '@types/node': 18.11.18
       prettier: 2.8.3
       typescript: 4.9.4
 
   apps/web:
     specifiers:
-      '@discord.ts-monorepo/tsconfig': workspace:*
+      '@akane/tsconfig': workspace:*
       '@types/node': 18.11.3
       '@types/react': 18.0.21
       '@types/react-dom': 18.0.6
@@ -69,7 +69,7 @@ importers:
       react-dom: 18.2.0_react@18.2.0
       swr: 2.0.3_react@18.2.0
     devDependencies:
-      '@discord.ts-monorepo/tsconfig': link:../../packages/tsconfig
+      '@akane/tsconfig': link:../../packages/tsconfig
       '@types/node': 18.11.3
       '@types/react': 18.0.21
       '@types/react-dom': 18.0.6

@@ -1,5 +1,5 @@
 {
-  "name": "@discord.ts-monorepo/database",
+  "name": "@akane/database",
   "main": "./src/index.ts",
   "types": "./src/index.ts",
   "scripts": {

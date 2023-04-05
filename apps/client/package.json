@@ -10,13 +10,13 @@
     "generate-i18n": "typesafe-i18n --no-watch"
   },
   "devDependencies": {
-    "@discord.ts-monorepo/tsconfig": "workspace:*",
+    "@akane/tsconfig": "workspace:*",
     "@types/node": "^18.11.18",
     "prettier": "^2.8.3",
     "typescript": "4.9.4"
   },
   "dependencies": {
-    "@discord.ts-monorepo/database": "workspace:*",
+    "@akane/database": "workspace:*",
     "discord.js": "^14.7.1",
     "discordx": "^11.6.0",
     "reflect-metadata": "^0.1.13",

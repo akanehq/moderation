@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import 'reflect-metadata';
 
-import { PrismaClient } from '@discord.ts-monorepo/database';
+import { PrismaClient } from '@akane/database';
 import { Client, DIService, typeDiDependencyRegistryEngine } from 'discordx';
 import { readdir } from 'fs/promises';
 import { resolve } from 'path';

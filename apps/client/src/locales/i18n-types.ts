@@ -103,6 +103,11 @@ type RootTranslation = {
    * @param {string} 0
    */
   MODERATION_KICK_EMBED_TITLE: RequiredParams<'0'>;
+  /**
+   * �​�​ ​V​o​c​ê​ ​f​o​i​ ​s​i​l​e​n​c​i​a​d​o​ ​e​m​ ​{​0​}
+   * @param {string} 0
+   */
+  MODERATION_WARN_EMBED_TITLE: RequiredParams<'0'>;
 };
 
 export type NamespaceERRORSTranslation = {
@@ -354,6 +359,10 @@ export type TranslationFunctions = {
    * 🚪 Você foi expulso de {0}
    */
   MODERATION_KICK_EMBED_TITLE: (arg0: string) => LocalizedString;
+  /**
+   * 🔇 Você foi silenciado em {0}
+   */
+  MODERATION_WARN_EMBED_TITLE: (arg0: string) => LocalizedString;
   ERRORS: {
     /**
      * Este comando só pode ser executado em um servidor.

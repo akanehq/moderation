@@ -34,4 +34,5 @@ export default {
 
   MODERATION_BAN_EMBED_TITLE: '⚒️ Você foi banido de {0:string}',
   MODERATION_KICK_EMBED_TITLE: '🚪 Você foi expulso de {0:string}',
+  MODERATION_WARN_EMBED_TITLE: '🔇 Você foi silenciado em {0:string}',
 } satisfies BaseTranslation;

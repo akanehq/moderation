@@ -21,6 +21,10 @@ export default {
   MODERATION_GENERIC_OPTION_DURATION_DESCRIPTION:
     'A duração para aplicar o comando.',
 
+  MODERATION_GENERIC_OPTION_DELETE_DAYS_NAME: 'deletar-mensagens',
+  MODERATION_GENERIC_OPTION_DELETE_DAYS_DESCRIPTION:
+    'O número de dias para deletar as mensagens (1-7).',
+
   MODERATION_GENERIC_OPTION_PUNISHMENT_ID_NAME: 'id',
   MODERATION_GENERIC_OPTION_PUNISHMENT_ID_DESCRIPTION:
     'O ID do castigo que você deseja aplicar o comando.',

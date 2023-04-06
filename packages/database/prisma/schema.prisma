@@ -7,27 +7,61 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-/// `User.id` should be the same as the Discord ID.
+/// Guild.id should be unique and the exact same as the guild's ID on Discord.
+model Guild {
+  id String @id @unique
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  User        User[]
+  Punishments Punishment[]
+}
+
+/// User.id should be unique and the exact same as the user's ID on Discord.
 model User {
   id String @id @unique
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  Todos Todo[]
+  Guilds              Guild[]
+  Punishments         Punishment[]
+  AuthoredPunishments Punishment[] @relation("AuthoredPunishment")
 }
 
-model Todo {
-  id String @id @unique @default(uuid())
+enum PunishmentKind {
+  Ban
+  Kick
+  Mute
+  Warn
+}
+
+enum PunishmentStatus {
+  Active
+  Expired
+  Revoked
+}
+
+model Punishment {
+  id Int @id @unique @default(autoincrement())
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
+  reason      String?
+  expiresAt   DateTime?
+  attachments String[]
+
+  kind   PunishmentKind
+  status PunishmentStatus @default(Active)
+
+  Author   User   @relation(name: "AuthoredPunishment", fields: [authorId], references: [id])
+  authorId String
+
   User   User   @relation(fields: [userId], references: [id])
   userId String
 
-  slug  String @unique
-  title String
-
-  completed Boolean @default(false)
+  Guild   Guild  @relation(fields: [guildId], references: [id])
+  guildId String
 }

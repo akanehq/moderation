@@ -22,12 +22,12 @@ export default class RegExpEvent<
   }
 
   /** Creates an event ID that can be used to identify the event and its arguments. */
-  public createEventId<K extends keyof T>(event: K, ...args: U[K]) {
+  public createEventID<K extends keyof T>(event: K, ...args: U[K]) {
     return `${this.uid}::${event.toString()}::${args.join('::')}`;
   }
 
   /** Parses an event ID and returns the event and its arguments. */
-  public parseEventId<ExpectedEvent extends keyof T>(eventId: string) {
+  public parseEventID<ExpectedEvent extends keyof T>(eventId: string) {
     return eventId.split('::').slice(2) as T[ExpectedEvent];
   }
 }

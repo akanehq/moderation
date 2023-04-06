@@ -7,6 +7,7 @@ import { ParameterDecoratorEx } from 'discordx';
 
 import { Option } from '~/helpers/localization';
 import RegExpEvent from '~/helpers/regexp-event';
+import { TranslationFunctions } from '~/locales/i18n-types';
 
 // Custom Buttons
 
@@ -55,6 +56,14 @@ export const DurationOption = ExtendsOption({
   type: ApplicationCommandOptionType.Number,
 });
 
+export const DeleteDaysOption = ExtendsOption({
+  name: 'MODERATION_GENERIC_OPTION_DELETE_DAYS_NAME',
+  description: 'MODERATION_GENERIC_OPTION_DELETE_DAYS_DESCRIPTION',
+  type: ApplicationCommandOptionType.Number,
+  minValue: 1,
+  maxValue: 7,
+});
+
 export const PunishmentIdOption = ExtendsOption({
   name: 'MODERATION_GENERIC_OPTION_PUNISHMENT_ID_NAME',
   description: 'MODERATION_GENERIC_OPTION_PUNISHMENT_ID_DESCRIPTION',
@@ -95,3 +104,36 @@ export const ModAppealPunishmentRegExp =
 
 export const ModGetAttachmentRegExp =
   ModRegExpEvents.createRegExp('GetAttachment');
+
+/**
+ * In order to prevent users from using malicious URLs, we only allow a few
+ * sources to be used as media sources (images, videos, etc).
+ */
+export const ALLOWED_MEDIA_SOURCES = [
+  'https://media.discordapp.net',
+  'https://cdn.discordapp.com',
+  'https://i.imgur.com',
+  'https://i.redd.it',
+  'https://i.ibb.co',
+];
+
+/** Check if the given URLs is allowed to be used as a media source. */
+export function isAllowedMediaSources(urls: string[]) {
+  return urls.some((url) =>
+    ALLOWED_MEDIA_SOURCES.some((allowed) => url.startsWith(allowed))
+  );
+}
+
+/** Parse the given input into an array of media URLs. */
+export function parseMediaUrlsInput(input: Maybe<string>) {
+  if (!input) return [];
+  const urls = input.split(/ |,/).filter((url) => url.length > 0);
+
+  if (!isAllowedMediaSources(urls)) {
+    return new Error(
+      'Some of the URLs you provided are not allowed to be used as media sources.'
+    );
+  }
+
+  return urls;
+}

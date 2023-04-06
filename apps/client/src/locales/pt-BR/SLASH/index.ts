@@ -1,6 +1,9 @@
 import { BaseTranslation } from '../../i18n-types';
 
 export default {
+  CONFIG_NAME: 'config',
+  CONFIG_DESCRIPTION: 'Comandos de configuração.',
+
   MODERATION_GENERIC_OPTION_MEMBER_NAME: 'membro',
   MODERATION_GENERIC_OPTION_MEMBER_DESCRIPTION:
     'O membro que você deseja aplicar o comando.',

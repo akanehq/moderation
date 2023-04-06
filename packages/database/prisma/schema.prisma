@@ -14,8 +14,9 @@ model Guild {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  User        User[]
-  Punishments Punishment[]
+  User                 User[]
+  Punishments          Punishment[]
+  ModerationLimitation ModerationLimitation[]
 }
 
 /// User.id should be unique and the exact same as the user's ID on Discord.
@@ -64,4 +65,28 @@ model Punishment {
 
   Guild   Guild  @relation(fields: [guildId], references: [id])
   guildId String
+}
+
+enum ModerationLimitationKind {
+  Any
+  Ban
+  Kick
+  Mute
+  Warn
+}
+
+model ModerationLimitation {
+  id String @id @unique @default(cuid())
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  Guild   Guild  @relation(fields: [guildId], references: [id])
+  guildId String
+
+  kind   ModerationLimitationKind
+  roleId String
+
+  amount    Int
+  expiresIn Int
 }

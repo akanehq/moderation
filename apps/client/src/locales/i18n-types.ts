@@ -20,6 +20,30 @@ export type Translations = RootTranslation & {
 
 type RootTranslation = {
   /**
+   * Q​u​a​l​q​u​e​r
+   */
+  ANY: string;
+  /**
+   * B​a​n​i​m​e​n​t​o​s
+   */
+  BANS: string;
+  /**
+   * A​v​i​s​o​s
+   */
+  WARNS: string;
+  /**
+   * E​x​p​u​l​s​õ​e​s
+   */
+  KICKS: string;
+  /**
+   * S​i​l​e​n​c​i​a​m​e​n​t​o​s
+   */
+  MUTES: string;
+  /**
+   * C​o​n​t​i​n​u​a​r
+   */
+  CONTINUE: string;
+  /**
    * A​n​e​x​o​s
    */
   ATTACHMENTS: string;
@@ -137,6 +161,202 @@ type RootTranslation = {
    * @param {string} member
    */
   MODERATION_LOGS_INFRACTIONS_OF: RequiredParams<'member'>;
+  /**
+   * {​0​|​{​A​n​y​:​ ​Q​u​a​l​q​u​e​r​ ​A​ç​ã​o​,​ ​B​a​n​:​ ​B​a​n​i​m​e​n​t​o​,​ ​K​i​c​k​:​ ​E​x​p​u​l​s​ã​o​,​ ​M​u​t​e​:​ ​S​i​l​e​n​c​i​a​m​e​n​t​o​,​ ​W​a​r​n​:​ ​A​v​i​s​o​}​}
+   * @param {'Any' | 'Ban' | 'Kick' | 'Mute' | 'Warn'} 0
+   */
+  MODERATION_LIMITATION_KIND: RequiredParams<`0|{Any:${string}, Ban:${string}, Kick:${string}, Mute:${string}, Warn:${string}}`>;
+  /**
+   * P​r​e​s​t​e​ ​a​t​e​n​ç​ã​o​ ​n​a​s​ ​p​e​r​m​i​s​s​õ​e​s
+   */
+  MODERATION_LIMIT_CONFIG_ATTENTION: string;
+  /**
+   * *​*​P​a​r​a​ ​u​s​a​r​ ​e​s​t​e​ ​r​e​c​u​r​s​o​ ​c​o​r​r​e​t​a​m​e​n​t​e​,​ ​o​ ​m​o​d​e​r​a​d​o​r​ ​n​ã​o​ ​p​o​d​e​ ​t​e​r​ ​a​ ​p​e​r​m​i​s​s​ã​o​ ​e​m​ ​q​u​e​s​t​ã​o​*​*​ ​(​p​o​r​ ​e​x​e​m​p​l​o​,​ ​s​e​ ​v​o​c​ê​ ​c​o​n​f​i​g​u​r​a​r​ ​o​ ​l​i​m​i​t​e​ ​d​e​ ​b​a​n​i​m​e​n​t​o​s​ ​p​a​r​a​ ​3​/​h​o​r​a​,​ ​o​ ​m​o​d​e​r​a​d​o​r​ ​n​ã​o​ ​p​o​d​e​ ​t​e​r​ ​a​ ​p​e​r​m​i​s​s​ã​o​ ​d​e​ ​b​a​n​i​r​ ​m​e​m​b​r​o​s​)​,​ ​p​o​i​s​ ​e​u​ ​s​e​r​e​i​ ​u​m​ ​i​n​t​e​r​m​e​d​i​á​r​i​o​ ​q​u​e​ ​i​r​á​ ​a​p​l​i​c​a​r​ ​a​s​ ​p​u​n​i​ç​õ​e​s​.
+   */
+  MODERATION_LIMIT_CONFIG_ATTENTION_DESCRIPTION: string;
+  /**
+   * Q​u​a​n​t​i​d​a​d​e
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_ADD_LIMITATION_AMOUNT_LABEL: string;
+  /**
+   * T​e​m​p​o​ ​(​S​e​g​u​n​d​o​s​)
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_ADD_LIMITATION_EXPIRES_IN_LABEL: string;
+  /**
+   * C​l​i​q​u​e​ ​n​o​ ​b​o​t​ã​o​ ​a​b​a​i​x​o​ ​p​a​r​a​ ​a​b​r​i​r​ ​o​ ​p​a​i​n​e​l​ ​d​e​ ​c​r​i​a​ç​ã​o​ ​d​e​ ​r​e​s​t​r​i​ç​ã​o​ ​d​e​ ​c​a​r​g​o​.
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_ADD_LIMITATION_QUESTION: string;
+  /**
+   * I​D​ ​d​o​ ​C​a​r​g​o
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_ADD_LIMITATION_ROLE_ID_LABEL: string;
+  /**
+   * �​�​ ​A​d​i​c​i​o​n​a​r​ ​R​e​s​t​r​i​ç​ã​o​ ​d​e​ ​M​o​d​e​r​a​d​o​r
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_ADD_LIMITATION_TITLE: string;
+  /**
+   * J​á​ ​e​x​i​s​t​e​ ​u​m​a​ ​r​e​s​t​r​i​ç​ã​o​ ​d​e​s​s​e​ ​t​i​p​o​ ​p​a​r​a​ ​e​s​t​e​ ​c​a​r​g​o​.​ ​T​a​l​v​e​z​ ​v​o​c​ê​ ​q​u​e​i​r​a​ ​e​d​i​t​a​r​ ​a​ ​r​e​s​t​r​i​ç​ã​o​ ​e​x​i​s​t​e​n​t​e​?​ ​S​e​l​e​c​i​o​n​a​ ​a​ ​o​p​ç​ã​o​ ​"​L​i​s​t​a​r​ ​R​e​s​t​r​i​ç​ã​o​"​ ​n​o​ ​m​e​n​u​ ​a​n​t​e​r​i​o​r​ ​e​ ​s​e​l​e​c​i​o​n​e​ ​a​ ​r​e​s​t​r​i​ç​ã​o​ ​q​u​e​ ​v​o​c​ê​ ​d​e​s​e​j​a​ ​e​d​i​t​a​r​.
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_ALREADY_EXISTS: string;
+  /**
+   * L​i​m​i​t​a​ ​o​ ​n​ú​m​e​r​o​ ​d​e​ ​{​0​|​{​A​n​y​:​ ​t​o​d​a​s​ ​a​ç​õ​e​s​,​ ​B​a​n​:​ ​b​a​n​i​m​e​n​t​o​s​,​ ​K​i​c​k​:​ ​e​x​p​u​l​s​õ​e​s​,​ ​M​u​t​e​:​ ​s​i​l​e​n​c​i​a​m​e​n​t​o​s​,​ ​W​a​r​n​:​ ​a​d​v​e​r​t​ê​n​c​i​a​s​}​}​ ​q​u​e​ ​u​m​ ​m​o​d​e​r​a​d​o​r​ ​p​o​d​e​ ​a​p​l​i​c​a​r​.
+   * @param {'Any' | 'Ban' | 'Kick' | 'Mute' | 'Warn'} 0
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_DESCRIPTION: RequiredParams<`0|{Any:${string}, Ban:${string}, Kick:${string}, Mute:${string}, Warn:${string}}`>;
+  /**
+   * A​ ​r​e​s​t​r​i​ç​ã​o​ ​f​o​i​ ​a​d​i​c​i​o​n​a​d​a​ ​c​o​m​ ​s​u​c​e​s​s​o​,​ ​e​l​a​ ​s​e​ ​a​p​l​i​c​a​r​á​ ​a​o​s​ ​m​e​m​b​r​o​s​ ​c​o​m​ ​o​ ​c​a​r​g​o​ ​{​r​o​l​e​}​ ​a​ ​c​a​d​a​ ​{​a​m​o​u​n​t​}​ ​v​e​z​e​s​ ​q​u​e​ ​f​o​r​e​m​ ​u​s​a​r​ ​o​ ​c​o​m​a​n​d​o​,​ ​p​o​r​ ​{​e​x​p​i​r​e​s​I​n​}​ ​s​e​g​u​n​d​o​s​.
+   * @param {string} amount
+   * @param {string} expiresIn
+   * @param {string} role
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_SUCCESS: RequiredParams<
+    'amount' | 'expiresIn' | 'role'
+  >;
+  /**
+   * L​i​m​i​t​a​ ​o​ ​n​ú​m​e​r​o​ ​d​e​ ​a​v​i​s​o​s​ ​q​u​e​ ​u​m​ ​m​o​d​e​r​a​d​o​r​ ​p​o​d​e​ ​a​p​l​i​c​a​r​.
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_WARNINGS_DESCRIPTION: string;
+  /**
+   * Q​u​a​l​ ​t​i​p​o​ ​d​e​ ​r​e​s​t​r​i​ç​ã​o​ ​v​o​c​ê​ ​d​e​s​e​j​a​ ​a​d​i​c​i​o​n​a​r​?
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_WHICH_TYPE_OF_LIMITATION: string;
+  /**
+   * S​e​l​e​c​i​o​n​e​ ​o​ ​t​i​p​o​ ​d​e​ ​r​e​s​t​r​i​ç​ã​o
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_WHICH_TYPE_OF_LIMITATION_PLACEHOLDER: string;
+  /**
+   * {​r​o​l​e​}​ ​•​ ​{​k​i​n​d​}​ ​•​ ​{​a​m​o​u​n​t​}​ ​•​ ​{​e​x​p​i​r​e​s​I​n​}​s
+   * @param {number} amount
+   * @param {number} expiresIn
+   * @param {string} kind
+   * @param {string} role
+   */
+  MODERATION_LIMIT_CONFIG_DELETE_CHOICE_LABEL: RequiredParams<
+    'amount' | 'expiresIn' | 'kind' | 'role'
+  >;
+  /**
+	 * C​o​m​ ​e​s​t​e​ ​r​e​c​u​r​s​o​,​ ​v​o​c​ê​ ​p​o​d​e​ ​c​o​n​f​i​g​u​r​a​r​ ​o​ ​n​ú​m​e​r​o​ ​d​e​ ​p​u​n​i​ç​õ​e​s​ ​q​u​e​ ​u​m​ ​m​o​d​e​r​a​d​o​r​ ​c​o​n​s​e​g​u​e​ ​a​p​l​i​c​a​r​ ​e​m​ ​u​m​ ​p​e​r​í​o​d​o​ ​d​e​ ​t​e​m​p​o​ ​d​e​t​e​r​m​i​n​a​d​o​.​
+​
+​S​e​ ​o​ ​n​ú​m​e​r​o​ ​d​e​ ​a​ç​õ​e​s​ ​f​o​r​ ​e​x​c​e​d​i​d​o​,​ ​o​ ​m​o​d​e​r​a​d​o​r​ ​s​e​r​á​ ​b​l​o​q​u​e​a​d​o​ ​d​e​ ​a​p​l​i​c​a​r​ ​n​o​v​a​s​ ​p​u​n​i​ç​õ​e​s​ ​a​t​é​ ​q​u​e​ ​o​ ​t​e​m​p​o​ ​l​i​m​i​t​e​ ​s​e​j​a​ ​a​t​i​n​g​i​d​o​.​ ​É​ ​b​e​m​ ​ú​t​i​l​ ​p​a​r​a​ ​e​v​i​t​a​r​ ​n​o​v​o​s​ ​m​o​d​e​r​a​d​o​r​e​s​ ​d​e​ ​a​b​u​s​a​r​e​m​ ​d​e​ ​s​u​a​ ​p​o​s​i​ç​ã​o​.​
+​​
+	 */
+  MODERATION_LIMIT_CONFIG_DESCRIPTION: string;
+  /**
+	 * O​ ​t​i​p​o​ ​d​e​ ​r​e​s​t​r​i​ç​ã​o​ ​d​e​t​e​r​m​i​n​a​ ​q​u​a​l​ ​a​ç​ã​o​ ​o​ ​m​o​d​e​r​a​d​o​r​ ​n​ã​o​ ​p​o​d​e​ ​f​a​z​e​r​.​ ​P​o​r​ ​e​x​e​m​p​l​o​,​ ​s​e​ ​v​o​c​ê​ ​c​o​n​f​i​g​u​r​a​r​ ​o​ ​l​i​m​i​t​e​ ​d​e​ ​b​a​n​i​m​e​n​t​o​s​ ​p​a​r​a​ ​3​/​h​o​r​a​,​ ​o​ ​m​o​d​e​r​a​d​o​r​ ​n​ã​o​ ​p​o​d​e​r​á​ ​b​a​n​i​r​ ​m​e​m​b​r​o​s​.​
+​​
+	 */
+  MODERATION_LIMIT_CONFIG_LIST_DESCRIPTION: string;
+  /**
+   * N​ã​o​ ​h​á​ ​r​e​s​t​r​i​ç​õ​e​s​ ​d​e​ ​c​a​r​g​o​ ​c​o​n​f​i​g​u​r​a​d​a​s​ ​n​e​s​t​e​ ​s​e​r​v​i​d​o​r​.
+   */
+  MODERATION_LIMIT_CONFIG_LIST_EMPTY: string;
+  /**
+   * {​r​o​l​e​I​d​}​ ​*​*​ ​•​ ​*​*​ ​{​k​i​n​d​|​{​A​n​y​:​ ​Q​u​a​l​q​u​e​r​ ​A​ç​ã​o​,​ ​B​a​n​:​ ​B​a​n​i​m​e​n​t​o​,​ ​K​i​c​k​:​ ​E​x​p​u​l​s​ã​o​,​ ​M​u​t​e​:​ ​S​i​l​e​n​c​i​a​m​e​n​t​o​,​ ​W​a​r​n​:​ ​A​v​i​s​o​}​}​ ​*​*​ ​•​ ​*​*​ ​{​a​m​o​u​n​t​}​ ​*​*​ ​•​ ​*​*​ ​{​e​x​p​i​r​e​s​I​n​}
+   * @param {number} amount
+   * @param {number} expiresIn
+   * @param {'Any' | 'Ban' | 'Kick' | 'Mute' | 'Warn'} kind
+   * @param {string} roleId
+   */
+  MODERATION_LIMIT_CONFIG_LIST_ITEM: RequiredParams<
+    | 'amount'
+    | 'expiresIn'
+    | `kind|{Any:${string}, Ban:${string}, Kick:${string}, Mute:${string}, Warn:${string}}`
+    | 'roleId'
+  >;
+  /**
+   * C​a​r​g​o​ ​(​I​D​)​ ​•​ ​T​i​p​o​ ​•​ ​Q​u​a​n​t​i​d​a​d​e​ ​•​ ​T​e​m​p​o​ ​(​S​e​g​u​n​d​o​s​)
+   */
+  MODERATION_LIMIT_CONFIG_LIST_ITEM_FOOTER: string;
+  /**
+   * �​�​ ​ ​ ​R​e​s​t​r​i​ç​õ​e​s​ ​d​e​ ​C​a​r​g​o
+   */
+  MODERATION_LIMIT_CONFIG_LIST_TITLE: string;
+  /**
+   * A​ ​r​e​m​o​ç​ã​o​ ​d​a​s​ ​r​e​s​t​r​i​ç​õ​e​s​ ​f​o​i​ ​c​a​n​c​e​l​a​d​a​.
+   */
+  MODERATION_LIMIT_CONFIG_PURGE_CANCELED: string;
+  /**
+   * V​o​c​ê​ ​t​e​m​ ​c​e​r​t​e​z​a​ ​q​u​e​ ​d​e​s​e​j​a​ ​r​e​m​o​v​e​r​ ​t​o​d​a​s​ ​a​s​ ​r​e​s​t​r​i​ç​õ​e​s​ ​d​e​ ​c​a​r​g​o​?
+   */
+  MODERATION_LIMIT_CONFIG_PURGE_CONFIRMATION: string;
+  /**
+   * T​o​d​a​s​ ​a​s​ ​r​e​s​t​r​i​ç​õ​e​s​ ​f​o​r​a​m​ ​r​e​m​o​v​i​d​a​s​.
+   */
+  MODERATION_LIMIT_CONFIG_PURGE_SUCCESS: string;
+  /**
+   * C​r​i​a​r​ ​R​e​s​t​r​i​ç​ã​o
+   */
+  MODERATION_LIMIT_CONFIG_SELECT_OPTION_CREATE_RESTRICTION: string;
+  /**
+   * C​r​i​a​r​ ​u​m​a​ ​n​o​v​a​ ​r​e​s​t​r​i​ç​ã​o​ ​p​a​r​a​ ​u​m​ ​c​a​r​g​o​.
+   */
+  MODERATION_LIMIT_CONFIG_SELECT_OPTION_CREATE_RESTRICTION_DESCRIPTION: string;
+  /**
+   * D​e​l​e​t​a​r​ ​R​e​s​t​r​i​ç​ã​o
+   */
+  MODERATION_LIMIT_CONFIG_SELECT_OPTION_DELETE_RESTRICTION: string;
+  /**
+   * D​e​l​e​t​a​ ​u​m​a​ ​r​e​s​t​r​i​ç​ã​o​ ​d​e​ ​c​a​r​g​o​ ​e​x​i​s​t​e​n​t​e​.
+   */
+  MODERATION_LIMIT_CONFIG_SELECT_OPTION_DELETE_RESTRICTION_DESCRIPTION: string;
+  /**
+   * L​i​s​t​a​r​ ​R​e​s​t​r​i​ç​õ​e​s
+   */
+  MODERATION_LIMIT_CONFIG_SELECT_OPTION_LIST_RESTRICTIONS: string;
+  /**
+   * L​i​s​t​a​ ​t​o​d​a​s​ ​a​s​ ​r​e​s​t​r​i​ç​õ​e​s​ ​d​e​ ​c​a​r​g​o​ ​e​x​i​s​t​e​n​t​e​s​.
+   */
+  MODERATION_LIMIT_CONFIG_SELECT_OPTION_LIST_RESTRICTIONS_DESCRIPTION: string;
+  /**
+   * L​i​m​p​a​r​ ​R​e​s​t​r​i​ç​õ​e​s
+   */
+  MODERATION_LIMIT_CONFIG_SELECT_OPTION_PURGE: string;
+  /**
+   * R​e​m​o​v​e​ ​T​O​D​A​S​ ​a​s​ ​r​e​s​t​r​i​ç​õ​e​s​ ​d​e​ ​c​a​r​g​o​s​ ​d​o​ ​s​e​r​v​i​d​o​r​.
+   */
+  MODERATION_LIMIT_CONFIG_SELECT_OPTION_PURGE_DESCRIPTION: string;
+  /**
+   * �​�​ ​C​o​n​f​i​g​u​r​a​ç​õ​e​s​ ​d​e​ ​R​e​s​t​r​i​ç​ã​o​ ​d​e​ ​M​o​d​e​r​a​d​o​r​e​s
+   */
+  MODERATION_LIMIT_CONFIG_TITLE: string;
+  /**
+   * V​o​c​ê​ ​n​ã​o​ ​p​o​d​e​ ​e​x​e​c​u​t​a​r​ ​e​s​s​a​ ​a​ç​ã​o​ ​p​o​i​s​ ​p​o​s​s​u​i​ ​a​ ​r​e​s​t​r​i​ç​ã​o​ ​d​o​ ​t​i​p​o​ ​{​k​i​n​d​|​{​B​a​n​:​ ​b​a​n​i​m​e​n​t​o​,​ ​K​i​c​k​:​ ​e​x​p​u​l​s​ã​o​,​ ​M​u​t​e​:​ ​s​i​l​e​n​c​i​a​m​e​n​t​o​,​ ​W​a​r​n​:​ ​a​v​i​s​o​}​}​ ​a​t​i​v​a​ ​(​u​s​o​u​ ​{​u​s​e​d​}​ ​d​e​ ​{​l​i​m​i​t​}​)​,​ ​t​e​n​t​e​ ​n​o​v​a​m​e​n​t​e​ ​{​r​e​m​a​i​n​i​n​g​T​i​m​e​|​d​R​e​l​a​t​i​v​e​T​i​m​e​}​.
+   * @param {'Ban' | 'Kick' | 'Mute' | 'Warn'} kind
+   * @param {unknown} limit
+   * @param {Date} remainingTime
+   * @param {unknown} used
+   */
+  MODERATION_LIMITATION_LIMIT_REACHED: RequiredParams<
+    | `kind|{Ban:${string}, Kick:${string}, Mute:${string}, Warn:${string}}`
+    | 'limit'
+    | 'remainingTime|dRelativeTime'
+    | 'used'
+  >;
+  /**
+   * S​e​l​e​c​i​o​n​e​ ​a​ ​r​e​s​t​r​i​ç​ã​o​ ​q​u​e​ ​v​o​c​ê​ ​d​e​s​e​j​a​ ​d​e​l​e​t​a​r
+   */
+  MODERATION_LIMIT_CONFIG_DELETE_PLACEHOLDER: string;
+  /**
+   * E​s​c​o​l​h​a​ ​a​ ​r​e​s​t​r​i​ç​ã​o​ ​q​u​e​ ​v​o​c​ê​ ​d​e​s​e​j​a​ ​d​e​l​e​t​a​r​ ​p​e​l​o​ ​m​e​n​u​ ​a​b​a​i​x​o​.
+   */
+  MODERATION_LIMIT_CONFIG_DELETE_QUESTION: string;
+  /**
+   * V​o​c​ê​ ​t​e​m​ ​c​e​r​t​e​z​a​ ​q​u​e​ ​d​e​s​e​j​a​ ​d​e​l​e​t​a​r​ ​a​ ​r​e​s​t​r​i​ç​ã​o​ ​d​e​ ​c​a​r​g​o​ ​{​r​o​l​e​}​?
+   * @param {string} role
+   */
+  MODERATION_LIMIT_CONFIG_DELETE_CONFIRMATION: RequiredParams<'role'>;
+  /**
+   * A​ ​r​e​m​o​ç​ã​o​ ​d​a​ ​r​e​s​t​r​i​ç​ã​o​ ​f​o​i​ ​c​a​n​c​e​l​a​d​a​.
+   */
+  MODERATION_LIMIT_CONFIG_DELETE_CANCELLED: string;
+  /**
+   * A​ ​r​e​s​t​r​i​ç​ã​o​ ​f​o​i​ ​r​e​m​o​v​i​d​a​ ​c​o​m​ ​s​u​c​e​s​s​o​.
+   */
+  MODERATION_LIMIT_CONFIG_DELETE_SUCCESS: string;
+  /**
+   * O​ ​c​a​r​g​o​ ​s​e​l​e​c​i​o​n​a​d​o​ ​n​ã​o​ ​e​x​i​s​t​e​ ​o​u​ ​n​ã​o​ ​t​e​n​h​o​ ​p​e​r​m​i​s​s​ã​o​ ​p​a​r​a​ ​v​ê​-​l​o​.
+   */
+  MODERATION_LIMITATION_CREATE_ROLE_DOES_NOT_EXIST: string;
 };
 
 export type NamespaceERRORSTranslation = {
@@ -175,6 +395,14 @@ export type NamespaceERRORSTranslation = {
 };
 
 export type NamespaceSLASHTranslation = {
+  /**
+   * c​o​n​f​i​g
+   */
+  CONFIG_NAME: string;
+  /**
+   * C​o​m​a​n​d​o​s​ ​d​e​ ​c​o​n​f​i​g​u​r​a​ç​ã​o​.
+   */
+  CONFIG_DESCRIPTION: string;
   /**
    * m​e​m​b​r​o
    */
@@ -315,6 +543,30 @@ type DisallowNamespaces = {
 
 export type TranslationFunctions = {
   /**
+   * Qualquer
+   */
+  ANY: () => LocalizedString;
+  /**
+   * Banimentos
+   */
+  BANS: () => LocalizedString;
+  /**
+   * Avisos
+   */
+  WARNS: () => LocalizedString;
+  /**
+   * Expulsões
+   */
+  KICKS: () => LocalizedString;
+  /**
+   * Silenciamentos
+   */
+  MUTES: () => LocalizedString;
+  /**
+   * Continuar
+   */
+  CONTINUE: () => LocalizedString;
+  /**
    * Anexos
    */
   ATTACHMENTS: () => LocalizedString;
@@ -427,6 +679,195 @@ export type TranslationFunctions = {
    * Infrações de {member}
    */
   MODERATION_LOGS_INFRACTIONS_OF: (arg: { member: string }) => LocalizedString;
+  /**
+   * {0|{Any: Qualquer Ação, Ban: Banimento, Kick: Expulsão, Mute: Silenciamento, Warn: Aviso}}
+   */
+  MODERATION_LIMITATION_KIND: (
+    arg0: 'Any' | 'Ban' | 'Kick' | 'Mute' | 'Warn'
+  ) => LocalizedString;
+  /**
+   * Preste atenção nas permissões
+   */
+  MODERATION_LIMIT_CONFIG_ATTENTION: () => LocalizedString;
+  /**
+   * **Para usar este recurso corretamente, o moderador não pode ter a permissão em questão** (por exemplo, se você configurar o limite de banimentos para 3/hora, o moderador não pode ter a permissão de banir membros), pois eu serei um intermediário que irá aplicar as punições.
+   */
+  MODERATION_LIMIT_CONFIG_ATTENTION_DESCRIPTION: () => LocalizedString;
+  /**
+   * Quantidade
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_ADD_LIMITATION_AMOUNT_LABEL: () => LocalizedString;
+  /**
+   * Tempo (Segundos)
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_ADD_LIMITATION_EXPIRES_IN_LABEL: () => LocalizedString;
+  /**
+   * Clique no botão abaixo para abrir o painel de criação de restrição de cargo.
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_ADD_LIMITATION_QUESTION: () => LocalizedString;
+  /**
+   * ID do Cargo
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_ADD_LIMITATION_ROLE_ID_LABEL: () => LocalizedString;
+  /**
+   * 🚏 Adicionar Restrição de Moderador
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_ADD_LIMITATION_TITLE: () => LocalizedString;
+  /**
+   * Já existe uma restrição desse tipo para este cargo. Talvez você queira editar a restrição existente? Seleciona a opção "Listar Restrição" no menu anterior e selecione a restrição que você deseja editar.
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_ALREADY_EXISTS: () => LocalizedString;
+  /**
+   * Limita o número de {0|{Any: todas ações, Ban: banimentos, Kick: expulsões, Mute: silenciamentos, Warn: advertências}} que um moderador pode aplicar.
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_DESCRIPTION: (
+    arg0: 'Any' | 'Ban' | 'Kick' | 'Mute' | 'Warn'
+  ) => LocalizedString;
+  /**
+   * A restrição foi adicionada com sucesso, ela se aplicará aos membros com o cargo {role} a cada {amount} vezes que forem usar o comando, por {expiresIn} segundos.
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_SUCCESS: (arg: {
+    amount: string;
+    expiresIn: string;
+    role: string;
+  }) => LocalizedString;
+  /**
+   * Limita o número de avisos que um moderador pode aplicar.
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_WARNINGS_DESCRIPTION: () => LocalizedString;
+  /**
+   * Qual tipo de restrição você deseja adicionar?
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_WHICH_TYPE_OF_LIMITATION: () => LocalizedString;
+  /**
+   * Selecione o tipo de restrição
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_WHICH_TYPE_OF_LIMITATION_PLACEHOLDER: () => LocalizedString;
+  /**
+   * {role} • {kind} • {amount} • {expiresIn}s
+   */
+  MODERATION_LIMIT_CONFIG_DELETE_CHOICE_LABEL: (arg: {
+    amount: number;
+    expiresIn: number;
+    kind: string;
+    role: string;
+  }) => LocalizedString;
+  /**
+	 * Com este recurso, você pode configurar o número de punições que um moderador consegue aplicar em um período de tempo determinado.
+
+Se o número de ações for excedido, o moderador será bloqueado de aplicar novas punições até que o tempo limite seja atingido. É bem útil para evitar novos moderadores de abusarem de sua posição.
+​
+	 */
+  MODERATION_LIMIT_CONFIG_DESCRIPTION: () => LocalizedString;
+  /**
+	 * O tipo de restrição determina qual ação o moderador não pode fazer. Por exemplo, se você configurar o limite de banimentos para 3/hora, o moderador não poderá banir membros.
+​
+	 */
+  MODERATION_LIMIT_CONFIG_LIST_DESCRIPTION: () => LocalizedString;
+  /**
+   * Não há restrições de cargo configuradas neste servidor.
+   */
+  MODERATION_LIMIT_CONFIG_LIST_EMPTY: () => LocalizedString;
+  /**
+   * {roleId} ** • ** {kind|{Any: Qualquer Ação, Ban: Banimento, Kick: Expulsão, Mute: Silenciamento, Warn: Aviso}} ** • ** {amount} ** • ** {expiresIn}
+   */
+  MODERATION_LIMIT_CONFIG_LIST_ITEM: (arg: {
+    amount: number;
+    expiresIn: number;
+    kind: 'Any' | 'Ban' | 'Kick' | 'Mute' | 'Warn';
+    roleId: string;
+  }) => LocalizedString;
+  /**
+   * Cargo (ID) • Tipo • Quantidade • Tempo (Segundos)
+   */
+  MODERATION_LIMIT_CONFIG_LIST_ITEM_FOOTER: () => LocalizedString;
+  /**
+   * 🚏   Restrições de Cargo
+   */
+  MODERATION_LIMIT_CONFIG_LIST_TITLE: () => LocalizedString;
+  /**
+   * A remoção das restrições foi cancelada.
+   */
+  MODERATION_LIMIT_CONFIG_PURGE_CANCELED: () => LocalizedString;
+  /**
+   * Você tem certeza que deseja remover todas as restrições de cargo?
+   */
+  MODERATION_LIMIT_CONFIG_PURGE_CONFIRMATION: () => LocalizedString;
+  /**
+   * Todas as restrições foram removidas.
+   */
+  MODERATION_LIMIT_CONFIG_PURGE_SUCCESS: () => LocalizedString;
+  /**
+   * Criar Restrição
+   */
+  MODERATION_LIMIT_CONFIG_SELECT_OPTION_CREATE_RESTRICTION: () => LocalizedString;
+  /**
+   * Criar uma nova restrição para um cargo.
+   */
+  MODERATION_LIMIT_CONFIG_SELECT_OPTION_CREATE_RESTRICTION_DESCRIPTION: () => LocalizedString;
+  /**
+   * Deletar Restrição
+   */
+  MODERATION_LIMIT_CONFIG_SELECT_OPTION_DELETE_RESTRICTION: () => LocalizedString;
+  /**
+   * Deleta uma restrição de cargo existente.
+   */
+  MODERATION_LIMIT_CONFIG_SELECT_OPTION_DELETE_RESTRICTION_DESCRIPTION: () => LocalizedString;
+  /**
+   * Listar Restrições
+   */
+  MODERATION_LIMIT_CONFIG_SELECT_OPTION_LIST_RESTRICTIONS: () => LocalizedString;
+  /**
+   * Lista todas as restrições de cargo existentes.
+   */
+  MODERATION_LIMIT_CONFIG_SELECT_OPTION_LIST_RESTRICTIONS_DESCRIPTION: () => LocalizedString;
+  /**
+   * Limpar Restrições
+   */
+  MODERATION_LIMIT_CONFIG_SELECT_OPTION_PURGE: () => LocalizedString;
+  /**
+   * Remove TODAS as restrições de cargos do servidor.
+   */
+  MODERATION_LIMIT_CONFIG_SELECT_OPTION_PURGE_DESCRIPTION: () => LocalizedString;
+  /**
+   * 🚏 Configurações de Restrição de Moderadores
+   */
+  MODERATION_LIMIT_CONFIG_TITLE: () => LocalizedString;
+  /**
+   * Você não pode executar essa ação pois possui a restrição do tipo {kind|{Ban: banimento, Kick: expulsão, Mute: silenciamento, Warn: aviso}} ativa (usou {used} de {limit}), tente novamente {remainingTime|dRelativeTime}.
+   */
+  MODERATION_LIMITATION_LIMIT_REACHED: (arg: {
+    kind: 'Ban' | 'Kick' | 'Mute' | 'Warn';
+    limit: unknown;
+    remainingTime: Date;
+    used: unknown;
+  }) => LocalizedString;
+  /**
+   * Selecione a restrição que você deseja deletar
+   */
+  MODERATION_LIMIT_CONFIG_DELETE_PLACEHOLDER: () => LocalizedString;
+  /**
+   * Escolha a restrição que você deseja deletar pelo menu abaixo.
+   */
+  MODERATION_LIMIT_CONFIG_DELETE_QUESTION: () => LocalizedString;
+  /**
+   * Você tem certeza que deseja deletar a restrição de cargo {role}?
+   */
+  MODERATION_LIMIT_CONFIG_DELETE_CONFIRMATION: (arg: {
+    role: string;
+  }) => LocalizedString;
+  /**
+   * A remoção da restrição foi cancelada.
+   */
+  MODERATION_LIMIT_CONFIG_DELETE_CANCELLED: () => LocalizedString;
+  /**
+   * A restrição foi removida com sucesso.
+   */
+  MODERATION_LIMIT_CONFIG_DELETE_SUCCESS: () => LocalizedString;
+  /**
+   * O cargo selecionado não existe ou não tenho permissão para vê-lo.
+   */
+  MODERATION_LIMITATION_CREATE_ROLE_DOES_NOT_EXIST: () => LocalizedString;
   ERRORS: {
     /**
      * Tempo esgotado.
@@ -462,6 +903,14 @@ export type TranslationFunctions = {
     MODERATION_GENERIC_PUNISHMENT_NOT_FOUND: () => LocalizedString;
   };
   SLASH: {
+    /**
+     * config
+     */
+    CONFIG_NAME: () => LocalizedString;
+    /**
+     * Comandos de configuração.
+     */
+    CONFIG_DESCRIPTION: () => LocalizedString;
     /**
      * membro
      */
@@ -585,4 +1034,6 @@ export type TranslationFunctions = {
   };
 };
 
-export type Formatters = {};
+export type Formatters = {
+  dRelativeTime: (value: Date) => unknown;
+};

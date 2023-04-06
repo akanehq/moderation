@@ -1,18 +1,35 @@
 import 'dotenv/config';
 import 'reflect-metadata';
 
-import { PrismaClient } from '@akane/database';
-import { Client, DIService, typeDiDependencyRegistryEngine } from 'discordx';
 import { readdir } from 'fs/promises';
 import { resolve } from 'path';
+
+import { PrismaClient } from '@akane/database';
+import { Client, DIService, typeDiDependencyRegistryEngine } from 'discordx';
+import { Logger } from 'tslog';
 import Container, { Service } from 'typedi';
 
-import { DISCORD_TOKEN, NODE_ENV } from './utils/process-env';
+import {
+  DISCORD_TOKEN,
+  LOG_LEVEL,
+  LOG_TYPE,
+  NODE_ENV,
+} from './constants/dotenv';
 
 export default async function main() {
   DIService.engine = typeDiDependencyRegistryEngine
     .setInjector(Container)
     .setService(Service);
+
+  Container.set(
+    Logger,
+    new Logger({
+      name: 'Akane',
+      type: LOG_TYPE,
+      minLevel: LOG_LEVEL,
+      prettyLogTemplate: '{{dateIsoStr}} {{logLevelName}}',
+    })
+  );
 
   await initializeDatabase();
   await initializeClient();
@@ -33,7 +50,7 @@ async function initializeClient() {
     intents: [],
   });
 
-  await importFolderRecursively(resolve(__dirname, 'modules'));
+  await importFolderRecursively(resolve(__dirname, 'commands'));
   await client.login(DISCORD_TOKEN);
 }
 

@@ -1,5 +1,6 @@
 {
   "$schema": "https://unpkg.com/typesafe-i18n@5.24.0/schema/typesafe-i18n.json",
-  "baseLocale": "en-US",
+  "outputPath": "./src/locales",
+  "baseLocale": "pt-BR",
   "adapter": "node"
 }

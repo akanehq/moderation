@@ -29,6 +29,26 @@ type RootTranslation = {
    * N​ã​o
    */
   INQUIRER_CONFIRMATION_NO: string;
+  /**
+   * P​r​i​m​e​i​r​a
+   */
+  PAGINATION_FIRST: string;
+  /**
+   * A​n​t​e​r​i​o​r
+   */
+  PAGINATION_PREVIOUS: string;
+  /**
+   * P​r​ó​x​i​m​a
+   */
+  PAGINATION_NEXT: string;
+  /**
+   * Ú​l​t​i​m​a
+   */
+  PAGINATION_LAST: string;
+  /**
+   * F​e​c​h​a​r
+   */
+  PAGINATION_CLOSE: string;
 };
 
 export type NamespaceSLASHTranslation = {
@@ -65,6 +85,26 @@ export type TranslationFunctions = {
    * Não
    */
   INQUIRER_CONFIRMATION_NO: () => LocalizedString;
+  /**
+   * Primeira
+   */
+  PAGINATION_FIRST: () => LocalizedString;
+  /**
+   * Anterior
+   */
+  PAGINATION_PREVIOUS: () => LocalizedString;
+  /**
+   * Próxima
+   */
+  PAGINATION_NEXT: () => LocalizedString;
+  /**
+   * Última
+   */
+  PAGINATION_LAST: () => LocalizedString;
+  /**
+   * Fechar
+   */
+  PAGINATION_CLOSE: () => LocalizedString;
   SLASH: {
     /**
      * exemplo

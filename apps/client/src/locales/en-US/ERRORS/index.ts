@@ -1,7 +1,3 @@
-import type { NamespaceERRORSTranslation } from '../../i18n-types';
+import { mergeTranslations } from '../../helpers';
 
-const en_US_ERRORS = {
-  // TODO: insert translations
-} satisfies NamespaceERRORSTranslation;
-
-export default en_US_ERRORS;
+export default mergeTranslations('ERRORS', {});

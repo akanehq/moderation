@@ -13,6 +13,7 @@ export type Locales = 'en-US' | 'pt-BR';
 export type Translation = RootTranslation & DisallowNamespaces;
 
 export type Translations = RootTranslation & {
+  ERRORS: NamespaceERRORSTranslation;
   SLASH: NamespaceSLASHTranslation;
 };
 
@@ -49,6 +50,21 @@ type RootTranslation = {
    * F​e​c​h​a​r
    */
   PAGINATION_CLOSE: string;
+};
+
+export type NamespaceERRORSTranslation = {
+  /**
+   * E​s​t​e​ ​c​o​m​a​n​d​o​ ​s​ó​ ​p​o​d​e​ ​s​e​r​ ​e​x​e​c​u​t​a​d​o​ ​e​m​ ​u​m​ ​s​e​r​v​i​d​o​r​.
+   */
+  GUARD_IN_GUILD_ONLY: string;
+  /**
+   * V​o​c​ê​ ​n​ã​o​ ​t​e​m​ ​p​e​r​m​i​s​s​ã​o​ ​p​a​r​a​ ​e​x​e​c​u​t​a​r​ ​e​s​t​e​ ​c​o​m​a​n​d​o​.
+   */
+  GUARD_HAS_PERMISSIONS_USER: string;
+  /**
+   * E​u​ ​n​ã​o​ ​t​e​n​h​o​ ​p​e​r​m​i​s​s​ã​o​ ​p​a​r​a​ ​e​x​e​c​u​t​a​r​ ​e​s​t​e​ ​c​o​m​a​n​d​o​.
+   */
+  GUARD_HAS_PERMISSIONS_CLIENT: string;
 };
 
 export type NamespaceSLASHTranslation = {
@@ -166,9 +182,15 @@ export type NamespaceSLASHTranslation = {
   MODERATION_WARN_DESCRIPTION: string;
 };
 
-export type Namespaces = 'SLASH';
+export type Namespaces = 'ERRORS' | 'SLASH';
 
 type DisallowNamespaces = {
+  /**
+   * reserved for 'ERRORS'-namespace\
+   * you need to use the `./ERRORS/index.ts` file instead
+   */
+  ERRORS?: "[typesafe-i18n] reserved for 'ERRORS'-namespace. You need to use the `./ERRORS/index.ts` file instead.";
+
   /**
    * reserved for 'SLASH'-namespace\
    * you need to use the `./SLASH/index.ts` file instead
@@ -209,6 +231,20 @@ export type TranslationFunctions = {
    * Fechar
    */
   PAGINATION_CLOSE: () => LocalizedString;
+  ERRORS: {
+    /**
+     * Este comando só pode ser executado em um servidor.
+     */
+    GUARD_IN_GUILD_ONLY: () => LocalizedString;
+    /**
+     * Você não tem permissão para executar este comando.
+     */
+    GUARD_HAS_PERMISSIONS_USER: () => LocalizedString;
+    /**
+     * Eu não tenho permissão para executar este comando.
+     */
+    GUARD_HAS_PERMISSIONS_CLIENT: () => LocalizedString;
+  };
   SLASH: {
     /**
      * membro

@@ -25,7 +25,7 @@ export const baseLocale: Locales = 'pt-BR';
 
 export const locales: Locales[] = ['en-US', 'pt-BR'];
 
-export const namespaces: Namespaces[] = ['SLASH'];
+export const namespaces: Namespaces[] = ['ERRORS', 'SLASH'];
 
 export const isLocale = (locale: string): locale is Locales =>
   locales.includes(locale as Locales);

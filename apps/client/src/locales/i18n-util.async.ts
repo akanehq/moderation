@@ -12,9 +12,11 @@ const localeTranslationLoaders = {
 
 const localeNamespaceLoaders = {
   'en-US': {
+    ERRORS: () => import('./en-US/ERRORS'),
     SLASH: () => import('./en-US/SLASH'),
   },
   'pt-BR': {
+    ERRORS: () => import('./pt-BR/ERRORS'),
     SLASH: () => import('./pt-BR/SLASH'),
   },
 };

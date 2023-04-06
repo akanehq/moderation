@@ -14,4 +14,6 @@ export default {
     'Ei, você não pode punir a si mesmo! Tá tudo bem?',
   MODERATION_GENERIC_CANNOT_PUNISH_BOT:
     'Eu não posso ser punido! Eu sou um bot, não um humano!',
+  MODERATION_GENERIC_PUNISHMENT_NOT_FOUND:
+    'Punição não encontrada. Verifique se o ID está correto.',
 } satisfies BaseTranslation;

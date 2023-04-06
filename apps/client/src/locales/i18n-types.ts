@@ -103,6 +103,10 @@ type RootTranslation = {
   MODERATION_GENERIC_PUNISHMENT_EMBED_DESCRIPTION: RequiredParams<
     'author' | 'guild' | 'reason'
   >;
+  /**
+   * A​ ​p​u​n​i​ç​ã​o​ ​f​o​i​ ​d​e​s​f​e​i​t​a​ ​c​o​m​ ​s​u​c​e​s​s​o​.
+   */
+  MODERATION_UNDO_SUCCESS: string;
 };
 
 export type NamespaceERRORSTranslation = {
@@ -130,6 +134,10 @@ export type NamespaceERRORSTranslation = {
    * E​u​ ​n​ã​o​ ​p​o​s​s​o​ ​s​e​r​ ​p​u​n​i​d​o​!​ ​E​u​ ​s​o​u​ ​u​m​ ​b​o​t​,​ ​n​ã​o​ ​u​m​ ​h​u​m​a​n​o​!
    */
   MODERATION_GENERIC_CANNOT_PUNISH_BOT: string;
+  /**
+   * P​u​n​i​ç​ã​o​ ​n​ã​o​ ​e​n​c​o​n​t​r​a​d​a​.​ ​V​e​r​i​f​i​q​u​e​ ​s​e​ ​o​ ​I​D​ ​e​s​t​á​ ​c​o​r​r​e​t​o​.
+   */
+  MODERATION_GENERIC_PUNISHMENT_NOT_FOUND: string;
 };
 
 export type NamespaceSLASHTranslation = {
@@ -353,6 +361,10 @@ export type TranslationFunctions = {
     guild: string;
     reason: string;
   }) => LocalizedString;
+  /**
+   * A punição foi desfeita com sucesso.
+   */
+  MODERATION_UNDO_SUCCESS: () => LocalizedString;
   ERRORS: {
     /**
      * Este comando só pode ser executado em um servidor.
@@ -378,6 +390,10 @@ export type TranslationFunctions = {
      * Eu não posso ser punido! Eu sou um bot, não um humano!
      */
     MODERATION_GENERIC_CANNOT_PUNISH_BOT: () => LocalizedString;
+    /**
+     * Punição não encontrada. Verifique se o ID está correto.
+     */
+    MODERATION_GENERIC_PUNISHMENT_NOT_FOUND: () => LocalizedString;
   };
   SLASH: {
     /**

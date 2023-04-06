@@ -33,6 +33,15 @@ export default {
 
   PAGINATION_CLOSE: 'Fechar',
 
+  // Administration Quarantine
+
+  ADMINISTRATION_QUARANTINE_CANCELLED:
+    'Comando cancelado. O servidor não foi colocado em quarentena.',
+  ADMINISTRATION_QUARANTINE_SUCCESS:
+    'O servidor foi colocado em quarentena com sucesso.',
+  ADMINISTRATION_UNQUARANTINE_SUCCESS:
+    'O servidor foi removido da quarentena com sucesso.',
+
   // Moderation Generic
 
   MODERATION_GENERIC_DEFAULT_REASON: 'Nenhuma razão fornecida.',

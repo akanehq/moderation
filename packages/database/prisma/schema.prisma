@@ -17,6 +17,8 @@ model Guild {
   User                 User[]
   Punishments          Punishment[]
   ModerationLimitation ModerationLimitation[]
+
+  Quarantine Quarantine?
 }
 
 /// User.id should be unique and the exact same as the user's ID on Discord.
@@ -89,4 +91,17 @@ model ModerationLimitation {
 
   amount    Int
   expiresIn Int
+}
+
+model Quarantine {
+  id String @id @unique @default(cuid())
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  Guild   Guild  @relation(fields: [guildId], references: [id])
+  guildId String @unique
+
+  data   Json
+  reason String?
 }

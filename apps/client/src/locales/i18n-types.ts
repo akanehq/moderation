@@ -96,6 +96,18 @@ type RootTranslation = {
    */
   PAGINATION_CLOSE: string;
   /**
+   * C​o​m​a​n​d​o​ ​c​a​n​c​e​l​a​d​o​.​ ​O​ ​s​e​r​v​i​d​o​r​ ​n​ã​o​ ​f​o​i​ ​c​o​l​o​c​a​d​o​ ​e​m​ ​q​u​a​r​e​n​t​e​n​a​.
+   */
+  ADMINISTRATION_QUARANTINE_CANCELLED: string;
+  /**
+   * O​ ​s​e​r​v​i​d​o​r​ ​f​o​i​ ​c​o​l​o​c​a​d​o​ ​e​m​ ​q​u​a​r​e​n​t​e​n​a​ ​c​o​m​ ​s​u​c​e​s​s​o​.
+   */
+  ADMINISTRATION_QUARANTINE_SUCCESS: string;
+  /**
+   * O​ ​s​e​r​v​i​d​o​r​ ​f​o​i​ ​r​e​m​o​v​i​d​o​ ​d​a​ ​q​u​a​r​e​n​t​e​n​a​ ​c​o​m​ ​s​u​c​e​s​s​o​.
+   */
+  ADMINISTRATION_UNQUARANTINE_SUCCESS: string;
+  /**
    * N​e​n​h​u​m​a​ ​r​a​z​ã​o​ ​f​o​r​n​e​c​i​d​a​.
    */
   MODERATION_GENERIC_DEFAULT_REASON: string;
@@ -377,6 +389,14 @@ export type NamespaceERRORSTranslation = {
    */
   GUARD_HAS_PERMISSIONS_CLIENT: string;
   /**
+   * O​ ​s​e​r​v​i​d​o​r​ ​j​á​ ​e​s​t​á​ ​e​m​ ​q​u​a​r​e​n​t​e​n​a​.
+   */
+  ADMINISTRATION_QUARANTINE_ALREADY_QUARANTINED: string;
+  /**
+   * O​ ​s​e​r​v​i​d​o​r​ ​n​ã​o​ ​e​s​t​á​ ​e​m​ ​q​u​a​r​e​n​t​e​n​a​.
+   */
+  ADMINISTRATION_UNQUARANTINE_NOT_QUARANTINED: string;
+  /**
    * U​m​ ​o​u​ ​m​a​i​s​ ​U​R​L​s​ ​d​e​ ​m​í​d​i​a​ ​s​ã​o​ ​i​n​v​á​l​i​d​o​s​.​ ​P​o​r​ ​f​a​v​o​r​,​ ​v​e​r​i​f​i​q​u​e​ ​s​e​ ​v​o​c​ê​ ​d​i​g​i​t​o​u​ ​c​o​r​r​e​t​a​m​e​n​t​e​ ​e​ ​t​e​n​t​e​ ​n​o​v​a​m​e​n​t​e​.
    */
   MODERATION_GENERIC_INVALID_MEDIA_URLS: string;
@@ -618,6 +638,18 @@ export type TranslationFunctions = {
    * Fechar
    */
   PAGINATION_CLOSE: () => LocalizedString;
+  /**
+   * Comando cancelado. O servidor não foi colocado em quarentena.
+   */
+  ADMINISTRATION_QUARANTINE_CANCELLED: () => LocalizedString;
+  /**
+   * O servidor foi colocado em quarentena com sucesso.
+   */
+  ADMINISTRATION_QUARANTINE_SUCCESS: () => LocalizedString;
+  /**
+   * O servidor foi removido da quarentena com sucesso.
+   */
+  ADMINISTRATION_UNQUARANTINE_SUCCESS: () => LocalizedString;
   /**
    * Nenhuma razão fornecida.
    */
@@ -885,6 +917,14 @@ Se o número de ações for excedido, o moderador será bloqueado de aplicar nov
      * Eu não tenho permissão para executar este comando.
      */
     GUARD_HAS_PERMISSIONS_CLIENT: () => LocalizedString;
+    /**
+     * O servidor já está em quarentena.
+     */
+    ADMINISTRATION_QUARANTINE_ALREADY_QUARANTINED: () => LocalizedString;
+    /**
+     * O servidor não está em quarentena.
+     */
+    ADMINISTRATION_UNQUARANTINE_NOT_QUARANTINED: () => LocalizedString;
     /**
      * Um ou mais URLs de mídia são inválidos. Por favor, verifique se você digitou corretamente e tente novamente.
      */

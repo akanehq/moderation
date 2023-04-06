@@ -7,7 +7,6 @@ import { ParameterDecoratorEx } from 'discordx';
 
 import { Option } from '~/helpers/localization';
 import RegExpEvent from '~/helpers/regexp-event';
-import { TranslationFunctions } from '~/locales/i18n-types';
 
 // Custom Buttons
 

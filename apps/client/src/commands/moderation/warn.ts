@@ -151,7 +151,12 @@ export default class Moderation {
       : await interaction.client.guilds.fetch(interaction.guildId);
 
     const punishmentEmbed = new EmbedBuilder()
-      .setTitle(LL.MODERATION_WARN_EMBED_TITLE(guild.name))
+      .setTitle(
+        LL.MODERATION_GENERIC_PUNISHMENT_EMBED_TITLE({
+          guild: guild.name,
+          kind: 'Warn',
+        })
+      )
       .setDescription(
         LL.MODERATION_GENERIC_PUNISHMENT_EMBED_DESCRIPTION({
           reason: reason ?? LL.MODERATION_GENERIC_DEFAULT_REASON(),

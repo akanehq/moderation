@@ -85,6 +85,16 @@ type RootTranslation = {
    */
   MODERATION_GENERIC_PUNISHMENT_SUCCESS_NO_DM: string;
   /**
+   * {​k​i​n​d​|​{​B​a​n​:​ ​⚒​️​,​ ​K​i​c​k​:​ ​�​�​,​ ​M​u​t​e​:​ ​�​�​,​ ​W​a​r​n​:​ ​⚠​️​}​}​ ​V​o​c​ê​ ​f​o​i​ ​{​k​i​n​d​|​{​B​a​n​:​ ​b​a​n​i​d​o​,​ ​K​i​c​k​:​ ​e​x​p​u​l​s​o​,​ ​M​u​t​e​:​ ​s​i​l​e​n​c​i​a​d​o​,​ ​W​a​r​n​:​ ​a​v​i​s​a​d​o​}​}​ ​e​m​ ​{​g​u​i​l​d​}
+   * @param {string} guild
+   * @param {'Ban' | 'Kick' | 'Mute' | 'Warn'} kind
+   */
+  MODERATION_GENERIC_PUNISHMENT_EMBED_TITLE: RequiredParams<
+    | 'guild'
+    | `kind|{Ban:${string}, Kick:${string}, Mute:${string}, Warn:${string}}`
+    | `kind|{Ban:${string}, Kick:${string}, Mute:${string}, Warn:${string}}`
+  >;
+  /**
    * V​o​c​ê​ ​f​o​i​ ​p​u​n​i​d​o​ ​n​o​ ​s​e​r​v​i​d​o​r​ ​{​g​u​i​l​d​}​ ​p​o​r​ ​{​a​u​t​h​o​r​}​ ​p​e​l​o​ ​m​o​t​i​v​o​:​ ​{​r​e​a​s​o​n​}
    * @param {string} author
    * @param {string} guild
@@ -93,31 +103,6 @@ type RootTranslation = {
   MODERATION_GENERIC_PUNISHMENT_EMBED_DESCRIPTION: RequiredParams<
     'author' | 'guild' | 'reason'
   >;
-  /**
-   * {​k​i​n​d​|​{​B​a​n​:​ ​⚒​️​,​ ​K​i​c​k​:​ ​�​�​,​ ​M​u​t​e​:​ ​�​�​,​ ​W​a​r​n​:​ ​⚠​️​}​}​ ​V​o​c​ê​ ​f​o​i​ ​{​k​i​n​d​|​{​B​a​n​:​ ​b​a​n​i​d​o​,​ ​K​i​c​k​:​ ​e​x​p​u​l​s​o​,​ ​M​u​t​e​:​ ​s​i​l​e​n​c​i​a​d​o​,​ ​W​a​r​n​:​ ​a​v​i​s​a​d​o​}​}​ ​e​m​ ​{​g​u​i​l​d​}
-   * @param {string} guild
-   * @param {'Ban' | 'Kick' | 'Mute' | 'Warn'} kind
-   */
-  MODERATION_EMBED_TITLE: RequiredParams<
-    | 'guild'
-    | `kind|{Ban:${string}, Kick:${string}, Mute:${string}, Warn:${string}}`
-    | `kind|{Ban:${string}, Kick:${string}, Mute:${string}, Warn:${string}}`
-  >;
-  /**
-   * ⚒​️​ ​V​o​c​ê​ ​f​o​i​ ​b​a​n​i​d​o​ ​d​e​ ​{​0​}
-   * @param {string} 0
-   */
-  MODERATION_BAN_EMBED_TITLE: RequiredParams<'0'>;
-  /**
-   * �​�​ ​V​o​c​ê​ ​f​o​i​ ​e​x​p​u​l​s​o​ ​d​e​ ​{​0​}
-   * @param {string} 0
-   */
-  MODERATION_KICK_EMBED_TITLE: RequiredParams<'0'>;
-  /**
-   * �​�​ ​V​o​c​ê​ ​f​o​i​ ​a​v​i​s​a​d​o​ ​e​m​ ​{​0​}
-   * @param {string} 0
-   */
-  MODERATION_WARN_EMBED_TITLE: RequiredParams<'0'>;
 };
 
 export type NamespaceERRORSTranslation = {
@@ -354,6 +339,13 @@ export type TranslationFunctions = {
    */
   MODERATION_GENERIC_PUNISHMENT_SUCCESS_NO_DM: () => LocalizedString;
   /**
+   * {kind|{Ban: ⚒️, Kick: 🚪, Mute: 🔇, Warn: ⚠️}} Você foi {kind|{Ban: banido, Kick: expulso, Mute: silenciado, Warn: avisado}} em {guild}
+   */
+  MODERATION_GENERIC_PUNISHMENT_EMBED_TITLE: (arg: {
+    guild: string;
+    kind: 'Ban' | 'Kick' | 'Mute' | 'Warn';
+  }) => LocalizedString;
+  /**
    * Você foi punido no servidor {guild} por {author} pelo motivo: {reason}
    */
   MODERATION_GENERIC_PUNISHMENT_EMBED_DESCRIPTION: (arg: {
@@ -361,25 +353,6 @@ export type TranslationFunctions = {
     guild: string;
     reason: string;
   }) => LocalizedString;
-  /**
-   * {kind|{Ban: ⚒️, Kick: 🚪, Mute: 🔇, Warn: ⚠️}} Você foi {kind|{Ban: banido, Kick: expulso, Mute: silenciado, Warn: avisado}} em {guild}
-   */
-  MODERATION_EMBED_TITLE: (arg: {
-    guild: string;
-    kind: 'Ban' | 'Kick' | 'Mute' | 'Warn';
-  }) => LocalizedString;
-  /**
-   * ⚒️ Você foi banido de {0}
-   */
-  MODERATION_BAN_EMBED_TITLE: (arg0: string) => LocalizedString;
-  /**
-   * 🚪 Você foi expulso de {0}
-   */
-  MODERATION_KICK_EMBED_TITLE: (arg0: string) => LocalizedString;
-  /**
-   * 🔇 Você foi avisado em {0}
-   */
-  MODERATION_WARN_EMBED_TITLE: (arg0: string) => LocalizedString;
   ERRORS: {
     /**
      * Este comando só pode ser executado em um servidor.

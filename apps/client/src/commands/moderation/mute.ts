@@ -157,7 +157,7 @@ export default class Moderation {
 
     const punishmentEmbed = new EmbedBuilder()
       .setTitle(
-        LL.MODERATION_EMBED_TITLE({
+        LL.MODERATION_GENERIC_PUNISHMENT_EMBED_TITLE({
           guild: guild.name,
           kind: 'Mute',
         })

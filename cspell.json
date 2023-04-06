@@ -1,0 +1,13 @@
+{
+  "dictionaries": ["Custom"],
+  "dictionaryDefinitions": [
+    {
+      "name": "Custom",
+      "description": "Custom words for this project.",
+      "path": "cspell-dict.txt",
+      "addWords": true
+    }
+  ],
+  "language": "en,pt-BR",
+  "useGitignore": true
+}

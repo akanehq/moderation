@@ -7,7 +7,24 @@
     "./apps/web"
   ],
 
+  "material-icon-theme.folders.associations": {
+    "administration": "admin",
+    "custom-voice": "audio",
+    "moderation": "tools",
+    "en-US": "decorators",
+    "pt-BR": "decorators",
+    "tsconfig": "typescript"
+  },
+
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
+  },
+
+  "files.associations": {
+    "*.env": "dotenv"
+  },
+
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
   }
 }

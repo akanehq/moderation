@@ -1,3 +1,9 @@
 {
-  "recommendations": ["dbaeumer.vscode-eslint", "editorconfig.editorconfig"]
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "editorconfig.editorconfig",
+    "PKief.material-icon-theme",
+    "Prisma.prisma",
+    "streetsidesoftware.code-spell-checker"
+  ]
 }

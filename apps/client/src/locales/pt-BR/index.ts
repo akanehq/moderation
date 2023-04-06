@@ -29,11 +29,9 @@ export default {
   MODERATION_GENERIC_PUNISHMENT_SUCCESS_NO_DM:
     'O membro foi punido com sucesso, mas não consegui enviar uma mensagem privada.',
 
-  MODERATION_BAN_EMBED_TITLE: '⚒️ Você foi banido de {0:string}',
-  MODERATION_BAN_EMBED_DESCRIPTION:
+  MODERATION_GENERIC_PUNISHMENT_EMBED_DESCRIPTION:
     'Você foi punido no servidor {guild:string} por {author:string} pelo motivo: {reason:string}',
 
+  MODERATION_BAN_EMBED_TITLE: '⚒️ Você foi banido de {0:string}',
   MODERATION_KICK_EMBED_TITLE: '🚪 Você foi expulso de {0:string}',
-  MODERATION_KICK_EMBED_DESCRIPTION:
-    'Você foi punido no servidor {guild:string} por {author:string} pelo motivo: {reason:string}',
 } satisfies BaseTranslation;

@@ -146,7 +146,7 @@ export default class Moderation {
     const punishmentEmbed = new EmbedBuilder()
       .setTitle(LL.MODERATION_KICK_EMBED_TITLE(guild.name))
       .setDescription(
-        LL.MODERATION_KICK_EMBED_DESCRIPTION({
+        LL.MODERATION_GENERIC_PUNISHMENT_EMBED_DESCRIPTION({
           reason: reason ?? LL.MODERATION_GENERIC_DEFAULT_REASON(),
           author: interaction.user.tag,
           guild: guild.name,

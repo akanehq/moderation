@@ -17,6 +17,13 @@ export default {
   ADMINISTRATION_UNQUARANTINE_NOT_QUARANTINED:
     'O servidor não está em quarentena.',
 
+  // Custom Voice
+
+  CUSTOMVOICE_PARENT_ALREADY_CONFIGURED:
+    'Já existe um canal de voz configurado neste canal.',
+  CUSTOMVOICE_PARENT_NOT_FOUND:
+    'Não foi possível encontrar o canal de voz pai. Por favor, verifique se você digitou corretamente e tente novamente.',
+
   // Moderation Generic
 
   MODERATION_GENERIC_INVALID_MEDIA_URLS:

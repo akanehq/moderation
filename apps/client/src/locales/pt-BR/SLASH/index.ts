@@ -4,6 +4,22 @@ export default {
   CONFIG_NAME: 'config',
   CONFIG_DESCRIPTION: 'Comandos de configuração.',
 
+  // Custom Voice
+
+  CUSTOMVOICE_SETUP_OPTION_CHANNEL_NAME: 'canal',
+  CUSTOMVOICE_SETUP_OPTION_CHANNEL_DESCRIPTION:
+    'O canal de voz que você deseja configurar.',
+
+  CUSTOMVOICE_SETUP_OPTION_CATEGORY_NAME: 'categoria',
+  CUSTOMVOICE_SETUP_OPTION_CATEGORY_DESCRIPTION:
+    'Categoria para criar os canais de voz.',
+
+  CUSTOMVOICE_SETUP_OPTION_TEMPLATE_NAME: 'nome',
+  CUSTOMVOICE_SETUP_OPTION_TEMPLATE_DESCRIPTION:
+    'O nome do canal de voz que você deseja criar.',
+
+  // Moderation Generic Options
+
   MODERATION_GENERIC_OPTION_MEMBER_NAME: 'membro',
   MODERATION_GENERIC_OPTION_MEMBER_DESCRIPTION:
     'O membro que você deseja aplicar o comando.',

@@ -42,6 +42,13 @@ export default {
   ADMINISTRATION_UNQUARANTINE_SUCCESS:
     'O servidor foi removido da quarentena com sucesso.',
 
+  // Custom Voice
+
+  CUSTOMVOICE_SUCCESS_SETUP:
+    'Canal de voz personalizado configurado com sucesso.',
+  CUSTOMVOICE_SUCCESS_UPDATE_TEMPLATE:
+    'Modelo de canal de voz personalizado atualizado com sucesso. Saiba que você pode usar as variáveis $USER e $COUNT para criar um nome dinâmico.',
+
   // Moderation Generic
 
   MODERATION_GENERIC_DEFAULT_REASON: 'Nenhuma razão fornecida.',

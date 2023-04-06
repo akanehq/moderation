@@ -108,6 +108,14 @@ type RootTranslation = {
    */
   ADMINISTRATION_UNQUARANTINE_SUCCESS: string;
   /**
+   * C​a​n​a​l​ ​d​e​ ​v​o​z​ ​p​e​r​s​o​n​a​l​i​z​a​d​o​ ​c​o​n​f​i​g​u​r​a​d​o​ ​c​o​m​ ​s​u​c​e​s​s​o​.
+   */
+  CUSTOMVOICE_SUCCESS_SETUP: string;
+  /**
+   * M​o​d​e​l​o​ ​d​e​ ​c​a​n​a​l​ ​d​e​ ​v​o​z​ ​p​e​r​s​o​n​a​l​i​z​a​d​o​ ​a​t​u​a​l​i​z​a​d​o​ ​c​o​m​ ​s​u​c​e​s​s​o​.​ ​S​a​i​b​a​ ​q​u​e​ ​v​o​c​ê​ ​p​o​d​e​ ​u​s​a​r​ ​a​s​ ​v​a​r​i​á​v​e​i​s​ ​$​U​S​E​R​ ​e​ ​$​C​O​U​N​T​ ​p​a​r​a​ ​c​r​i​a​r​ ​u​m​ ​n​o​m​e​ ​d​i​n​â​m​i​c​o​.
+   */
+  CUSTOMVOICE_SUCCESS_UPDATE_TEMPLATE: string;
+  /**
    * N​e​n​h​u​m​a​ ​r​a​z​ã​o​ ​f​o​r​n​e​c​i​d​a​.
    */
   MODERATION_GENERIC_DEFAULT_REASON: string;
@@ -397,6 +405,14 @@ export type NamespaceERRORSTranslation = {
    */
   ADMINISTRATION_UNQUARANTINE_NOT_QUARANTINED: string;
   /**
+   * J​á​ ​e​x​i​s​t​e​ ​u​m​ ​c​a​n​a​l​ ​d​e​ ​v​o​z​ ​c​o​n​f​i​g​u​r​a​d​o​ ​n​e​s​t​e​ ​c​a​n​a​l​.
+   */
+  CUSTOMVOICE_PARENT_ALREADY_CONFIGURED: string;
+  /**
+   * N​ã​o​ ​f​o​i​ ​p​o​s​s​í​v​e​l​ ​e​n​c​o​n​t​r​a​r​ ​o​ ​c​a​n​a​l​ ​d​e​ ​v​o​z​ ​p​a​i​.​ ​P​o​r​ ​f​a​v​o​r​,​ ​v​e​r​i​f​i​q​u​e​ ​s​e​ ​v​o​c​ê​ ​d​i​g​i​t​o​u​ ​c​o​r​r​e​t​a​m​e​n​t​e​ ​e​ ​t​e​n​t​e​ ​n​o​v​a​m​e​n​t​e​.
+   */
+  CUSTOMVOICE_PARENT_NOT_FOUND: string;
+  /**
    * U​m​ ​o​u​ ​m​a​i​s​ ​U​R​L​s​ ​d​e​ ​m​í​d​i​a​ ​s​ã​o​ ​i​n​v​á​l​i​d​o​s​.​ ​P​o​r​ ​f​a​v​o​r​,​ ​v​e​r​i​f​i​q​u​e​ ​s​e​ ​v​o​c​ê​ ​d​i​g​i​t​o​u​ ​c​o​r​r​e​t​a​m​e​n​t​e​ ​e​ ​t​e​n​t​e​ ​n​o​v​a​m​e​n​t​e​.
    */
   MODERATION_GENERIC_INVALID_MEDIA_URLS: string;
@@ -423,6 +439,30 @@ export type NamespaceSLASHTranslation = {
    * C​o​m​a​n​d​o​s​ ​d​e​ ​c​o​n​f​i​g​u​r​a​ç​ã​o​.
    */
   CONFIG_DESCRIPTION: string;
+  /**
+   * c​a​n​a​l
+   */
+  CUSTOMVOICE_SETUP_OPTION_CHANNEL_NAME: string;
+  /**
+   * O​ ​c​a​n​a​l​ ​d​e​ ​v​o​z​ ​q​u​e​ ​v​o​c​ê​ ​d​e​s​e​j​a​ ​c​o​n​f​i​g​u​r​a​r​.
+   */
+  CUSTOMVOICE_SETUP_OPTION_CHANNEL_DESCRIPTION: string;
+  /**
+   * c​a​t​e​g​o​r​i​a
+   */
+  CUSTOMVOICE_SETUP_OPTION_CATEGORY_NAME: string;
+  /**
+   * C​a​t​e​g​o​r​i​a​ ​p​a​r​a​ ​c​r​i​a​r​ ​o​s​ ​c​a​n​a​i​s​ ​d​e​ ​v​o​z​.
+   */
+  CUSTOMVOICE_SETUP_OPTION_CATEGORY_DESCRIPTION: string;
+  /**
+   * n​o​m​e
+   */
+  CUSTOMVOICE_SETUP_OPTION_TEMPLATE_NAME: string;
+  /**
+   * O​ ​n​o​m​e​ ​d​o​ ​c​a​n​a​l​ ​d​e​ ​v​o​z​ ​q​u​e​ ​v​o​c​ê​ ​d​e​s​e​j​a​ ​c​r​i​a​r​.
+   */
+  CUSTOMVOICE_SETUP_OPTION_TEMPLATE_DESCRIPTION: string;
   /**
    * m​e​m​b​r​o
    */
@@ -650,6 +690,14 @@ export type TranslationFunctions = {
    * O servidor foi removido da quarentena com sucesso.
    */
   ADMINISTRATION_UNQUARANTINE_SUCCESS: () => LocalizedString;
+  /**
+   * Canal de voz personalizado configurado com sucesso.
+   */
+  CUSTOMVOICE_SUCCESS_SETUP: () => LocalizedString;
+  /**
+   * Modelo de canal de voz personalizado atualizado com sucesso. Saiba que você pode usar as variáveis $USER e $COUNT para criar um nome dinâmico.
+   */
+  CUSTOMVOICE_SUCCESS_UPDATE_TEMPLATE: () => LocalizedString;
   /**
    * Nenhuma razão fornecida.
    */
@@ -926,6 +974,14 @@ Se o número de ações for excedido, o moderador será bloqueado de aplicar nov
      */
     ADMINISTRATION_UNQUARANTINE_NOT_QUARANTINED: () => LocalizedString;
     /**
+     * Já existe um canal de voz configurado neste canal.
+     */
+    CUSTOMVOICE_PARENT_ALREADY_CONFIGURED: () => LocalizedString;
+    /**
+     * Não foi possível encontrar o canal de voz pai. Por favor, verifique se você digitou corretamente e tente novamente.
+     */
+    CUSTOMVOICE_PARENT_NOT_FOUND: () => LocalizedString;
+    /**
      * Um ou mais URLs de mídia são inválidos. Por favor, verifique se você digitou corretamente e tente novamente.
      */
     MODERATION_GENERIC_INVALID_MEDIA_URLS: () => LocalizedString;
@@ -951,6 +1007,30 @@ Se o número de ações for excedido, o moderador será bloqueado de aplicar nov
      * Comandos de configuração.
      */
     CONFIG_DESCRIPTION: () => LocalizedString;
+    /**
+     * canal
+     */
+    CUSTOMVOICE_SETUP_OPTION_CHANNEL_NAME: () => LocalizedString;
+    /**
+     * O canal de voz que você deseja configurar.
+     */
+    CUSTOMVOICE_SETUP_OPTION_CHANNEL_DESCRIPTION: () => LocalizedString;
+    /**
+     * categoria
+     */
+    CUSTOMVOICE_SETUP_OPTION_CATEGORY_NAME: () => LocalizedString;
+    /**
+     * Categoria para criar os canais de voz.
+     */
+    CUSTOMVOICE_SETUP_OPTION_CATEGORY_DESCRIPTION: () => LocalizedString;
+    /**
+     * nome
+     */
+    CUSTOMVOICE_SETUP_OPTION_TEMPLATE_NAME: () => LocalizedString;
+    /**
+     * O nome do canal de voz que você deseja criar.
+     */
+    CUSTOMVOICE_SETUP_OPTION_TEMPLATE_DESCRIPTION: () => LocalizedString;
     /**
      * membro
      */

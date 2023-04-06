@@ -16,6 +16,7 @@ model Guild {
 
   User                 User[]
   Punishments          Punishment[]
+  CustomVoice          CustomVoice[]
   ModerationLimitation ModerationLimitation[]
 
   Quarantine Quarantine?
@@ -104,4 +105,19 @@ model Quarantine {
 
   data   Json
   reason String?
+}
+
+model CustomVoice {
+  id String @id @unique @default(cuid())
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  Guild   Guild  @relation(fields: [guildId], references: [id])
+  guildId String
+
+  categoryID String @unique
+  parentID   String @unique
+
+  template String?
 }

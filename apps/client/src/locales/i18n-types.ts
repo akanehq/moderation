@@ -94,6 +94,16 @@ type RootTranslation = {
     'author' | 'guild' | 'reason'
   >;
   /**
+   * {​k​i​n​d​|​{​B​a​n​:​ ​⚒​️​,​ ​K​i​c​k​:​ ​�​�​,​ ​M​u​t​e​:​ ​�​�​,​ ​W​a​r​n​:​ ​⚠​️​}​}​ ​V​o​c​ê​ ​f​o​i​ ​{​k​i​n​d​|​{​B​a​n​:​ ​b​a​n​i​d​o​,​ ​K​i​c​k​:​ ​e​x​p​u​l​s​o​,​ ​M​u​t​e​:​ ​s​i​l​e​n​c​i​a​d​o​,​ ​W​a​r​n​:​ ​a​v​i​s​a​d​o​}​}​ ​e​m​ ​{​g​u​i​l​d​}
+   * @param {string} guild
+   * @param {'Ban' | 'Kick' | 'Mute' | 'Warn'} kind
+   */
+  MODERATION_EMBED_TITLE: RequiredParams<
+    | 'guild'
+    | `kind|{Ban:${string}, Kick:${string}, Mute:${string}, Warn:${string}}`
+    | `kind|{Ban:${string}, Kick:${string}, Mute:${string}, Warn:${string}}`
+  >;
+  /**
    * ⚒​️​ ​V​o​c​ê​ ​f​o​i​ ​b​a​n​i​d​o​ ​d​e​ ​{​0​}
    * @param {string} 0
    */
@@ -104,7 +114,7 @@ type RootTranslation = {
    */
   MODERATION_KICK_EMBED_TITLE: RequiredParams<'0'>;
   /**
-   * �​�​ ​V​o​c​ê​ ​f​o​i​ ​s​i​l​e​n​c​i​a​d​o​ ​e​m​ ​{​0​}
+   * �​�​ ​V​o​c​ê​ ​f​o​i​ ​a​v​i​s​a​d​o​ ​e​m​ ​{​0​}
    * @param {string} 0
    */
   MODERATION_WARN_EMBED_TITLE: RequiredParams<'0'>;
@@ -352,6 +362,13 @@ export type TranslationFunctions = {
     reason: string;
   }) => LocalizedString;
   /**
+   * {kind|{Ban: ⚒️, Kick: 🚪, Mute: 🔇, Warn: ⚠️}} Você foi {kind|{Ban: banido, Kick: expulso, Mute: silenciado, Warn: avisado}} em {guild}
+   */
+  MODERATION_EMBED_TITLE: (arg: {
+    guild: string;
+    kind: 'Ban' | 'Kick' | 'Mute' | 'Warn';
+  }) => LocalizedString;
+  /**
    * ⚒️ Você foi banido de {0}
    */
   MODERATION_BAN_EMBED_TITLE: (arg0: string) => LocalizedString;
@@ -360,7 +377,7 @@ export type TranslationFunctions = {
    */
   MODERATION_KICK_EMBED_TITLE: (arg0: string) => LocalizedString;
   /**
-   * 🔇 Você foi silenciado em {0}
+   * 🔇 Você foi avisado em {0}
    */
   MODERATION_WARN_EMBED_TITLE: (arg0: string) => LocalizedString;
   ERRORS: {

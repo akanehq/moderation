@@ -54,6 +54,7 @@ export const DurationOption = ExtendsOption({
   name: 'MODERATION_GENERIC_OPTION_DURATION_NAME',
   description: 'MODERATION_GENERIC_OPTION_DURATION_DESCRIPTION',
   type: ApplicationCommandOptionType.Number,
+  required: true,
 });
 
 export const DeleteDaysOption = ExtendsOption({

@@ -32,7 +32,10 @@ export default {
   MODERATION_GENERIC_PUNISHMENT_EMBED_DESCRIPTION:
     'Você foi punido no servidor {guild:string} por {author:string} pelo motivo: {reason:string}',
 
+  MODERATION_EMBED_TITLE:
+    '{kind|{Ban: ⚒️, Kick: 🚪, Mute: 🔇, Warn: ⚠️}} Você foi {kind|{Ban: banido, Kick: expulso, Mute: silenciado, Warn: avisado}} em {guild:string}',
+
   MODERATION_BAN_EMBED_TITLE: '⚒️ Você foi banido de {0:string}',
   MODERATION_KICK_EMBED_TITLE: '🚪 Você foi expulso de {0:string}',
-  MODERATION_WARN_EMBED_TITLE: '🔇 Você foi silenciado em {0:string}',
+  MODERATION_WARN_EMBED_TITLE: '🔇 Você foi avisado em {0:string}',
 } satisfies BaseTranslation;

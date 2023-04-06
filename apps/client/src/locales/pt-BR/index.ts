@@ -32,4 +32,8 @@ export default {
   MODERATION_BAN_EMBED_TITLE: '⚒️ Você foi banido de {0:string}',
   MODERATION_BAN_EMBED_DESCRIPTION:
     'Você foi punido no servidor {guild:string} por {author:string} pelo motivo: {reason:string}',
+
+  MODERATION_KICK_EMBED_TITLE: '🚪 Você foi expulso de {0:string}',
+  MODERATION_KICK_EMBED_DESCRIPTION:
+    'Você foi punido no servidor {guild:string} por {author:string} pelo motivo: {reason:string}',
 } satisfies BaseTranslation;

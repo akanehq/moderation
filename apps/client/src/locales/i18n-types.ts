@@ -98,6 +98,20 @@ type RootTranslation = {
   MODERATION_BAN_EMBED_DESCRIPTION: RequiredParams<
     'author' | 'guild' | 'reason'
   >;
+  /**
+   * �​�​ ​V​o​c​ê​ ​f​o​i​ ​e​x​p​u​l​s​o​ ​d​e​ ​{​0​}
+   * @param {string} 0
+   */
+  MODERATION_KICK_EMBED_TITLE: RequiredParams<'0'>;
+  /**
+   * V​o​c​ê​ ​f​o​i​ ​p​u​n​i​d​o​ ​n​o​ ​s​e​r​v​i​d​o​r​ ​{​g​u​i​l​d​}​ ​p​o​r​ ​{​a​u​t​h​o​r​}​ ​p​e​l​o​ ​m​o​t​i​v​o​:​ ​{​r​e​a​s​o​n​}
+   * @param {string} author
+   * @param {string} guild
+   * @param {string} reason
+   */
+  MODERATION_KICK_EMBED_DESCRIPTION: RequiredParams<
+    'author' | 'guild' | 'reason'
+  >;
 };
 
 export type NamespaceERRORSTranslation = {
@@ -341,6 +355,18 @@ export type TranslationFunctions = {
    * Você foi punido no servidor {guild} por {author} pelo motivo: {reason}
    */
   MODERATION_BAN_EMBED_DESCRIPTION: (arg: {
+    author: string;
+    guild: string;
+    reason: string;
+  }) => LocalizedString;
+  /**
+   * 🚪 Você foi expulso de {0}
+   */
+  MODERATION_KICK_EMBED_TITLE: (arg0: string) => LocalizedString;
+  /**
+   * Você foi punido no servidor {guild} por {author} pelo motivo: {reason}
+   */
+  MODERATION_KICK_EMBED_DESCRIPTION: (arg: {
     author: string;
     guild: string;
     reason: string;

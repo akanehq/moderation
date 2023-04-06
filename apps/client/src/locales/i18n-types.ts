@@ -24,6 +24,22 @@ type RootTranslation = {
    */
   ATTACHMENTS: string;
   /**
+   * T​o​t​a​l
+   */
+  TOTAL: string;
+  /**
+   * Ú​l​t​i​m​o​s​ ​3​0​ ​d​i​a​s
+   */
+  LAST_30_DAYS: string;
+  /**
+   * Ú​l​t​i​m​a​s​ ​2​4​ ​h​o​r​a​s
+   */
+  LAST_24_HOURS: string;
+  /**
+   * {​{​N​e​n​h​u​m​a​ ​i​n​f​r​a​ç​ã​o​|​1​ ​i​n​f​r​a​ç​ã​o​|​?​?​ ​i​n​f​r​a​ç​õ​e​s​}​}
+   */
+  X_INFRACTIONS: string;
+  /**
    * V​o​c​ê​ ​t​e​m​ ​c​e​r​t​e​z​a​?
    */
   INQUIRER_CONFIRMATION_QUESTION: string;
@@ -107,9 +123,27 @@ type RootTranslation = {
    * A​ ​p​u​n​i​ç​ã​o​ ​f​o​i​ ​d​e​s​f​e​i​t​a​ ​c​o​m​ ​s​u​c​e​s​s​o​.
    */
   MODERATION_UNDO_SUCCESS: string;
+  /**
+   * N​ã​o​ ​h​á​ ​p​u​n​i​ç​õ​e​s​ ​r​e​g​i​s​t​r​a​d​a​s​ ​p​a​r​a​ ​{​m​e​m​b​e​r​}​ ​n​o​ ​s​e​r​v​i​d​o​r​.
+   * @param {string} member
+   */
+  MODERATION_LOGS_NO_PUNISHMENTS: RequiredParams<'member'>;
+  /**
+   * S​e​l​e​c​i​o​n​e​ ​u​m​a​ ​p​u​n​i​ç​ã​o​ ​p​a​r​a​ ​v​e​r​ ​m​a​i​s​ ​d​e​t​a​l​h​e​s​.
+   */
+  MODERATION_LOGS_SELECT_MENU_PLACEHOLDER: string;
+  /**
+   * I​n​f​r​a​ç​õ​e​s​ ​d​e​ ​{​m​e​m​b​e​r​}
+   * @param {string} member
+   */
+  MODERATION_LOGS_INFRACTIONS_OF: RequiredParams<'member'>;
 };
 
 export type NamespaceERRORSTranslation = {
+  /**
+   * T​e​m​p​o​ ​e​s​g​o​t​a​d​o​.
+   */
+  PAGINATION_TIMEOUT: string;
   /**
    * E​s​t​e​ ​c​o​m​a​n​d​o​ ​s​ó​ ​p​o​d​e​ ​s​e​r​ ​e​x​e​c​u​t​a​d​o​ ​e​m​ ​u​m​ ​s​e​r​v​i​d​o​r​.
    */
@@ -285,6 +319,22 @@ export type TranslationFunctions = {
    */
   ATTACHMENTS: () => LocalizedString;
   /**
+   * Total
+   */
+  TOTAL: () => LocalizedString;
+  /**
+   * Últimos 30 dias
+   */
+  LAST_30_DAYS: () => LocalizedString;
+  /**
+   * Últimas 24 horas
+   */
+  LAST_24_HOURS: () => LocalizedString;
+  /**
+   * {{Nenhuma infração|1 infração|?? infrações}}
+   */
+  X_INFRACTIONS: (arg0: number | string | boolean) => LocalizedString;
+  /**
    * Você tem certeza?
    */
   INQUIRER_CONFIRMATION_QUESTION: () => LocalizedString;
@@ -365,7 +415,23 @@ export type TranslationFunctions = {
    * A punição foi desfeita com sucesso.
    */
   MODERATION_UNDO_SUCCESS: () => LocalizedString;
+  /**
+   * Não há punições registradas para {member} no servidor.
+   */
+  MODERATION_LOGS_NO_PUNISHMENTS: (arg: { member: string }) => LocalizedString;
+  /**
+   * Selecione uma punição para ver mais detalhes.
+   */
+  MODERATION_LOGS_SELECT_MENU_PLACEHOLDER: () => LocalizedString;
+  /**
+   * Infrações de {member}
+   */
+  MODERATION_LOGS_INFRACTIONS_OF: (arg: { member: string }) => LocalizedString;
   ERRORS: {
+    /**
+     * Tempo esgotado.
+     */
+    PAGINATION_TIMEOUT: () => LocalizedString;
     /**
      * Este comando só pode ser executado em um servidor.
      */

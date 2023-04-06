@@ -1,6 +1,8 @@
 import { BaseTranslation } from '../../i18n-types';
 
 export default {
+  PAGINATION_TIMEOUT: 'Tempo esgotado.',
+
   GUARD_IN_GUILD_ONLY: 'Este comando só pode ser executado em um servidor.',
 
   GUARD_HAS_PERMISSIONS_USER:

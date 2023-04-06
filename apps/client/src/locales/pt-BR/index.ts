@@ -3,6 +3,11 @@ import type { BaseTranslation } from '../i18n-types';
 export default {
   ATTACHMENTS: 'Anexos',
 
+  TOTAL: 'Total',
+  LAST_30_DAYS: 'Últimos 30 dias',
+  LAST_24_HOURS: 'Últimas 24 horas',
+  X_INFRACTIONS: '{{ Nenhuma infração | 1 infração | ?? infrações }}',
+
   INQUIRER_CONFIRMATION_QUESTION: 'Você tem certeza?',
   INQUIRER_CONFIRMATION_YES: 'Sim',
   INQUIRER_CONFIRMATION_NO: 'Não',
@@ -35,4 +40,10 @@ export default {
     'Você foi punido no servidor {guild:string} por {author:string} pelo motivo: {reason:string}',
 
   MODERATION_UNDO_SUCCESS: 'A punição foi desfeita com sucesso.',
+
+  MODERATION_LOGS_NO_PUNISHMENTS:
+    'Não há punições registradas para {member:string} no servidor.',
+  MODERATION_LOGS_SELECT_MENU_PLACEHOLDER:
+    'Selecione uma punição para ver mais detalhes.',
+  MODERATION_LOGS_INFRACTIONS_OF: 'Infrações de {member:string}',
 } satisfies BaseTranslation;

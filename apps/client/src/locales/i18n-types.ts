@@ -16,7 +16,20 @@ export type Translations = RootTranslation & {
   SLASH: NamespaceSLASHTranslation;
 };
 
-type RootTranslation = {};
+type RootTranslation = {
+  /**
+   * V​o​c​ê​ ​t​e​m​ ​c​e​r​t​e​z​a​?
+   */
+  INQUIRER_CONFIRMATION_QUESTION: string;
+  /**
+   * S​i​m
+   */
+  INQUIRER_CONFIRMATION_YES: string;
+  /**
+   * N​ã​o
+   */
+  INQUIRER_CONFIRMATION_NO: string;
+};
 
 export type NamespaceSLASHTranslation = {
   /**
@@ -40,6 +53,18 @@ type DisallowNamespaces = {
 };
 
 export type TranslationFunctions = {
+  /**
+   * Você tem certeza?
+   */
+  INQUIRER_CONFIRMATION_QUESTION: () => LocalizedString;
+  /**
+   * Sim
+   */
+  INQUIRER_CONFIRMATION_YES: () => LocalizedString;
+  /**
+   * Não
+   */
+  INQUIRER_CONFIRMATION_NO: () => LocalizedString;
   SLASH: {
     /**
      * exemplo

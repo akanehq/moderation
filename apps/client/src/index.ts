@@ -14,7 +14,7 @@ import {
   LOG_LEVEL,
   LOG_TYPE,
   NODE_ENV,
-} from './constants/dotenv';
+} from '~/constants/dotenv';
 
 export default async function main() {
   DIService.engine = typeDiDependencyRegistryEngine

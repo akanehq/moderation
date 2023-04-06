@@ -6,13 +6,21 @@
       "warn",
       {
         "newlines-between": "always",
-        "alphabetize": { "order": "asc" },
+        "alphabetize": {
+          "order": "asc"
+        },
         "groups": [
           "builtin",
           "external",
           "internal",
           ["parent", "index", "sibling"],
           "type"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "~/**",
+            "group": "internal"
+          }
         ]
       }
     ]

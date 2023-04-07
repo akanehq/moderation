@@ -1,6 +1,6 @@
 build/
 node_modules/
-src/i18n/i18n-*.ts
+src/locales/i18n-*.ts
 
 tsconfig.json
 pnpm-lock.yaml

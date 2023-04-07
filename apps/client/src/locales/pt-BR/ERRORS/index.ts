@@ -14,7 +14,7 @@ export default {
   GUARD_HAS_PERMISSIONS_CLIENT:
     'Eu não tenho permissão para executar este comando.',
 
-  // Administration / Quarantine
+  // Administration (Quarantine)
 
   ADMINISTRATION_QUARANTINE_ALREADY_QUARANTINED:
     'O servidor já está em quarentena. Talvez você queira usar o comando `unquarantine`?',
@@ -56,4 +56,9 @@ export default {
 
   MODERATION_LIMIT_CONFIG_LIST_EMPTY:
     'Não há configurações de limite definidas.',
+
+  // Moderation (Events/GetAttachment)
+
+  MODERATION_GET_ATTACHMENT_PUNISHMENT_NOT_FOUND:
+    'Não foi possível encontrar nenhuma punição com o ID registrado. Reporte este erro para o suporte do bot.',
 } satisfies BaseTranslation;

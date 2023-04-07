@@ -33,6 +33,9 @@ export default {
 
   PAGINATION_CLOSE: 'Fechar',
 
+  PAGINATION_CLOSED:
+    'A paginação foi fechada. Você pode reabri-la clicando no mesmo botão.',
+
   // Administration (Quarantine)
 
   ADMINISTRATION_QUARANTINE_CANCELLED:

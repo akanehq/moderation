@@ -96,6 +96,10 @@ type RootTranslation = {
    */
   PAGINATION_CLOSE: string;
   /**
+   * A​ ​p​a​g​i​n​a​ç​ã​o​ ​f​o​i​ ​f​e​c​h​a​d​a​.​ ​V​o​c​ê​ ​p​o​d​e​ ​r​e​a​b​r​i​-​l​a​ ​c​l​i​c​a​n​d​o​ ​n​o​ ​m​e​s​m​o​ ​b​o​t​ã​o​.
+   */
+  PAGINATION_CLOSED: string;
+  /**
    * C​o​m​a​n​d​o​ ​c​a​n​c​e​l​a​d​o​.​ ​O​ ​s​e​r​v​i​d​o​r​ ​n​ã​o​ ​f​o​i​ ​c​o​l​o​c​a​d​o​ ​e​m​ ​q​u​a​r​e​n​t​e​n​a​.
    */
   ADMINISTRATION_QUARANTINE_CANCELLED: string;
@@ -411,6 +415,10 @@ export type NamespaceERRORSTranslation = {
    * N​ã​o​ ​h​á​ ​c​o​n​f​i​g​u​r​a​ç​õ​e​s​ ​d​e​ ​l​i​m​i​t​e​ ​d​e​f​i​n​i​d​a​s​.
    */
   MODERATION_LIMIT_CONFIG_LIST_EMPTY: string;
+  /**
+   * N​ã​o​ ​f​o​i​ ​p​o​s​s​í​v​e​l​ ​e​n​c​o​n​t​r​a​r​ ​n​e​n​h​u​m​a​ ​p​u​n​i​ç​ã​o​ ​c​o​m​ ​o​ ​I​D​ ​r​e​g​i​s​t​r​a​d​o​.​ ​R​e​p​o​r​t​e​ ​e​s​t​e​ ​e​r​r​o​ ​p​a​r​a​ ​o​ ​s​u​p​o​r​t​e​ ​d​o​ ​b​o​t​.
+   */
+  MODERATION_GET_ATTACHMENT_PUNISHMENT_NOT_FOUND: string;
 };
 
 export type NamespaceSLASHTranslation = {
@@ -677,6 +685,10 @@ export type TranslationFunctions = {
    * Fechar
    */
   PAGINATION_CLOSE: () => LocalizedString;
+  /**
+   * A paginação foi fechada. Você pode reabri-la clicando no mesmo botão.
+   */
+  PAGINATION_CLOSED: () => LocalizedString;
   /**
    * Comando cancelado. O servidor não foi colocado em quarentena.
    */
@@ -983,6 +995,10 @@ Se o número de ações for excedido, o moderador será bloqueado de aplicar nov
      * Não há configurações de limite definidas.
      */
     MODERATION_LIMIT_CONFIG_LIST_EMPTY: () => LocalizedString;
+    /**
+     * Não foi possível encontrar nenhuma punição com o ID registrado. Reporte este erro para o suporte do bot.
+     */
+    MODERATION_GET_ATTACHMENT_PUNISHMENT_NOT_FOUND: () => LocalizedString;
   };
   SLASH: {
     /**

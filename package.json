@@ -6,6 +6,11 @@
     "apps/*",
     "packages/*"
   ],
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
@@ -15,6 +20,8 @@
   },
   "packageManager": "pnpm@7.12.2",
   "devDependencies": {
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.1",
     "turbo": "^1.7.0"

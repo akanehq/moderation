@@ -1,5 +1,6 @@
 # Akane
 
+![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)
 ![Github CI](https://github.com/akanehq/akane/actions/workflows/ci.yml/badge.svg)
 
 ## Applications

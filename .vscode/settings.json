@@ -11,6 +11,7 @@
     "administration": "admin",
     "custom-voice": "audio",
     "moderation": "tools",
+    "slash": "command",
     "en-US": "decorators",
     "pt-BR": "decorators",
     "tsconfig": "typescript"

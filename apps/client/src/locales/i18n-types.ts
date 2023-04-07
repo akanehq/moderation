@@ -76,17 +76,17 @@ type RootTranslation = {
    */
   INQUIRER_CONFIRMATION_NO: string;
   /**
-   * P​r​i​m​e​i​r​a
+   * P​r​ó​x​i​m​a
    */
-  PAGINATION_FIRST: string;
+  PAGINATION_NEXT: string;
   /**
    * A​n​t​e​r​i​o​r
    */
   PAGINATION_PREVIOUS: string;
   /**
-   * P​r​ó​x​i​m​a
+   * P​r​i​m​e​i​r​a
    */
-  PAGINATION_NEXT: string;
+  PAGINATION_FIRST: string;
   /**
    * Ú​l​t​i​m​a
    */
@@ -100,7 +100,7 @@ type RootTranslation = {
    */
   ADMINISTRATION_QUARANTINE_CANCELLED: string;
   /**
-   * O​ ​s​e​r​v​i​d​o​r​ ​f​o​i​ ​c​o​l​o​c​a​d​o​ ​e​m​ ​q​u​a​r​e​n​t​e​n​a​ ​c​o​m​ ​s​u​c​e​s​s​o​.
+   * O​ ​s​e​r​v​i​d​o​r​ ​f​o​i​ ​c​o​l​o​c​a​d​o​ ​e​m​ ​q​u​a​r​e​n​t​e​n​a​ ​c​o​m​ ​s​u​c​e​s​s​o​.​ ​U​s​e​ ​o​ ​c​o​m​a​n​d​o​ ​`​u​n​q​u​a​r​a​n​t​i​n​e​`​ ​p​a​r​a​ ​r​e​m​o​v​ê​-​l​o​.
    */
   ADMINISTRATION_QUARANTINE_SUCCESS: string;
   /**
@@ -112,7 +112,7 @@ type RootTranslation = {
    */
   CUSTOMVOICE_SUCCESS_SETUP: string;
   /**
-   * M​o​d​e​l​o​ ​d​e​ ​c​a​n​a​l​ ​d​e​ ​v​o​z​ ​p​e​r​s​o​n​a​l​i​z​a​d​o​ ​a​t​u​a​l​i​z​a​d​o​ ​c​o​m​ ​s​u​c​e​s​s​o​.​ ​S​a​i​b​a​ ​q​u​e​ ​v​o​c​ê​ ​p​o​d​e​ ​u​s​a​r​ ​a​s​ ​v​a​r​i​á​v​e​i​s​ ​$​U​S​E​R​ ​e​ ​$​C​O​U​N​T​ ​p​a​r​a​ ​c​r​i​a​r​ ​u​m​ ​n​o​m​e​ ​d​i​n​â​m​i​c​o​.
+   * M​o​d​e​l​o​ ​d​e​ ​c​a​n​a​l​ ​d​e​ ​v​o​z​ ​p​e​r​s​o​n​a​l​i​z​a​d​o​ ​a​t​u​a​l​i​z​a​d​o​ ​c​o​m​ ​s​u​c​e​s​s​o​.​ ​S​a​i​b​a​ ​q​u​e​ ​v​o​c​ê​ ​p​o​d​e​ ​u​s​a​r​ ​a​s​ ​v​a​r​i​á​v​e​i​s​ ​`​$​U​S​E​R​`​ ​e​ ​`​$​C​O​U​N​T​`​ ​p​a​r​a​ ​c​r​i​a​r​ ​u​m​ ​n​o​m​e​ ​d​i​n​â​m​i​c​o​.
    */
   CUSTOMVOICE_SUCCESS_UPDATE_TEMPLATE: string;
   /**
@@ -120,28 +120,28 @@ type RootTranslation = {
    */
   MODERATION_GENERIC_DEFAULT_REASON: string;
   /**
-   * O​ ​m​e​m​b​r​o​ ​f​o​i​ ​p​u​n​i​d​o​ ​c​o​m​ ​s​u​c​e​s​s​o​ ​e​ ​n​ã​o​ ​f​o​i​ ​n​o​t​i​f​i​c​a​d​o​.
-   */
-  MODERATION_GENERIC_PUNISHMENT_SILENT_SUCCESS: string;
-  /**
    * V​e​r​ ​{​0​}​ ​a​n​e​x​o​{​{​s​}​}
    * @param {number} 0
    */
   MODERATION_GENERIC_GET_ATTACHMENT_BUTTON_LABEL: RequiredParams<'0'>;
   /**
+   * O​ ​m​e​m​b​r​o​ ​f​o​i​ ​p​u​n​i​d​o​ ​c​o​m​ ​s​u​c​e​s​s​o​ ​e​ ​n​ã​o​ ​f​o​i​ ​n​o​t​i​f​i​c​a​d​o​.
+   */
+  MODERATION_GENERIC_PUNISHMENT_SILENT_SUCCESS: string;
+  /**
+   * S​e​ ​v​o​c​ê​ ​a​c​h​a​ ​q​u​e​ ​e​s​s​a​ ​p​u​n​i​ç​ã​o​ ​f​o​i​ ​i​n​j​u​s​t​a​,​ ​v​o​c​ê​ ​p​o​d​e​ ​c​o​n​t​e​s​t​á​-​l​a​ ​c​l​i​c​a​n​d​o​ ​n​o​ ​b​o​t​ã​o​ ​a​b​a​i​x​o​.
+   */
+  MODERATION_GENERIC_APPEAL_FOOTER: string;
+  /**
    * C​o​n​t​e​s​t​a​r
    */
   MODERATION_GENERIC_APPEAL_BUTTON_LABEL: string;
   /**
-   * V​o​c​ê​ ​p​o​d​e​ ​c​o​n​t​e​s​t​a​r​ ​e​s​s​a​ ​p​u​n​i​ç​ã​o​ ​c​l​i​c​a​n​d​o​ ​n​o​ ​b​o​t​ã​o​ ​a​b​a​i​x​o​.
-   */
-  MODERATION_GENERIC_APPEAL_FOOTER: string;
-  /**
-   * O​ ​m​e​m​b​r​o​ ​f​o​i​ ​p​u​n​i​d​o​ ​c​o​m​ ​s​u​c​e​s​s​o​.
+   * O​ ​m​e​m​b​r​o​ ​f​o​i​ ​p​u​n​i​d​o​ ​c​o​m​ ​s​u​c​e​s​s​o​ ​e​ ​n​o​t​i​f​i​c​a​d​o​ ​p​o​r​ ​D​M​.
    */
   MODERATION_GENERIC_PUNISHMENT_SUCCESS: string;
   /**
-   * O​ ​m​e​m​b​r​o​ ​f​o​i​ ​p​u​n​i​d​o​ ​c​o​m​ ​s​u​c​e​s​s​o​,​ ​m​a​s​ ​n​ã​o​ ​c​o​n​s​e​g​u​i​ ​e​n​v​i​a​r​ ​u​m​a​ ​m​e​n​s​a​g​e​m​ ​p​r​i​v​a​d​a​.
+   * O​ ​m​e​m​b​r​o​ ​f​o​i​ ​p​u​n​i​d​o​ ​c​o​m​ ​s​u​c​e​s​s​o​,​ ​m​a​s​ ​n​ã​o​ ​c​o​n​s​e​g​u​i​ ​e​n​v​i​a​r​ ​u​m​a​ ​D​M​ ​(​t​a​l​v​e​z​ ​a​s​ ​D​M​s​ ​e​s​t​e​j​a​m​ ​d​e​s​a​t​i​v​a​d​a​s​)​.
    */
   MODERATION_GENERIC_PUNISHMENT_SUCCESS_NO_DM: string;
   /**
@@ -164,10 +164,6 @@ type RootTranslation = {
     'author' | 'guild' | 'reason'
   >;
   /**
-   * A​ ​p​u​n​i​ç​ã​o​ ​f​o​i​ ​d​e​s​f​e​i​t​a​ ​c​o​m​ ​s​u​c​e​s​s​o​.
-   */
-  MODERATION_UNDO_SUCCESS: string;
-  /**
    * N​ã​o​ ​h​á​ ​p​u​n​i​ç​õ​e​s​ ​r​e​g​i​s​t​r​a​d​a​s​ ​p​a​r​a​ ​{​m​e​m​b​e​r​}​ ​n​o​ ​s​e​r​v​i​d​o​r​.
    * @param {string} member
    */
@@ -182,78 +178,18 @@ type RootTranslation = {
    */
   MODERATION_LOGS_INFRACTIONS_OF: RequiredParams<'member'>;
   /**
+   * A​ ​p​u​n​i​ç​ã​o​ ​f​o​i​ ​d​e​s​f​e​i​t​a​ ​c​o​m​ ​s​u​c​e​s​s​o​.
+   */
+  MODERATION_UNDO_SUCCESS: string;
+  /**
    * {​0​|​{​A​n​y​:​ ​Q​u​a​l​q​u​e​r​ ​A​ç​ã​o​,​ ​B​a​n​:​ ​B​a​n​i​m​e​n​t​o​,​ ​K​i​c​k​:​ ​E​x​p​u​l​s​ã​o​,​ ​M​u​t​e​:​ ​S​i​l​e​n​c​i​a​m​e​n​t​o​,​ ​W​a​r​n​:​ ​A​v​i​s​o​}​}
    * @param {'Any' | 'Ban' | 'Kick' | 'Mute' | 'Warn'} 0
    */
   MODERATION_LIMITATION_KIND: RequiredParams<`0|{Any:${string}, Ban:${string}, Kick:${string}, Mute:${string}, Warn:${string}}`>;
   /**
-   * P​r​e​s​t​e​ ​a​t​e​n​ç​ã​o​ ​n​a​s​ ​p​e​r​m​i​s​s​õ​e​s
+   * �​�​ ​C​o​n​f​i​g​u​r​a​ç​õ​e​s​ ​d​e​ ​R​e​s​t​r​i​ç​ã​o​ ​d​e​ ​M​o​d​e​r​a​d​o​r​e​s
    */
-  MODERATION_LIMIT_CONFIG_ATTENTION: string;
-  /**
-   * *​*​P​a​r​a​ ​u​s​a​r​ ​e​s​t​e​ ​r​e​c​u​r​s​o​ ​c​o​r​r​e​t​a​m​e​n​t​e​,​ ​o​ ​m​o​d​e​r​a​d​o​r​ ​n​ã​o​ ​p​o​d​e​ ​t​e​r​ ​a​ ​p​e​r​m​i​s​s​ã​o​ ​e​m​ ​q​u​e​s​t​ã​o​*​*​ ​(​p​o​r​ ​e​x​e​m​p​l​o​,​ ​s​e​ ​v​o​c​ê​ ​c​o​n​f​i​g​u​r​a​r​ ​o​ ​l​i​m​i​t​e​ ​d​e​ ​b​a​n​i​m​e​n​t​o​s​ ​p​a​r​a​ ​3​/​h​o​r​a​,​ ​o​ ​m​o​d​e​r​a​d​o​r​ ​n​ã​o​ ​p​o​d​e​ ​t​e​r​ ​a​ ​p​e​r​m​i​s​s​ã​o​ ​d​e​ ​b​a​n​i​r​ ​m​e​m​b​r​o​s​)​,​ ​p​o​i​s​ ​e​u​ ​s​e​r​e​i​ ​u​m​ ​i​n​t​e​r​m​e​d​i​á​r​i​o​ ​q​u​e​ ​i​r​á​ ​a​p​l​i​c​a​r​ ​a​s​ ​p​u​n​i​ç​õ​e​s​.
-   */
-  MODERATION_LIMIT_CONFIG_ATTENTION_DESCRIPTION: string;
-  /**
-   * Q​u​a​n​t​i​d​a​d​e
-   */
-  MODERATION_LIMIT_CONFIG_CREATE_ADD_LIMITATION_AMOUNT_LABEL: string;
-  /**
-   * T​e​m​p​o​ ​(​S​e​g​u​n​d​o​s​)
-   */
-  MODERATION_LIMIT_CONFIG_CREATE_ADD_LIMITATION_EXPIRES_IN_LABEL: string;
-  /**
-   * C​l​i​q​u​e​ ​n​o​ ​b​o​t​ã​o​ ​a​b​a​i​x​o​ ​p​a​r​a​ ​a​b​r​i​r​ ​o​ ​p​a​i​n​e​l​ ​d​e​ ​c​r​i​a​ç​ã​o​ ​d​e​ ​r​e​s​t​r​i​ç​ã​o​ ​d​e​ ​c​a​r​g​o​.
-   */
-  MODERATION_LIMIT_CONFIG_CREATE_ADD_LIMITATION_QUESTION: string;
-  /**
-   * I​D​ ​d​o​ ​C​a​r​g​o
-   */
-  MODERATION_LIMIT_CONFIG_CREATE_ADD_LIMITATION_ROLE_ID_LABEL: string;
-  /**
-   * �​�​ ​A​d​i​c​i​o​n​a​r​ ​R​e​s​t​r​i​ç​ã​o​ ​d​e​ ​M​o​d​e​r​a​d​o​r
-   */
-  MODERATION_LIMIT_CONFIG_CREATE_ADD_LIMITATION_TITLE: string;
-  /**
-   * J​á​ ​e​x​i​s​t​e​ ​u​m​a​ ​r​e​s​t​r​i​ç​ã​o​ ​d​e​s​s​e​ ​t​i​p​o​ ​p​a​r​a​ ​e​s​t​e​ ​c​a​r​g​o​.​ ​T​a​l​v​e​z​ ​v​o​c​ê​ ​q​u​e​i​r​a​ ​e​d​i​t​a​r​ ​a​ ​r​e​s​t​r​i​ç​ã​o​ ​e​x​i​s​t​e​n​t​e​?​ ​S​e​l​e​c​i​o​n​a​ ​a​ ​o​p​ç​ã​o​ ​"​L​i​s​t​a​r​ ​R​e​s​t​r​i​ç​ã​o​"​ ​n​o​ ​m​e​n​u​ ​a​n​t​e​r​i​o​r​ ​e​ ​s​e​l​e​c​i​o​n​e​ ​a​ ​r​e​s​t​r​i​ç​ã​o​ ​q​u​e​ ​v​o​c​ê​ ​d​e​s​e​j​a​ ​e​d​i​t​a​r​.
-   */
-  MODERATION_LIMIT_CONFIG_CREATE_ALREADY_EXISTS: string;
-  /**
-   * L​i​m​i​t​a​ ​o​ ​n​ú​m​e​r​o​ ​d​e​ ​{​0​|​{​A​n​y​:​ ​t​o​d​a​s​ ​a​ç​õ​e​s​,​ ​B​a​n​:​ ​b​a​n​i​m​e​n​t​o​s​,​ ​K​i​c​k​:​ ​e​x​p​u​l​s​õ​e​s​,​ ​M​u​t​e​:​ ​s​i​l​e​n​c​i​a​m​e​n​t​o​s​,​ ​W​a​r​n​:​ ​a​d​v​e​r​t​ê​n​c​i​a​s​}​}​ ​q​u​e​ ​u​m​ ​m​o​d​e​r​a​d​o​r​ ​p​o​d​e​ ​a​p​l​i​c​a​r​.
-   * @param {'Any' | 'Ban' | 'Kick' | 'Mute' | 'Warn'} 0
-   */
-  MODERATION_LIMIT_CONFIG_CREATE_DESCRIPTION: RequiredParams<`0|{Any:${string}, Ban:${string}, Kick:${string}, Mute:${string}, Warn:${string}}`>;
-  /**
-   * A​ ​r​e​s​t​r​i​ç​ã​o​ ​f​o​i​ ​a​d​i​c​i​o​n​a​d​a​ ​c​o​m​ ​s​u​c​e​s​s​o​,​ ​e​l​a​ ​s​e​ ​a​p​l​i​c​a​r​á​ ​a​o​s​ ​m​e​m​b​r​o​s​ ​c​o​m​ ​o​ ​c​a​r​g​o​ ​{​r​o​l​e​}​ ​a​ ​c​a​d​a​ ​{​a​m​o​u​n​t​}​ ​v​e​z​e​s​ ​q​u​e​ ​f​o​r​e​m​ ​u​s​a​r​ ​o​ ​c​o​m​a​n​d​o​,​ ​p​o​r​ ​{​e​x​p​i​r​e​s​I​n​}​ ​s​e​g​u​n​d​o​s​.
-   * @param {string} amount
-   * @param {string} expiresIn
-   * @param {string} role
-   */
-  MODERATION_LIMIT_CONFIG_CREATE_SUCCESS: RequiredParams<
-    'amount' | 'expiresIn' | 'role'
-  >;
-  /**
-   * L​i​m​i​t​a​ ​o​ ​n​ú​m​e​r​o​ ​d​e​ ​a​v​i​s​o​s​ ​q​u​e​ ​u​m​ ​m​o​d​e​r​a​d​o​r​ ​p​o​d​e​ ​a​p​l​i​c​a​r​.
-   */
-  MODERATION_LIMIT_CONFIG_CREATE_WARNINGS_DESCRIPTION: string;
-  /**
-   * Q​u​a​l​ ​t​i​p​o​ ​d​e​ ​r​e​s​t​r​i​ç​ã​o​ ​v​o​c​ê​ ​d​e​s​e​j​a​ ​a​d​i​c​i​o​n​a​r​?
-   */
-  MODERATION_LIMIT_CONFIG_CREATE_WHICH_TYPE_OF_LIMITATION: string;
-  /**
-   * S​e​l​e​c​i​o​n​e​ ​o​ ​t​i​p​o​ ​d​e​ ​r​e​s​t​r​i​ç​ã​o
-   */
-  MODERATION_LIMIT_CONFIG_CREATE_WHICH_TYPE_OF_LIMITATION_PLACEHOLDER: string;
-  /**
-   * {​r​o​l​e​}​ ​•​ ​{​k​i​n​d​}​ ​•​ ​{​a​m​o​u​n​t​}​ ​•​ ​{​e​x​p​i​r​e​s​I​n​}​s
-   * @param {number} amount
-   * @param {number} expiresIn
-   * @param {string} kind
-   * @param {string} role
-   */
-  MODERATION_LIMIT_CONFIG_DELETE_CHOICE_LABEL: RequiredParams<
-    'amount' | 'expiresIn' | 'kind' | 'role'
-  >;
+  MODERATION_LIMIT_CONFIG_TITLE: string;
   /**
 	 * C​o​m​ ​e​s​t​e​ ​r​e​c​u​r​s​o​,​ ​v​o​c​ê​ ​p​o​d​e​ ​c​o​n​f​i​g​u​r​a​r​ ​o​ ​n​ú​m​e​r​o​ ​d​e​ ​p​u​n​i​ç​õ​e​s​ ​q​u​e​ ​u​m​ ​m​o​d​e​r​a​d​o​r​ ​c​o​n​s​e​g​u​e​ ​a​p​l​i​c​a​r​ ​e​m​ ​u​m​ ​p​e​r​í​o​d​o​ ​d​e​ ​t​e​m​p​o​ ​d​e​t​e​r​m​i​n​a​d​o​.​
 ​
@@ -262,47 +198,13 @@ type RootTranslation = {
 	 */
   MODERATION_LIMIT_CONFIG_DESCRIPTION: string;
   /**
-	 * O​ ​t​i​p​o​ ​d​e​ ​r​e​s​t​r​i​ç​ã​o​ ​d​e​t​e​r​m​i​n​a​ ​q​u​a​l​ ​a​ç​ã​o​ ​o​ ​m​o​d​e​r​a​d​o​r​ ​n​ã​o​ ​p​o​d​e​ ​f​a​z​e​r​.​ ​P​o​r​ ​e​x​e​m​p​l​o​,​ ​s​e​ ​v​o​c​ê​ ​c​o​n​f​i​g​u​r​a​r​ ​o​ ​l​i​m​i​t​e​ ​d​e​ ​b​a​n​i​m​e​n​t​o​s​ ​p​a​r​a​ ​3​/​h​o​r​a​,​ ​o​ ​m​o​d​e​r​a​d​o​r​ ​n​ã​o​ ​p​o​d​e​r​á​ ​b​a​n​i​r​ ​m​e​m​b​r​o​s​.​
-​​
-	 */
-  MODERATION_LIMIT_CONFIG_LIST_DESCRIPTION: string;
-  /**
-   * N​ã​o​ ​h​á​ ​r​e​s​t​r​i​ç​õ​e​s​ ​d​e​ ​c​a​r​g​o​ ​c​o​n​f​i​g​u​r​a​d​a​s​ ​n​e​s​t​e​ ​s​e​r​v​i​d​o​r​.
+   * P​r​e​s​t​e​ ​a​t​e​n​ç​ã​o​ ​n​a​s​ ​p​e​r​m​i​s​s​õ​e​s
    */
-  MODERATION_LIMIT_CONFIG_LIST_EMPTY: string;
+  MODERATION_LIMIT_CONFIG_ATTENTION: string;
   /**
-   * {​r​o​l​e​I​d​}​ ​*​*​ ​•​ ​*​*​ ​{​k​i​n​d​|​{​A​n​y​:​ ​Q​u​a​l​q​u​e​r​ ​A​ç​ã​o​,​ ​B​a​n​:​ ​B​a​n​i​m​e​n​t​o​,​ ​K​i​c​k​:​ ​E​x​p​u​l​s​ã​o​,​ ​M​u​t​e​:​ ​S​i​l​e​n​c​i​a​m​e​n​t​o​,​ ​W​a​r​n​:​ ​A​v​i​s​o​}​}​ ​*​*​ ​•​ ​*​*​ ​{​a​m​o​u​n​t​}​ ​*​*​ ​•​ ​*​*​ ​{​e​x​p​i​r​e​s​I​n​}
-   * @param {number} amount
-   * @param {number} expiresIn
-   * @param {'Any' | 'Ban' | 'Kick' | 'Mute' | 'Warn'} kind
-   * @param {string} roleId
+   * *​*​P​a​r​a​ ​u​s​a​r​ ​e​s​t​e​ ​r​e​c​u​r​s​o​ ​c​o​r​r​e​t​a​m​e​n​t​e​,​ ​o​ ​m​o​d​e​r​a​d​o​r​ ​n​ã​o​ ​p​o​d​e​ ​t​e​r​ ​a​ ​p​e​r​m​i​s​s​ã​o​ ​e​m​ ​q​u​e​s​t​ã​o​*​*​ ​(​p​o​r​ ​e​x​e​m​p​l​o​,​ ​s​e​ ​v​o​c​ê​ ​c​o​n​f​i​g​u​r​a​r​ ​o​ ​l​i​m​i​t​e​ ​d​e​ ​b​a​n​i​m​e​n​t​o​s​ ​p​a​r​a​ ​3​/​h​o​r​a​,​ ​o​ ​m​o​d​e​r​a​d​o​r​ ​n​ã​o​ ​p​o​d​e​ ​t​e​r​ ​a​ ​p​e​r​m​i​s​s​ã​o​ ​d​e​ ​b​a​n​i​r​ ​m​e​m​b​r​o​s​)​,​ ​p​o​i​s​ ​e​u​ ​s​e​r​e​i​ ​u​m​ ​i​n​t​e​r​m​e​d​i​á​r​i​o​ ​q​u​e​ ​i​r​á​ ​a​p​l​i​c​a​r​ ​a​s​ ​p​u​n​i​ç​õ​e​s​.
    */
-  MODERATION_LIMIT_CONFIG_LIST_ITEM: RequiredParams<
-    | 'amount'
-    | 'expiresIn'
-    | `kind|{Any:${string}, Ban:${string}, Kick:${string}, Mute:${string}, Warn:${string}}`
-    | 'roleId'
-  >;
-  /**
-   * C​a​r​g​o​ ​(​I​D​)​ ​•​ ​T​i​p​o​ ​•​ ​Q​u​a​n​t​i​d​a​d​e​ ​•​ ​T​e​m​p​o​ ​(​S​e​g​u​n​d​o​s​)
-   */
-  MODERATION_LIMIT_CONFIG_LIST_ITEM_FOOTER: string;
-  /**
-   * �​�​ ​ ​ ​R​e​s​t​r​i​ç​õ​e​s​ ​d​e​ ​C​a​r​g​o
-   */
-  MODERATION_LIMIT_CONFIG_LIST_TITLE: string;
-  /**
-   * A​ ​r​e​m​o​ç​ã​o​ ​d​a​s​ ​r​e​s​t​r​i​ç​õ​e​s​ ​f​o​i​ ​c​a​n​c​e​l​a​d​a​.
-   */
-  MODERATION_LIMIT_CONFIG_PURGE_CANCELED: string;
-  /**
-   * V​o​c​ê​ ​t​e​m​ ​c​e​r​t​e​z​a​ ​q​u​e​ ​d​e​s​e​j​a​ ​r​e​m​o​v​e​r​ ​t​o​d​a​s​ ​a​s​ ​r​e​s​t​r​i​ç​õ​e​s​ ​d​e​ ​c​a​r​g​o​?
-   */
-  MODERATION_LIMIT_CONFIG_PURGE_CONFIRMATION: string;
-  /**
-   * T​o​d​a​s​ ​a​s​ ​r​e​s​t​r​i​ç​õ​e​s​ ​f​o​r​a​m​ ​r​e​m​o​v​i​d​a​s​.
-   */
-  MODERATION_LIMIT_CONFIG_PURGE_SUCCESS: string;
+  MODERATION_LIMIT_CONFIG_ATTENTION_DESCRIPTION: string;
   /**
    * C​r​i​a​r​ ​R​e​s​t​r​i​ç​ã​o
    */
@@ -336,21 +238,46 @@ type RootTranslation = {
    */
   MODERATION_LIMIT_CONFIG_SELECT_OPTION_PURGE_DESCRIPTION: string;
   /**
-   * �​�​ ​C​o​n​f​i​g​u​r​a​ç​õ​e​s​ ​d​e​ ​R​e​s​t​r​i​ç​ã​o​ ​d​e​ ​M​o​d​e​r​a​d​o​r​e​s
+   * L​i​m​i​t​a​ ​o​ ​n​ú​m​e​r​o​ ​d​e​ ​{​0​|​{​A​n​y​:​ ​t​o​d​a​s​ ​a​ç​õ​e​s​,​ ​B​a​n​:​ ​b​a​n​i​m​e​n​t​o​s​,​ ​K​i​c​k​:​ ​e​x​p​u​l​s​õ​e​s​,​ ​M​u​t​e​:​ ​s​i​l​e​n​c​i​a​m​e​n​t​o​s​,​ ​W​a​r​n​:​ ​a​d​v​e​r​t​ê​n​c​i​a​s​}​}​ ​q​u​e​ ​u​m​ ​m​o​d​e​r​a​d​o​r​ ​p​o​d​e​ ​a​p​l​i​c​a​r​.
+   * @param {'Any' | 'Ban' | 'Kick' | 'Mute' | 'Warn'} 0
    */
-  MODERATION_LIMIT_CONFIG_TITLE: string;
+  MODERATION_LIMIT_CONFIG_CREATE_DESCRIPTION: RequiredParams<`0|{Any:${string}, Ban:${string}, Kick:${string}, Mute:${string}, Warn:${string}}`>;
   /**
-   * V​o​c​ê​ ​n​ã​o​ ​p​o​d​e​ ​e​x​e​c​u​t​a​r​ ​e​s​s​a​ ​a​ç​ã​o​ ​p​o​i​s​ ​p​o​s​s​u​i​ ​a​ ​r​e​s​t​r​i​ç​ã​o​ ​d​o​ ​t​i​p​o​ ​{​k​i​n​d​|​{​B​a​n​:​ ​b​a​n​i​m​e​n​t​o​,​ ​K​i​c​k​:​ ​e​x​p​u​l​s​ã​o​,​ ​M​u​t​e​:​ ​s​i​l​e​n​c​i​a​m​e​n​t​o​,​ ​W​a​r​n​:​ ​a​v​i​s​o​}​}​ ​a​t​i​v​a​ ​(​u​s​o​u​ ​{​u​s​e​d​}​ ​d​e​ ​{​l​i​m​i​t​}​)​,​ ​t​e​n​t​e​ ​n​o​v​a​m​e​n​t​e​ ​{​r​e​m​a​i​n​i​n​g​T​i​m​e​|​d​R​e​l​a​t​i​v​e​T​i​m​e​}​.
-   * @param {'Ban' | 'Kick' | 'Mute' | 'Warn'} kind
-   * @param {unknown} limit
-   * @param {Date} remainingTime
-   * @param {unknown} used
+   * Q​u​e​ ​t​i​p​o​ ​d​e​ ​r​e​s​t​r​i​ç​ã​o​ ​v​o​c​ê​ ​d​e​s​e​j​a​ ​a​d​i​c​i​o​n​a​r​?
    */
-  MODERATION_LIMITATION_LIMIT_REACHED: RequiredParams<
-    | `kind|{Ban:${string}, Kick:${string}, Mute:${string}, Warn:${string}}`
-    | 'limit'
-    | 'remainingTime|dRelativeTime'
-    | 'used'
+  MODERATION_LIMIT_CONFIG_CREATE_WHICH_TYPE_OF_LIMITATION: string;
+  /**
+   * S​e​l​e​c​i​o​n​e​ ​o​ ​t​i​p​o​ ​d​e​ ​r​e​s​t​r​i​ç​ã​o
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_WHICH_TYPE_OF_LIMITATION_PLACEHOLDER: string;
+  /**
+   * �​�​ ​A​d​i​c​i​o​n​a​r​ ​R​e​s​t​r​i​ç​ã​o
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_ADD_LIMITATION_TITLE: string;
+  /**
+   * C​l​i​q​u​e​ ​n​o​ ​b​o​t​ã​o​ ​a​b​a​i​x​o​ ​p​a​r​a​ ​c​r​i​a​r​ ​u​m​a​ ​n​o​v​a​ ​r​e​s​t​r​i​ç​ã​o​ ​p​a​r​a​ ​u​m​ ​c​a​r​g​o​.
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_ADD_LIMITATION_QUESTION: string;
+  /**
+   * I​D​ ​d​o​ ​C​a​r​g​o
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_ADD_LIMITATION_ROLE_ID_LABEL: string;
+  /**
+   * Q​u​a​n​t​i​d​a​d​e
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_ADD_LIMITATION_AMOUNT_LABEL: string;
+  /**
+   * E​x​p​i​r​a​ ​e​m​ ​(​s​e​g​u​n​d​o​s​)
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_ADD_LIMITATION_EXPIRES_IN_LABEL: string;
+  /**
+   * A​ ​r​e​s​t​r​i​ç​ã​o​ ​f​o​i​ ​a​d​i​c​i​o​n​a​d​a​ ​c​o​m​ ​s​u​c​e​s​s​o​,​ ​e​l​a​ ​s​e​ ​a​p​l​i​c​a​r​á​ ​a​o​s​ ​m​e​m​b​r​o​s​ ​c​o​m​ ​o​ ​c​a​r​g​o​ ​{​r​o​l​e​}​ ​a​ ​c​a​d​a​ ​{​a​m​o​u​n​t​}​ ​v​e​z​e​s​ ​q​u​e​ ​f​o​r​e​m​ ​u​s​a​r​ ​o​ ​c​o​m​a​n​d​o​,​ ​p​o​r​ ​{​e​x​p​i​r​e​s​I​n​}​ ​s​e​g​u​n​d​o​s​.
+   * @param {string} amount
+   * @param {string} expiresIn
+   * @param {string} role
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_SUCCESS: RequiredParams<
+    'amount' | 'expiresIn' | 'role'
   >;
   /**
    * S​e​l​e​c​i​o​n​e​ ​a​ ​r​e​s​t​r​i​ç​ã​o​ ​q​u​e​ ​v​o​c​ê​ ​d​e​s​e​j​a​ ​d​e​l​e​t​a​r
@@ -361,12 +288,22 @@ type RootTranslation = {
    */
   MODERATION_LIMIT_CONFIG_DELETE_QUESTION: string;
   /**
+   * {​r​o​l​e​}​ ​•​ ​{​k​i​n​d​}​ ​•​ ​{​a​m​o​u​n​t​}​ ​•​ ​{​e​x​p​i​r​e​s​I​n​}​s
+   * @param {number} amount
+   * @param {number} expiresIn
+   * @param {string} kind
+   * @param {string} role
+   */
+  MODERATION_LIMIT_CONFIG_DELETE_CHOICE_LABEL: RequiredParams<
+    'amount' | 'expiresIn' | 'kind' | 'role'
+  >;
+  /**
    * V​o​c​ê​ ​t​e​m​ ​c​e​r​t​e​z​a​ ​q​u​e​ ​d​e​s​e​j​a​ ​d​e​l​e​t​a​r​ ​a​ ​r​e​s​t​r​i​ç​ã​o​ ​d​e​ ​c​a​r​g​o​ ​{​r​o​l​e​}​?
    * @param {string} role
    */
   MODERATION_LIMIT_CONFIG_DELETE_CONFIRMATION: RequiredParams<'role'>;
   /**
-   * A​ ​r​e​m​o​ç​ã​o​ ​d​a​ ​r​e​s​t​r​i​ç​ã​o​ ​f​o​i​ ​c​a​n​c​e​l​a​d​a​.
+   * A​ ​r​e​m​o​ç​ã​o​ ​d​a​ ​r​e​s​t​r​i​ç​ã​o​ ​f​o​i​ ​c​a​n​c​e​l​a​d​a​.​ ​N​a​d​a​ ​f​o​i​ ​r​e​m​o​v​i​d​o​.
    */
   MODERATION_LIMIT_CONFIG_DELETE_CANCELLED: string;
   /**
@@ -374,9 +311,43 @@ type RootTranslation = {
    */
   MODERATION_LIMIT_CONFIG_DELETE_SUCCESS: string;
   /**
-   * O​ ​c​a​r​g​o​ ​s​e​l​e​c​i​o​n​a​d​o​ ​n​ã​o​ ​e​x​i​s​t​e​ ​o​u​ ​n​ã​o​ ​t​e​n​h​o​ ​p​e​r​m​i​s​s​ã​o​ ​p​a​r​a​ ​v​ê​-​l​o​.
+   * V​o​c​ê​ ​t​e​m​ ​c​e​r​t​e​z​a​ ​q​u​e​ ​d​e​s​e​j​a​ ​*​*​D​E​L​E​T​A​R​ ​T​O​D​A​S​*​*​ ​a​s​ ​r​e​s​t​r​i​ç​õ​e​s​ ​d​e​ ​c​a​r​g​o​ ​d​o​ ​s​e​r​v​i​d​o​r​?​ ​E​s​t​a​ ​a​ç​ã​o​ ​n​ã​o​ ​p​o​d​e​ ​s​e​r​ ​d​e​s​f​e​i​t​a​.
    */
-  MODERATION_LIMITATION_CREATE_ROLE_DOES_NOT_EXIST: string;
+  MODERATION_LIMIT_CONFIG_PURGE_CONFIRMATION: string;
+  /**
+   * A​ ​r​e​m​o​ç​ã​o​ ​d​a​s​ ​r​e​s​t​r​i​ç​õ​e​s​ ​f​o​i​ ​c​a​n​c​e​l​a​d​a​.​ ​N​a​d​a​ ​f​o​i​ ​r​e​m​o​v​i​d​o​.
+   */
+  MODERATION_LIMIT_CONFIG_PURGE_CANCELED: string;
+  /**
+   * A​s​ ​r​e​s​t​r​i​ç​õ​e​s​ ​f​o​r​a​m​ ​r​e​m​o​v​i​d​a​s​ ​c​o​m​ ​s​u​c​e​s​s​o​.
+   */
+  MODERATION_LIMIT_CONFIG_PURGE_SUCCESS: string;
+  /**
+   * �​�​ ​ ​ ​R​e​s​t​r​i​ç​õ​e​s​ ​d​e​ ​C​a​r​g​o
+   */
+  MODERATION_LIMIT_CONFIG_LIST_TITLE: string;
+  /**
+	 * O​ ​t​i​p​o​ ​d​e​ ​r​e​s​t​r​i​ç​ã​o​ ​d​e​t​e​r​m​i​n​a​ ​q​u​a​l​ ​a​ç​ã​o​ ​o​ ​m​o​d​e​r​a​d​o​r​ ​n​ã​o​ ​p​o​d​e​ ​f​a​z​e​r​.​ ​P​o​r​ ​e​x​e​m​p​l​o​,​ ​s​e​ ​v​o​c​ê​ ​c​o​n​f​i​g​u​r​a​r​ ​o​ ​l​i​m​i​t​e​ ​d​e​ ​b​a​n​i​m​e​n​t​o​s​ ​p​a​r​a​ ​3​/​h​o​r​a​,​ ​o​ ​m​o​d​e​r​a​d​o​r​ ​n​ã​o​ ​p​o​d​e​r​á​ ​b​a​n​i​r​ ​m​e​m​b​r​o​s​.​
+​​
+	 */
+  MODERATION_LIMIT_CONFIG_LIST_DESCRIPTION: string;
+  /**
+   * C​a​r​g​o​ ​(​I​D​)​ ​•​ ​T​i​p​o​ ​•​ ​Q​u​a​n​t​i​d​a​d​e​ ​•​ ​E​x​p​i​r​a​ ​e​m​ ​(​s​e​g​u​n​d​o​s​)
+   */
+  MODERATION_LIMIT_CONFIG_LIST_ITEM_FOOTER: string;
+  /**
+   * {​r​o​l​e​I​d​}​ ​*​*​ ​•​ ​*​*​ ​{​k​i​n​d​|​{​A​n​y​:​ ​Q​u​a​l​q​u​e​r​ ​A​ç​ã​o​,​ ​B​a​n​:​ ​B​a​n​i​m​e​n​t​o​,​ ​K​i​c​k​:​ ​E​x​p​u​l​s​ã​o​,​ ​M​u​t​e​:​ ​S​i​l​e​n​c​i​a​m​e​n​t​o​,​ ​W​a​r​n​:​ ​A​v​i​s​o​}​}​ ​*​*​ ​•​ ​*​*​ ​{​a​m​o​u​n​t​}​ ​*​*​ ​•​ ​*​*​ ​{​e​x​p​i​r​e​s​I​n​}
+   * @param {number} amount
+   * @param {number} expiresIn
+   * @param {'Any' | 'Ban' | 'Kick' | 'Mute' | 'Warn'} kind
+   * @param {string} roleId
+   */
+  MODERATION_LIMIT_CONFIG_LIST_ITEM: RequiredParams<
+    | 'amount'
+    | 'expiresIn'
+    | `kind|{Any:${string}, Ban:${string}, Kick:${string}, Mute:${string}, Warn:${string}}`
+    | 'roleId'
+  >;
 };
 
 export type NamespaceERRORSTranslation = {
@@ -397,11 +368,11 @@ export type NamespaceERRORSTranslation = {
    */
   GUARD_HAS_PERMISSIONS_CLIENT: string;
   /**
-   * O​ ​s​e​r​v​i​d​o​r​ ​j​á​ ​e​s​t​á​ ​e​m​ ​q​u​a​r​e​n​t​e​n​a​.
+   * O​ ​s​e​r​v​i​d​o​r​ ​j​á​ ​e​s​t​á​ ​e​m​ ​q​u​a​r​e​n​t​e​n​a​.​ ​T​a​l​v​e​z​ ​v​o​c​ê​ ​q​u​e​i​r​a​ ​u​s​a​r​ ​o​ ​c​o​m​a​n​d​o​ ​`​u​n​q​u​a​r​a​n​t​i​n​e​`​?
    */
   ADMINISTRATION_QUARANTINE_ALREADY_QUARANTINED: string;
   /**
-   * O​ ​s​e​r​v​i​d​o​r​ ​n​ã​o​ ​e​s​t​á​ ​e​m​ ​q​u​a​r​e​n​t​e​n​a​.
+   * O​ ​s​e​r​v​i​d​o​r​ ​n​ã​o​ ​e​s​t​á​ ​e​m​ ​q​u​a​r​e​n​t​e​n​a​.​ ​T​a​l​v​e​z​ ​v​o​c​ê​ ​q​u​e​i​r​a​ ​u​s​a​r​ ​o​ ​c​o​m​a​n​d​o​ ​`​q​u​a​r​a​n​t​i​n​e​`​?
    */
   ADMINISTRATION_UNQUARANTINE_NOT_QUARANTINED: string;
   /**
@@ -428,6 +399,18 @@ export type NamespaceERRORSTranslation = {
    * P​u​n​i​ç​ã​o​ ​n​ã​o​ ​e​n​c​o​n​t​r​a​d​a​.​ ​V​e​r​i​f​i​q​u​e​ ​s​e​ ​o​ ​I​D​ ​e​s​t​á​ ​c​o​r​r​e​t​o​.
    */
   MODERATION_GENERIC_PUNISHMENT_NOT_FOUND: string;
+  /**
+   * O​ ​c​a​r​g​o​ ​q​u​e​ ​v​o​c​ê​ ​e​s​t​á​ ​t​e​n​t​a​n​d​o​ ​c​r​i​a​r​ ​n​ã​o​ ​e​x​i​s​t​e​ ​o​u​ ​n​ã​o​ ​t​e​n​h​o​ ​p​e​r​m​i​s​s​õ​e​s​ ​p​a​r​a​ ​v​ê​-​l​o​.
+   */
+  MODERATION_LIMITATION_CREATE_ROLE_DOES_NOT_EXIST: string;
+  /**
+   * J​á​ ​e​x​i​s​t​e​ ​u​m​a​ ​r​e​s​t​r​i​ç​ã​o​ ​d​e​s​s​e​ ​t​i​p​o​ ​p​a​r​a​ ​e​s​t​e​ ​c​a​r​g​o​.​ ​T​a​l​v​e​z​ ​v​o​c​ê​ ​q​u​e​i​r​a​ ​e​d​i​t​a​r​ ​a​ ​r​e​s​t​r​i​ç​ã​o​ ​e​x​i​s​t​e​n​t​e​?​ ​S​e​l​e​c​i​o​n​a​ ​a​ ​o​p​ç​ã​o​ ​"​L​i​s​t​a​r​ ​R​e​s​t​r​i​ç​ã​o​"​ ​n​o​ ​m​e​n​u​ ​a​n​t​e​r​i​o​r​ ​e​ ​s​e​l​e​c​i​o​n​e​ ​a​ ​r​e​s​t​r​i​ç​ã​o​ ​q​u​e​ ​v​o​c​ê​ ​d​e​s​e​j​a​ ​e​d​i​t​a​r​.
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_ALREADY_EXISTS: string;
+  /**
+   * N​ã​o​ ​h​á​ ​c​o​n​f​i​g​u​r​a​ç​õ​e​s​ ​d​e​ ​l​i​m​i​t​e​ ​d​e​f​i​n​i​d​a​s​.
+   */
+  MODERATION_LIMIT_CONFIG_LIST_EMPTY: string;
 };
 
 export type NamespaceSLASHTranslation = {
@@ -439,6 +422,22 @@ export type NamespaceSLASHTranslation = {
    * C​o​m​a​n​d​o​s​ ​d​e​ ​c​o​n​f​i​g​u​r​a​ç​ã​o​.
    */
   CONFIG_DESCRIPTION: string;
+  /**
+   * q​u​a​r​e​n​t​e​n​a
+   */
+  ADMINISTRATION_QUARANTINE_NAME: string;
+  /**
+   * C​o​l​o​c​a​ ​o​ ​s​e​r​v​i​d​o​r​ ​e​m​ ​q​u​a​r​e​n​t​e​n​a​.
+   */
+  ADMINISTRATION_QUARANTINE_DESCRIPTION: string;
+  /**
+   * r​e​m​o​v​e​r​-​q​u​a​r​e​n​t​e​n​a
+   */
+  ADMINISTRATION_UNQUARANTINE_NAME: string;
+  /**
+   * R​e​m​o​v​e​ ​o​ ​s​e​r​v​i​d​o​r​ ​d​a​ ​q​u​a​r​e​n​t​e​n​a​.
+   */
+  ADMINISTRATION_UNQUARANTINE_DESCRIPTION: string;
   /**
    * c​a​n​a​l
    */
@@ -484,7 +483,7 @@ export type NamespaceSLASHTranslation = {
    */
   MODERATION_GENERIC_OPTION_ATTACHMENTS_NAME: string;
   /**
-   * O​s​ ​a​n​e​x​o​s​ ​p​a​r​a​ ​a​p​l​i​c​a​r​ ​o​ ​c​o​m​a​n​d​o​.
+   * O​s​ ​a​n​e​x​o​s​ ​(​U​R​L​s​)​ ​p​a​r​a​ ​a​p​l​i​c​a​r​ ​o​ ​c​o​m​a​n​d​o​.
    */
   MODERATION_GENERIC_OPTION_ATTACHMENTS_DESCRIPTION: string;
   /**
@@ -500,7 +499,7 @@ export type NamespaceSLASHTranslation = {
    */
   MODERATION_GENERIC_OPTION_DURATION_NAME: string;
   /**
-   * A​ ​d​u​r​a​ç​ã​o​ ​p​a​r​a​ ​a​p​l​i​c​a​r​ ​o​ ​c​o​m​a​n​d​o​.
+   * P​o​r​ ​q​u​a​n​t​o​ ​t​e​m​p​o​ ​a​ ​p​u​n​i​ç​ã​o​ ​d​e​v​e​ ​d​u​r​a​r​.
    */
   MODERATION_GENERIC_OPTION_DURATION_DESCRIPTION: string;
   /**
@@ -659,17 +658,17 @@ export type TranslationFunctions = {
    */
   INQUIRER_CONFIRMATION_NO: () => LocalizedString;
   /**
-   * Primeira
+   * Próxima
    */
-  PAGINATION_FIRST: () => LocalizedString;
+  PAGINATION_NEXT: () => LocalizedString;
   /**
    * Anterior
    */
   PAGINATION_PREVIOUS: () => LocalizedString;
   /**
-   * Próxima
+   * Primeira
    */
-  PAGINATION_NEXT: () => LocalizedString;
+  PAGINATION_FIRST: () => LocalizedString;
   /**
    * Última
    */
@@ -683,7 +682,7 @@ export type TranslationFunctions = {
    */
   ADMINISTRATION_QUARANTINE_CANCELLED: () => LocalizedString;
   /**
-   * O servidor foi colocado em quarentena com sucesso.
+   * O servidor foi colocado em quarentena com sucesso. Use o comando `unquarantine` para removê-lo.
    */
   ADMINISTRATION_QUARANTINE_SUCCESS: () => LocalizedString;
   /**
@@ -695,7 +694,7 @@ export type TranslationFunctions = {
    */
   CUSTOMVOICE_SUCCESS_SETUP: () => LocalizedString;
   /**
-   * Modelo de canal de voz personalizado atualizado com sucesso. Saiba que você pode usar as variáveis $USER e $COUNT para criar um nome dinâmico.
+   * Modelo de canal de voz personalizado atualizado com sucesso. Saiba que você pode usar as variáveis `$USER` e `$COUNT` para criar um nome dinâmico.
    */
   CUSTOMVOICE_SUCCESS_UPDATE_TEMPLATE: () => LocalizedString;
   /**
@@ -703,29 +702,29 @@ export type TranslationFunctions = {
    */
   MODERATION_GENERIC_DEFAULT_REASON: () => LocalizedString;
   /**
-   * O membro foi punido com sucesso e não foi notificado.
-   */
-  MODERATION_GENERIC_PUNISHMENT_SILENT_SUCCESS: () => LocalizedString;
-  /**
    * Ver {0} anexo{{s}}
    */
   MODERATION_GENERIC_GET_ATTACHMENT_BUTTON_LABEL: (
     arg0: number
   ) => LocalizedString;
   /**
+   * O membro foi punido com sucesso e não foi notificado.
+   */
+  MODERATION_GENERIC_PUNISHMENT_SILENT_SUCCESS: () => LocalizedString;
+  /**
+   * Se você acha que essa punição foi injusta, você pode contestá-la clicando no botão abaixo.
+   */
+  MODERATION_GENERIC_APPEAL_FOOTER: () => LocalizedString;
+  /**
    * Contestar
    */
   MODERATION_GENERIC_APPEAL_BUTTON_LABEL: () => LocalizedString;
   /**
-   * Você pode contestar essa punição clicando no botão abaixo.
-   */
-  MODERATION_GENERIC_APPEAL_FOOTER: () => LocalizedString;
-  /**
-   * O membro foi punido com sucesso.
+   * O membro foi punido com sucesso e notificado por DM.
    */
   MODERATION_GENERIC_PUNISHMENT_SUCCESS: () => LocalizedString;
   /**
-   * O membro foi punido com sucesso, mas não consegui enviar uma mensagem privada.
+   * O membro foi punido com sucesso, mas não consegui enviar uma DM (talvez as DMs estejam desativadas).
    */
   MODERATION_GENERIC_PUNISHMENT_SUCCESS_NO_DM: () => LocalizedString;
   /**
@@ -744,10 +743,6 @@ export type TranslationFunctions = {
     reason: string;
   }) => LocalizedString;
   /**
-   * A punição foi desfeita com sucesso.
-   */
-  MODERATION_UNDO_SUCCESS: () => LocalizedString;
-  /**
    * Não há punições registradas para {member} no servidor.
    */
   MODERATION_LOGS_NO_PUNISHMENTS: (arg: { member: string }) => LocalizedString;
@@ -760,78 +755,19 @@ export type TranslationFunctions = {
    */
   MODERATION_LOGS_INFRACTIONS_OF: (arg: { member: string }) => LocalizedString;
   /**
+   * A punição foi desfeita com sucesso.
+   */
+  MODERATION_UNDO_SUCCESS: () => LocalizedString;
+  /**
    * {0|{Any: Qualquer Ação, Ban: Banimento, Kick: Expulsão, Mute: Silenciamento, Warn: Aviso}}
    */
   MODERATION_LIMITATION_KIND: (
     arg0: 'Any' | 'Ban' | 'Kick' | 'Mute' | 'Warn'
   ) => LocalizedString;
   /**
-   * Preste atenção nas permissões
+   * 🚏 Configurações de Restrição de Moderadores
    */
-  MODERATION_LIMIT_CONFIG_ATTENTION: () => LocalizedString;
-  /**
-   * **Para usar este recurso corretamente, o moderador não pode ter a permissão em questão** (por exemplo, se você configurar o limite de banimentos para 3/hora, o moderador não pode ter a permissão de banir membros), pois eu serei um intermediário que irá aplicar as punições.
-   */
-  MODERATION_LIMIT_CONFIG_ATTENTION_DESCRIPTION: () => LocalizedString;
-  /**
-   * Quantidade
-   */
-  MODERATION_LIMIT_CONFIG_CREATE_ADD_LIMITATION_AMOUNT_LABEL: () => LocalizedString;
-  /**
-   * Tempo (Segundos)
-   */
-  MODERATION_LIMIT_CONFIG_CREATE_ADD_LIMITATION_EXPIRES_IN_LABEL: () => LocalizedString;
-  /**
-   * Clique no botão abaixo para abrir o painel de criação de restrição de cargo.
-   */
-  MODERATION_LIMIT_CONFIG_CREATE_ADD_LIMITATION_QUESTION: () => LocalizedString;
-  /**
-   * ID do Cargo
-   */
-  MODERATION_LIMIT_CONFIG_CREATE_ADD_LIMITATION_ROLE_ID_LABEL: () => LocalizedString;
-  /**
-   * 🚏 Adicionar Restrição de Moderador
-   */
-  MODERATION_LIMIT_CONFIG_CREATE_ADD_LIMITATION_TITLE: () => LocalizedString;
-  /**
-   * Já existe uma restrição desse tipo para este cargo. Talvez você queira editar a restrição existente? Seleciona a opção "Listar Restrição" no menu anterior e selecione a restrição que você deseja editar.
-   */
-  MODERATION_LIMIT_CONFIG_CREATE_ALREADY_EXISTS: () => LocalizedString;
-  /**
-   * Limita o número de {0|{Any: todas ações, Ban: banimentos, Kick: expulsões, Mute: silenciamentos, Warn: advertências}} que um moderador pode aplicar.
-   */
-  MODERATION_LIMIT_CONFIG_CREATE_DESCRIPTION: (
-    arg0: 'Any' | 'Ban' | 'Kick' | 'Mute' | 'Warn'
-  ) => LocalizedString;
-  /**
-   * A restrição foi adicionada com sucesso, ela se aplicará aos membros com o cargo {role} a cada {amount} vezes que forem usar o comando, por {expiresIn} segundos.
-   */
-  MODERATION_LIMIT_CONFIG_CREATE_SUCCESS: (arg: {
-    amount: string;
-    expiresIn: string;
-    role: string;
-  }) => LocalizedString;
-  /**
-   * Limita o número de avisos que um moderador pode aplicar.
-   */
-  MODERATION_LIMIT_CONFIG_CREATE_WARNINGS_DESCRIPTION: () => LocalizedString;
-  /**
-   * Qual tipo de restrição você deseja adicionar?
-   */
-  MODERATION_LIMIT_CONFIG_CREATE_WHICH_TYPE_OF_LIMITATION: () => LocalizedString;
-  /**
-   * Selecione o tipo de restrição
-   */
-  MODERATION_LIMIT_CONFIG_CREATE_WHICH_TYPE_OF_LIMITATION_PLACEHOLDER: () => LocalizedString;
-  /**
-   * {role} • {kind} • {amount} • {expiresIn}s
-   */
-  MODERATION_LIMIT_CONFIG_DELETE_CHOICE_LABEL: (arg: {
-    amount: number;
-    expiresIn: number;
-    kind: string;
-    role: string;
-  }) => LocalizedString;
+  MODERATION_LIMIT_CONFIG_TITLE: () => LocalizedString;
   /**
 	 * Com este recurso, você pode configurar o número de punições que um moderador consegue aplicar em um período de tempo determinado.
 
@@ -840,43 +776,13 @@ Se o número de ações for excedido, o moderador será bloqueado de aplicar nov
 	 */
   MODERATION_LIMIT_CONFIG_DESCRIPTION: () => LocalizedString;
   /**
-	 * O tipo de restrição determina qual ação o moderador não pode fazer. Por exemplo, se você configurar o limite de banimentos para 3/hora, o moderador não poderá banir membros.
-​
-	 */
-  MODERATION_LIMIT_CONFIG_LIST_DESCRIPTION: () => LocalizedString;
-  /**
-   * Não há restrições de cargo configuradas neste servidor.
+   * Preste atenção nas permissões
    */
-  MODERATION_LIMIT_CONFIG_LIST_EMPTY: () => LocalizedString;
+  MODERATION_LIMIT_CONFIG_ATTENTION: () => LocalizedString;
   /**
-   * {roleId} ** • ** {kind|{Any: Qualquer Ação, Ban: Banimento, Kick: Expulsão, Mute: Silenciamento, Warn: Aviso}} ** • ** {amount} ** • ** {expiresIn}
+   * **Para usar este recurso corretamente, o moderador não pode ter a permissão em questão** (por exemplo, se você configurar o limite de banimentos para 3/hora, o moderador não pode ter a permissão de banir membros), pois eu serei um intermediário que irá aplicar as punições.
    */
-  MODERATION_LIMIT_CONFIG_LIST_ITEM: (arg: {
-    amount: number;
-    expiresIn: number;
-    kind: 'Any' | 'Ban' | 'Kick' | 'Mute' | 'Warn';
-    roleId: string;
-  }) => LocalizedString;
-  /**
-   * Cargo (ID) • Tipo • Quantidade • Tempo (Segundos)
-   */
-  MODERATION_LIMIT_CONFIG_LIST_ITEM_FOOTER: () => LocalizedString;
-  /**
-   * 🚏   Restrições de Cargo
-   */
-  MODERATION_LIMIT_CONFIG_LIST_TITLE: () => LocalizedString;
-  /**
-   * A remoção das restrições foi cancelada.
-   */
-  MODERATION_LIMIT_CONFIG_PURGE_CANCELED: () => LocalizedString;
-  /**
-   * Você tem certeza que deseja remover todas as restrições de cargo?
-   */
-  MODERATION_LIMIT_CONFIG_PURGE_CONFIRMATION: () => LocalizedString;
-  /**
-   * Todas as restrições foram removidas.
-   */
-  MODERATION_LIMIT_CONFIG_PURGE_SUCCESS: () => LocalizedString;
+  MODERATION_LIMIT_CONFIG_ATTENTION_DESCRIPTION: () => LocalizedString;
   /**
    * Criar Restrição
    */
@@ -910,17 +816,46 @@ Se o número de ações for excedido, o moderador será bloqueado de aplicar nov
    */
   MODERATION_LIMIT_CONFIG_SELECT_OPTION_PURGE_DESCRIPTION: () => LocalizedString;
   /**
-   * 🚏 Configurações de Restrição de Moderadores
+   * Limita o número de {0|{Any: todas ações, Ban: banimentos, Kick: expulsões, Mute: silenciamentos, Warn: advertências}} que um moderador pode aplicar.
    */
-  MODERATION_LIMIT_CONFIG_TITLE: () => LocalizedString;
+  MODERATION_LIMIT_CONFIG_CREATE_DESCRIPTION: (
+    arg0: 'Any' | 'Ban' | 'Kick' | 'Mute' | 'Warn'
+  ) => LocalizedString;
   /**
-   * Você não pode executar essa ação pois possui a restrição do tipo {kind|{Ban: banimento, Kick: expulsão, Mute: silenciamento, Warn: aviso}} ativa (usou {used} de {limit}), tente novamente {remainingTime|dRelativeTime}.
+   * Que tipo de restrição você deseja adicionar?
    */
-  MODERATION_LIMITATION_LIMIT_REACHED: (arg: {
-    kind: 'Ban' | 'Kick' | 'Mute' | 'Warn';
-    limit: unknown;
-    remainingTime: Date;
-    used: unknown;
+  MODERATION_LIMIT_CONFIG_CREATE_WHICH_TYPE_OF_LIMITATION: () => LocalizedString;
+  /**
+   * Selecione o tipo de restrição
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_WHICH_TYPE_OF_LIMITATION_PLACEHOLDER: () => LocalizedString;
+  /**
+   * 🚏 Adicionar Restrição
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_ADD_LIMITATION_TITLE: () => LocalizedString;
+  /**
+   * Clique no botão abaixo para criar uma nova restrição para um cargo.
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_ADD_LIMITATION_QUESTION: () => LocalizedString;
+  /**
+   * ID do Cargo
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_ADD_LIMITATION_ROLE_ID_LABEL: () => LocalizedString;
+  /**
+   * Quantidade
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_ADD_LIMITATION_AMOUNT_LABEL: () => LocalizedString;
+  /**
+   * Expira em (segundos)
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_ADD_LIMITATION_EXPIRES_IN_LABEL: () => LocalizedString;
+  /**
+   * A restrição foi adicionada com sucesso, ela se aplicará aos membros com o cargo {role} a cada {amount} vezes que forem usar o comando, por {expiresIn} segundos.
+   */
+  MODERATION_LIMIT_CONFIG_CREATE_SUCCESS: (arg: {
+    amount: string;
+    expiresIn: string;
+    role: string;
   }) => LocalizedString;
   /**
    * Selecione a restrição que você deseja deletar
@@ -931,13 +866,22 @@ Se o número de ações for excedido, o moderador será bloqueado de aplicar nov
    */
   MODERATION_LIMIT_CONFIG_DELETE_QUESTION: () => LocalizedString;
   /**
+   * {role} • {kind} • {amount} • {expiresIn}s
+   */
+  MODERATION_LIMIT_CONFIG_DELETE_CHOICE_LABEL: (arg: {
+    amount: number;
+    expiresIn: number;
+    kind: string;
+    role: string;
+  }) => LocalizedString;
+  /**
    * Você tem certeza que deseja deletar a restrição de cargo {role}?
    */
   MODERATION_LIMIT_CONFIG_DELETE_CONFIRMATION: (arg: {
     role: string;
   }) => LocalizedString;
   /**
-   * A remoção da restrição foi cancelada.
+   * A remoção da restrição foi cancelada. Nada foi removido.
    */
   MODERATION_LIMIT_CONFIG_DELETE_CANCELLED: () => LocalizedString;
   /**
@@ -945,9 +889,39 @@ Se o número de ações for excedido, o moderador será bloqueado de aplicar nov
    */
   MODERATION_LIMIT_CONFIG_DELETE_SUCCESS: () => LocalizedString;
   /**
-   * O cargo selecionado não existe ou não tenho permissão para vê-lo.
+   * Você tem certeza que deseja **DELETAR TODAS** as restrições de cargo do servidor? Esta ação não pode ser desfeita.
    */
-  MODERATION_LIMITATION_CREATE_ROLE_DOES_NOT_EXIST: () => LocalizedString;
+  MODERATION_LIMIT_CONFIG_PURGE_CONFIRMATION: () => LocalizedString;
+  /**
+   * A remoção das restrições foi cancelada. Nada foi removido.
+   */
+  MODERATION_LIMIT_CONFIG_PURGE_CANCELED: () => LocalizedString;
+  /**
+   * As restrições foram removidas com sucesso.
+   */
+  MODERATION_LIMIT_CONFIG_PURGE_SUCCESS: () => LocalizedString;
+  /**
+   * 🚏   Restrições de Cargo
+   */
+  MODERATION_LIMIT_CONFIG_LIST_TITLE: () => LocalizedString;
+  /**
+	 * O tipo de restrição determina qual ação o moderador não pode fazer. Por exemplo, se você configurar o limite de banimentos para 3/hora, o moderador não poderá banir membros.
+​
+	 */
+  MODERATION_LIMIT_CONFIG_LIST_DESCRIPTION: () => LocalizedString;
+  /**
+   * Cargo (ID) • Tipo • Quantidade • Expira em (segundos)
+   */
+  MODERATION_LIMIT_CONFIG_LIST_ITEM_FOOTER: () => LocalizedString;
+  /**
+   * {roleId} ** • ** {kind|{Any: Qualquer Ação, Ban: Banimento, Kick: Expulsão, Mute: Silenciamento, Warn: Aviso}} ** • ** {amount} ** • ** {expiresIn}
+   */
+  MODERATION_LIMIT_CONFIG_LIST_ITEM: (arg: {
+    amount: number;
+    expiresIn: number;
+    kind: 'Any' | 'Ban' | 'Kick' | 'Mute' | 'Warn';
+    roleId: string;
+  }) => LocalizedString;
   ERRORS: {
     /**
      * Tempo esgotado.
@@ -966,11 +940,11 @@ Se o número de ações for excedido, o moderador será bloqueado de aplicar nov
      */
     GUARD_HAS_PERMISSIONS_CLIENT: () => LocalizedString;
     /**
-     * O servidor já está em quarentena.
+     * O servidor já está em quarentena. Talvez você queira usar o comando `unquarantine`?
      */
     ADMINISTRATION_QUARANTINE_ALREADY_QUARANTINED: () => LocalizedString;
     /**
-     * O servidor não está em quarentena.
+     * O servidor não está em quarentena. Talvez você queira usar o comando `quarantine`?
      */
     ADMINISTRATION_UNQUARANTINE_NOT_QUARANTINED: () => LocalizedString;
     /**
@@ -997,6 +971,18 @@ Se o número de ações for excedido, o moderador será bloqueado de aplicar nov
      * Punição não encontrada. Verifique se o ID está correto.
      */
     MODERATION_GENERIC_PUNISHMENT_NOT_FOUND: () => LocalizedString;
+    /**
+     * O cargo que você está tentando criar não existe ou não tenho permissões para vê-lo.
+     */
+    MODERATION_LIMITATION_CREATE_ROLE_DOES_NOT_EXIST: () => LocalizedString;
+    /**
+     * Já existe uma restrição desse tipo para este cargo. Talvez você queira editar a restrição existente? Seleciona a opção "Listar Restrição" no menu anterior e selecione a restrição que você deseja editar.
+     */
+    MODERATION_LIMIT_CONFIG_CREATE_ALREADY_EXISTS: () => LocalizedString;
+    /**
+     * Não há configurações de limite definidas.
+     */
+    MODERATION_LIMIT_CONFIG_LIST_EMPTY: () => LocalizedString;
   };
   SLASH: {
     /**
@@ -1007,6 +993,22 @@ Se o número de ações for excedido, o moderador será bloqueado de aplicar nov
      * Comandos de configuração.
      */
     CONFIG_DESCRIPTION: () => LocalizedString;
+    /**
+     * quarentena
+     */
+    ADMINISTRATION_QUARANTINE_NAME: () => LocalizedString;
+    /**
+     * Coloca o servidor em quarentena.
+     */
+    ADMINISTRATION_QUARANTINE_DESCRIPTION: () => LocalizedString;
+    /**
+     * remover-quarentena
+     */
+    ADMINISTRATION_UNQUARANTINE_NAME: () => LocalizedString;
+    /**
+     * Remove o servidor da quarentena.
+     */
+    ADMINISTRATION_UNQUARANTINE_DESCRIPTION: () => LocalizedString;
     /**
      * canal
      */
@@ -1052,7 +1054,7 @@ Se o número de ações for excedido, o moderador será bloqueado de aplicar nov
      */
     MODERATION_GENERIC_OPTION_ATTACHMENTS_NAME: () => LocalizedString;
     /**
-     * Os anexos para aplicar o comando.
+     * Os anexos (URLs) para aplicar o comando.
      */
     MODERATION_GENERIC_OPTION_ATTACHMENTS_DESCRIPTION: () => LocalizedString;
     /**
@@ -1068,7 +1070,7 @@ Se o número de ações for excedido, o moderador será bloqueado de aplicar nov
      */
     MODERATION_GENERIC_OPTION_DURATION_NAME: () => LocalizedString;
     /**
-     * A duração para aplicar o comando.
+     * Por quanto tempo a punição deve durar.
      */
     MODERATION_GENERIC_OPTION_DURATION_DESCRIPTION: () => LocalizedString;
     /**
@@ -1154,6 +1156,4 @@ Se o número de ações for excedido, o moderador será bloqueado de aplicar nov
   };
 };
 
-export type Formatters = {
-  dRelativeTime: (value: Date) => unknown;
-};
+export type Formatters = {};

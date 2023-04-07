@@ -4,6 +4,14 @@ export default {
   CONFIG_NAME: 'config',
   CONFIG_DESCRIPTION: 'Comandos de configuração.',
 
+  // Administration
+
+  ADMINISTRATION_QUARANTINE_NAME: 'quarentena',
+  ADMINISTRATION_QUARANTINE_DESCRIPTION: 'Coloca o servidor em quarentena.',
+
+  ADMINISTRATION_UNQUARANTINE_NAME: 'remover-quarentena',
+  ADMINISTRATION_UNQUARANTINE_DESCRIPTION: 'Remove o servidor da quarentena.',
+
   // Custom Voice
 
   CUSTOMVOICE_SETUP_OPTION_CHANNEL_NAME: 'canal',
@@ -18,7 +26,7 @@ export default {
   CUSTOMVOICE_SETUP_OPTION_TEMPLATE_DESCRIPTION:
     'O nome do canal de voz que você deseja criar.',
 
-  // Moderation Generic Options
+  // Moderation (Generic Options)
 
   MODERATION_GENERIC_OPTION_MEMBER_NAME: 'membro',
   MODERATION_GENERIC_OPTION_MEMBER_DESCRIPTION:
@@ -30,7 +38,7 @@ export default {
 
   MODERATION_GENERIC_OPTION_ATTACHMENTS_NAME: 'anexos',
   MODERATION_GENERIC_OPTION_ATTACHMENTS_DESCRIPTION:
-    'Os anexos para aplicar o comando.',
+    'Os anexos (URLs) para aplicar o comando.',
 
   MODERATION_GENERIC_OPTION_EXPIRES_AT_NAME: 'expiração',
   MODERATION_GENERIC_OPTION_EXPIRES_AT_DESCRIPTION:
@@ -38,7 +46,7 @@ export default {
 
   MODERATION_GENERIC_OPTION_DURATION_NAME: 'duração',
   MODERATION_GENERIC_OPTION_DURATION_DESCRIPTION:
-    'A duração para aplicar o comando.',
+    'Por quanto tempo a punição deve durar.',
 
   MODERATION_GENERIC_OPTION_DELETE_DAYS_NAME: 'deletar-mensagens',
   MODERATION_GENERIC_OPTION_DELETE_DAYS_DESCRIPTION:
@@ -52,7 +60,7 @@ export default {
   MODERATION_GENERIC_OPTION_SILENT_DESCRIPTION:
     'Se o comando deve ser executado silenciosamente.',
 
-  // Moderation Commands
+  // Moderation
 
   MODERATION_NAME: 'mod',
   MODERATION_DESCRIPTION: 'Comandos de moderação.',

@@ -257,7 +257,7 @@ export default class Config {
     if (!role) {
       await limitationInfo.interaction.followUp({
         components: [],
-        content: LL.MODERATION_LIMITATION_CREATE_ROLE_DOES_NOT_EXIST(),
+        content: LL.ERRORS.MODERATION_LIMITATION_CREATE_ROLE_DOES_NOT_EXIST(),
         ephemeral: true,
       });
 
@@ -275,7 +275,7 @@ export default class Config {
     if (alreadyExists) {
       await limitationInfo.interaction.editReply({
         components: [],
-        content: LL.MODERATION_LIMIT_CONFIG_CREATE_ALREADY_EXISTS(),
+        content: LL.ERRORS.MODERATION_LIMIT_CONFIG_CREATE_ALREADY_EXISTS(),
       });
 
       return;
@@ -329,7 +329,7 @@ export default class Config {
 
     if (limitationsCount === 0) {
       await replyOrFollowUp(interaction, {
-        content: LL.MODERATION_LIMIT_CONFIG_LIST_EMPTY(),
+        content: LL.ERRORS.MODERATION_LIMIT_CONFIG_LIST_EMPTY(),
         components: [],
         ephemeral: true,
       });
@@ -447,7 +447,7 @@ export default class Config {
 
     if (limitationsCount === 0) {
       await replyOrFollowUp(interaction, {
-        content: LL.MODERATION_LIMIT_CONFIG_LIST_EMPTY(),
+        content: LL.ERRORS.MODERATION_LIMIT_CONFIG_LIST_EMPTY(),
         components: [],
         ephemeral: true,
       });
@@ -508,7 +508,7 @@ export default class Config {
 
     if (limitationsCount === 0) {
       await replyOrFollowUp(interaction, {
-        content: LL.MODERATION_LIMIT_CONFIG_LIST_EMPTY(),
+        content: LL.ERRORS.MODERATION_LIMIT_CONFIG_LIST_EMPTY(),
         components: [],
         ephemeral: true,
       });

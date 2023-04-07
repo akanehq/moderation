@@ -16,7 +16,8 @@
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "prepare": "husky install",
-    "type-check": "turbo run type-check"
+    "type-check": "turbo run type-check",
+    "watch": "turbo run watch --parallel"
   },
   "packageManager": "pnpm@7.12.2",
   "devDependencies": {

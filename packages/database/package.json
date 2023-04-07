@@ -4,13 +4,15 @@
   "types": "./src/index.ts",
   "scripts": {
     "db:generate": "prisma generate",
-    "db:push": "prisma db push --skip-generate"
+    "db:push": "prisma db push --skip-generate",
+    "watch": "watch -p 'prisma/**' -c 'pnpm run db:generate'"
   },
   "dependencies": {
     "@prisma/client": "^4.10.0",
     "tslib": "^2.5.0"
   },
   "devDependencies": {
-    "prisma": "^4.10.0"
+    "prisma": "^4.10.0",
+    "watch-cli": "^0.2.3"
   }
 }

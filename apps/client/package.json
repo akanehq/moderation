@@ -7,7 +7,8 @@
     "lint": "prettier --check .",
     "start": "NODE_ENV=PRODUCTION node build/index.js",
     "typesafe-i18n": "typesafe-i18n",
-    "generate-i18n": "typesafe-i18n --no-watch"
+    "generate-i18n": "typesafe-i18n --no-watch",
+    "watch": "watch -p 'src/locales/**/*.ts' -c 'npm run generate-i18n'"
   },
   "devDependencies": {
     "@akane/tsconfig": "workspace:*",
@@ -18,7 +19,8 @@
     "resolve-tspaths": "^0.8.8",
     "ts-node-dev": "^2.0.0",
     "ts-toolbelt": "^9.6.0",
-    "typescript": "4.9.4"
+    "typescript": "4.9.4",
+    "watch-cli": "^0.2.3"
   },
   "dependencies": {
     "@akane/database": "workspace:*",

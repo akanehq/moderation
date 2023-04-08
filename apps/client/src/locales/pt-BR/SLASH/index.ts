@@ -4,6 +4,10 @@ export default {
   CONFIG_NAME: 'config',
   CONFIG_DESCRIPTION: 'Comandos de configuração.',
 
+  CONFIG_CONFIGUREMODERATIONLIMITATION_NAME: 'restrição-de-moderação',
+  CONFIG_CONFIGUREMODERATIONLIMITATION_DESCRIPTION:
+    'Configurações de restrição de moderação.',
+
   // Administration
 
   ADMINISTRATION_QUARANTINE_NAME: 'quarentena',
@@ -13,6 +17,17 @@ export default {
   ADMINISTRATION_UNQUARANTINE_DESCRIPTION: 'Remove o servidor da quarentena.',
 
   // Custom Voice
+
+  CUSTOMVOICE_NAME: 'voz-privada',
+  CUSTOMVOICE_DESCRIPTION: 'Comandos de voz privada.',
+
+  CUSTOMVOICE_SETUP_NAME: 'configurar',
+  CUSTOMVOICE_SETUP_DESCRIPTION:
+    'Configura os canais de voz privados do servidor.',
+
+  CUSTOMVOICE_UPDATETEMPLATE_NAME: 'atualizar',
+  CUSTOMVOICE_UPDATETEMPLATE_DESCRIPTION:
+    'Atualiza o padrão de nomes de canais de voz privados do servidor.',
 
   CUSTOMVOICE_SETUP_OPTION_CHANNEL_NAME: 'canal',
   CUSTOMVOICE_SETUP_OPTION_CHANNEL_DESCRIPTION:

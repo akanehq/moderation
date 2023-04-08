@@ -4,6 +4,10 @@ export default mergeTranslations('SLASH', {
   CONFIG_NAME: 'config',
   CONFIG_DESCRIPTION: 'Config-related commands.',
 
+  CONFIG_CONFIGUREMODERATIONLIMITATION_NAME: 'moderation-limitation',
+  CONFIG_CONFIGUREMODERATIONLIMITATION_DESCRIPTION:
+    'Moderation limitation settings.',
+
   // Administration
 
   ADMINISTRATION_QUARANTINE_NAME: 'quarantine',
@@ -14,6 +18,17 @@ export default mergeTranslations('SLASH', {
     'Removes the server from quarantine.',
 
   // Custom Voice
+
+  CUSTOMVOICE_NAME: 'private-voice',
+  CUSTOMVOICE_DESCRIPTION: 'Private voice commands.',
+
+  CUSTOMVOICE_SETUP_NAME: 'setup',
+  CUSTOMVOICE_SETUP_DESCRIPTION:
+    'Setup the private voice channels of the server.',
+
+  CUSTOMVOICE_UPDATETEMPLATE_NAME: 'update',
+  CUSTOMVOICE_UPDATETEMPLATE_DESCRIPTION:
+    'Update the private voice channel name template of the server.',
 
   CUSTOMVOICE_SETUP_OPTION_CHANNEL_NAME: 'channel',
   CUSTOMVOICE_SETUP_OPTION_CHANNEL_DESCRIPTION:

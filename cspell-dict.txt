@@ -1,6 +1,7 @@
 akane
 akanehq
 bitfield
+configuremoderationlimitation
 customvoice
 discordx
 Paginable
@@ -11,3 +12,4 @@ tspaths
 typedi
 typesafe
 unquarantine
+updatetemplate

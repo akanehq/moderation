@@ -27,7 +27,7 @@ export default async function main() {
       name: 'Akane',
       type: LOG_TYPE,
       minLevel: LOG_LEVEL,
-      prettyLogTemplate: '{{dateIsoStr}} {{logLevelName}}',
+      prettyLogTemplate: '{{dateIsoStr}} {{logLevelName}} ',
     })
   );
 

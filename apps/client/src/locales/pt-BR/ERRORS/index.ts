@@ -61,4 +61,15 @@ export default {
 
   MODERATION_GET_ATTACHMENT_PUNISHMENT_NOT_FOUND:
     'Não foi possível encontrar nenhuma punição com o ID registrado. Reporte este erro para o suporte do bot.',
+
+  // Moderation (Events/AppealPunishment)
+
+  MODERATION_APPEAL_PUNISHMENT_NOT_APPEALABLE:
+    'Esta punição não pode ser apelada porque o servidor não está mais aceitando apelações.',
+
+  MODERATION_APPEAL_PUNISHMENT_NO_CHANNEL_IN_DB:
+    'Não foi possível encontrar o canal de apelações no banco de dados. Este é um erro incomum. Por favor, entre em contato com o suporte do bot.',
+
+  MODERATION_APPEAL_PUNISHMENT_NO_CHANNEL:
+    'Não foi possível encontrar o canal de apelações no servidor. É possível que o canal tenha sido excluído. Se possível, entre em contato pessoalmente com a equipe de moderação do servidor e informe o ocorrido.',
 } satisfies BaseTranslation;

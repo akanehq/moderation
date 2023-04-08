@@ -1,8 +1,14 @@
 import dedent from 'ts-dedent';
+import { RequiredParams } from 'typesafe-i18n';
 
 import { mergeTranslations } from '../helpers';
 
 export default mergeTranslations('*', {
+  OPEN: 'Open',
+
+  ACCEPT: 'Accept',
+  DECLINE: 'Decline',
+
   ANY: 'Any',
   BANS: 'Bans',
   WARNS: 'Warns',
@@ -185,4 +191,34 @@ export default mergeTranslations('*', {
 
   MODERATION_LIMIT_CONFIG_LIST_ITEM:
     '{roleId} ** • ** {kind|{Any: Any Action, Ban: Ban, Kick: Kick, Mute: Mute, Warn: Warn}} ** • ** {amount} ** • ** {expiresIn}',
+
+  // Moderation (Events/AppealPunishment)
+
+  MODERATION_APPEAL_PUNISHMENT_MODAL_TITLE: '🚏 Appeal Punishment',
+
+  MODERATION_APPEAL_PUNISHMENT_MODAL_QUESTION:
+    'Are you sure you want to appeal the `{0}` punishment? If yes, click the button below and describe the reason for the appeal.',
+
+  MODERATION_APPEAL_PUNISHMENT_MODAL_PLACEHOLDER:
+    'Describe the reason for the appeal',
+
+  MODERATION_APPEAL_PUNISHMENT_GUILD_MESSAGE:
+    'Member {member} appealed the `{punishmentId}` punishment.',
+
+  MODERATION_APPEAL_PUNISHMENT_INFORMATION_TITLE:
+    '🚏 Appeal Punishment Information',
+
+  MODERATION_APPEAL_PUNISHMENT_INFORMATION_DESCRIPTION: dedent`
+    Member {member} has appealed \`{punishmentId}\` with the following reason:
+
+    \`\`\`
+    {reason}
+    \`\`\`
+  ` as RequiredParams<'reason' | 'member' | 'punishmentId'>,
+
+  MODERATION_APPEAL_PUNISHMENT_INFORMATION_FOOTER:
+    'To accept or decline, click on one of the buttons below.',
+
+  MODERATION_APPEAL_PUNISHMENT_INFORMATION_SUCCESS:
+    'The appeal was successfully created! Now just wait for a response from a server moderator.',
 });

@@ -19,6 +19,18 @@ export type Translations = RootTranslation &
 
 type RootTranslation = {
 	/**
+	 * A​b​r​i​r
+	 */
+	OPEN: string
+	/**
+	 * A​c​e​i​t​a​r
+	 */
+	ACCEPT: string
+	/**
+	 * R​e​c​u​s​a​r
+	 */
+	DECLINE: string
+	/**
 	 * Q​u​a​l​q​u​e​r
 	 */
 	ANY: string
@@ -336,6 +348,48 @@ type RootTranslation = {
 	 * @param {string} roleId
 	 */
 	MODERATION_LIMIT_CONFIG_LIST_ITEM: RequiredParams<'amount' | 'expiresIn' | `kind|{Any:${string}, Ban:${string}, Kick:${string}, Mute:${string}, Warn:${string}}` | 'roleId'>
+	/**
+	 * �​�​ ​A​p​e​l​a​r​ ​P​u​n​i​ç​ã​o
+	 */
+	MODERATION_APPEAL_PUNISHMENT_MODAL_TITLE: string
+	/**
+	 * V​o​c​ê​ ​t​e​m​ ​c​e​r​t​e​z​a​ ​q​u​e​ ​d​e​s​e​j​a​ ​a​p​e​l​a​r​ ​a​ ​p​u​n​i​ç​ã​o​ ​`​{​0​}​`​?​ ​S​e​ ​s​i​m​,​ ​c​l​i​q​u​e​ ​n​o​ ​b​o​t​ã​o​ ​a​b​a​i​x​o​ ​e​ ​d​e​s​c​r​e​v​a​ ​o​ ​p​o​r​q​u​ê​ ​d​a​ ​a​p​e​l​a​ç​ã​o​.
+	 * @param {number} 0
+	 */
+	MODERATION_APPEAL_PUNISHMENT_MODAL_QUESTION: RequiredParams<'0'>
+	/**
+	 * D​e​s​c​r​e​v​a​ ​o​ ​m​o​t​i​v​o​ ​d​a​ ​a​p​e​l​a​ç​ã​o
+	 */
+	MODERATION_APPEAL_PUNISHMENT_MODAL_PLACEHOLDER: string
+	/**
+	 * O​ ​m​e​m​b​r​o​ ​{​m​e​m​b​e​r​}​ ​a​p​e​l​o​u​ ​a​ ​p​u​n​i​ç​ã​o​ ​`​{​p​u​n​i​s​h​m​e​n​t​I​d​}​`​.
+	 * @param {string} member
+	 * @param {number} punishmentId
+	 */
+	MODERATION_APPEAL_PUNISHMENT_GUILD_MESSAGE: RequiredParams<'member' | 'punishmentId'>
+	/**
+	 * �​�​ ​D​e​t​a​l​h​e​s​ ​d​a​ ​A​p​e​l​a​ç​ã​o
+	 */
+	MODERATION_APPEAL_PUNISHMENT_INFORMATION_TITLE: string
+	/**
+	 * O​ ​m​e​m​b​r​o​ ​{​m​e​m​b​e​r​}​ ​a​p​e​l​o​u​ ​a​ ​p​u​n​i​ç​ã​o​ ​`​{​p​u​n​i​s​h​m​e​n​t​I​d​}​`​ ​c​o​m​ ​o​ ​s​e​g​u​i​n​t​e​ ​m​o​t​i​v​o​:​
+​
+​`​`​`​
+​{​r​e​a​s​o​n​}​
+​`​`​`
+	 * @param {string} member
+	 * @param {number} punishmentId
+	 * @param {string} reason
+	 */
+	MODERATION_APPEAL_PUNISHMENT_INFORMATION_DESCRIPTION: RequiredParams<'member' | 'punishmentId' | 'reason'>
+	/**
+	 * P​a​r​a​ ​a​c​e​i​t​a​r​ ​o​u​ ​r​e​c​u​s​a​r​,​ ​c​l​i​q​u​e​ ​e​m​ ​u​m​ ​d​o​s​ ​b​o​t​õ​e​s​ ​a​b​a​i​x​o​.
+	 */
+	MODERATION_APPEAL_PUNISHMENT_INFORMATION_FOOTER: string
+	/**
+	 * A​ ​a​p​e​l​a​ç​ã​o​ ​f​o​i​ ​c​r​i​a​d​a​ ​c​o​m​ ​s​u​c​e​s​s​o​!​ ​A​g​o​r​a​ ​é​ ​s​ó​ ​e​s​p​e​r​a​r​ ​a​ ​r​e​s​p​o​s​t​a​ ​d​e​ ​u​m​ ​m​o​d​e​r​a​d​o​r​ ​d​o​ ​s​e​r​v​i​d​o​r​.
+	 */
+	MODERATION_APPEAL_PUNISHMENT_INFORMATION_SUCCESS: string
 }
 
 export type NamespaceERRORSTranslation = {
@@ -403,6 +457,18 @@ export type NamespaceERRORSTranslation = {
 	 * N​ã​o​ ​f​o​i​ ​p​o​s​s​í​v​e​l​ ​e​n​c​o​n​t​r​a​r​ ​n​e​n​h​u​m​a​ ​p​u​n​i​ç​ã​o​ ​c​o​m​ ​o​ ​I​D​ ​r​e​g​i​s​t​r​a​d​o​.​ ​R​e​p​o​r​t​e​ ​e​s​t​e​ ​e​r​r​o​ ​p​a​r​a​ ​o​ ​s​u​p​o​r​t​e​ ​d​o​ ​b​o​t​.
 	 */
 	MODERATION_GET_ATTACHMENT_PUNISHMENT_NOT_FOUND: string
+	/**
+	 * E​s​t​a​ ​p​u​n​i​ç​ã​o​ ​n​ã​o​ ​p​o​d​e​ ​s​e​r​ ​a​p​e​l​a​d​a​ ​p​o​r​q​u​e​ ​o​ ​s​e​r​v​i​d​o​r​ ​n​ã​o​ ​e​s​t​á​ ​m​a​i​s​ ​a​c​e​i​t​a​n​d​o​ ​a​p​e​l​a​ç​õ​e​s​.
+	 */
+	MODERATION_APPEAL_PUNISHMENT_NOT_APPEALABLE: string
+	/**
+	 * N​ã​o​ ​f​o​i​ ​p​o​s​s​í​v​e​l​ ​e​n​c​o​n​t​r​a​r​ ​o​ ​c​a​n​a​l​ ​d​e​ ​a​p​e​l​a​ç​õ​e​s​ ​n​o​ ​b​a​n​c​o​ ​d​e​ ​d​a​d​o​s​.​ ​E​s​t​e​ ​é​ ​u​m​ ​e​r​r​o​ ​i​n​c​o​m​u​m​.​ ​P​o​r​ ​f​a​v​o​r​,​ ​e​n​t​r​e​ ​e​m​ ​c​o​n​t​a​t​o​ ​c​o​m​ ​o​ ​s​u​p​o​r​t​e​ ​d​o​ ​b​o​t​.
+	 */
+	MODERATION_APPEAL_PUNISHMENT_NO_CHANNEL_IN_DB: string
+	/**
+	 * N​ã​o​ ​f​o​i​ ​p​o​s​s​í​v​e​l​ ​e​n​c​o​n​t​r​a​r​ ​o​ ​c​a​n​a​l​ ​d​e​ ​a​p​e​l​a​ç​õ​e​s​ ​n​o​ ​s​e​r​v​i​d​o​r​.​ ​É​ ​p​o​s​s​í​v​e​l​ ​q​u​e​ ​o​ ​c​a​n​a​l​ ​t​e​n​h​a​ ​s​i​d​o​ ​e​x​c​l​u​í​d​o​.​ ​S​e​ ​p​o​s​s​í​v​e​l​,​ ​e​n​t​r​e​ ​e​m​ ​c​o​n​t​a​t​o​ ​p​e​s​s​o​a​l​m​e​n​t​e​ ​c​o​m​ ​a​ ​e​q​u​i​p​e​ ​d​e​ ​m​o​d​e​r​a​ç​ã​o​ ​d​o​ ​s​e​r​v​i​d​o​r​ ​e​ ​i​n​f​o​r​m​e​ ​o​ ​o​c​o​r​r​i​d​o​.
+	 */
+	MODERATION_APPEAL_PUNISHMENT_NO_CHANNEL: string
 }
 
 export type NamespaceSLASHTranslation = {
@@ -627,6 +693,18 @@ type DisallowNamespaces = {
 }
 
 export type TranslationFunctions = {
+	/**
+	 * Abrir
+	 */
+	OPEN: () => LocalizedString
+	/**
+	 * Aceitar
+	 */
+	ACCEPT: () => LocalizedString
+	/**
+	 * Recusar
+	 */
+	DECLINE: () => LocalizedString
 	/**
 	 * Qualquer
 	 */
@@ -923,6 +1001,42 @@ Se o número de ações for excedido, o moderador será bloqueado de aplicar nov
 	 * {roleId} ** • ** {kind|{Any: Qualquer Ação, Ban: Banimento, Kick: Expulsão, Mute: Silenciamento, Warn: Aviso}} ** • ** {amount} ** • ** {expiresIn}
 	 */
 	MODERATION_LIMIT_CONFIG_LIST_ITEM: (arg: { amount: number, expiresIn: number, kind: 'Any' | 'Ban' | 'Kick' | 'Mute' | 'Warn', roleId: string }) => LocalizedString
+	/**
+	 * 🚏 Apelar Punição
+	 */
+	MODERATION_APPEAL_PUNISHMENT_MODAL_TITLE: () => LocalizedString
+	/**
+	 * Você tem certeza que deseja apelar a punição `{0}`? Se sim, clique no botão abaixo e descreva o porquê da apelação.
+	 */
+	MODERATION_APPEAL_PUNISHMENT_MODAL_QUESTION: (arg0: number) => LocalizedString
+	/**
+	 * Descreva o motivo da apelação
+	 */
+	MODERATION_APPEAL_PUNISHMENT_MODAL_PLACEHOLDER: () => LocalizedString
+	/**
+	 * O membro {member} apelou a punição `{punishmentId}`.
+	 */
+	MODERATION_APPEAL_PUNISHMENT_GUILD_MESSAGE: (arg: { member: string, punishmentId: number }) => LocalizedString
+	/**
+	 * 🚏 Detalhes da Apelação
+	 */
+	MODERATION_APPEAL_PUNISHMENT_INFORMATION_TITLE: () => LocalizedString
+	/**
+	 * O membro {member} apelou a punição `{punishmentId}` com o seguinte motivo:
+
+```
+{reason}
+```
+	 */
+	MODERATION_APPEAL_PUNISHMENT_INFORMATION_DESCRIPTION: (arg: { member: string, punishmentId: number, reason: string }) => LocalizedString
+	/**
+	 * Para aceitar ou recusar, clique em um dos botões abaixo.
+	 */
+	MODERATION_APPEAL_PUNISHMENT_INFORMATION_FOOTER: () => LocalizedString
+	/**
+	 * A apelação foi criada com sucesso! Agora é só esperar a resposta de um moderador do servidor.
+	 */
+	MODERATION_APPEAL_PUNISHMENT_INFORMATION_SUCCESS: () => LocalizedString
 	ERRORS: {
 		/**
 		 * Tempo esgotado.
@@ -988,6 +1102,18 @@ Se o número de ações for excedido, o moderador será bloqueado de aplicar nov
 		 * Não foi possível encontrar nenhuma punição com o ID registrado. Reporte este erro para o suporte do bot.
 		 */
 		MODERATION_GET_ATTACHMENT_PUNISHMENT_NOT_FOUND: () => LocalizedString
+		/**
+		 * Esta punição não pode ser apelada porque o servidor não está mais aceitando apelações.
+		 */
+		MODERATION_APPEAL_PUNISHMENT_NOT_APPEALABLE: () => LocalizedString
+		/**
+		 * Não foi possível encontrar o canal de apelações no banco de dados. Este é um erro incomum. Por favor, entre em contato com o suporte do bot.
+		 */
+		MODERATION_APPEAL_PUNISHMENT_NO_CHANNEL_IN_DB: () => LocalizedString
+		/**
+		 * Não foi possível encontrar o canal de apelações no servidor. É possível que o canal tenha sido excluído. Se possível, entre em contato pessoalmente com a equipe de moderação do servidor e informe o ocorrido.
+		 */
+		MODERATION_APPEAL_PUNISHMENT_NO_CHANNEL: () => LocalizedString
 	}
 	SLASH: {
 		/**

@@ -53,4 +53,15 @@ export default mergeTranslations('ERRORS', {
   // Moderation (Limitation/Delete)
 
   MODERATION_LIMIT_CONFIG_LIST_EMPTY: 'There are no limit settings defined.',
+
+  // Moderation (Events/AppealPunishment)
+
+  MODERATION_APPEAL_PUNISHMENT_NOT_APPEALABLE:
+    'This punishment cannot be appealed because the server is no longer accepting appeals.',
+
+  MODERATION_APPEAL_PUNISHMENT_NO_CHANNEL_IN_DB:
+    'Unable to find the appeals channel in the database. This is an uncommon error. Please contact bot support.',
+
+  MODERATION_APPEAL_PUNISHMENT_NO_CHANNEL:
+    "Unable to find the appeals channel on the server. It is possible that the channel has been deleted. If possible, personally contact the server's moderation team and report the incident.",
 });

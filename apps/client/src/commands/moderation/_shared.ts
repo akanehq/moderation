@@ -89,9 +89,15 @@ function ExtendsOption(
 
 // Custom RegExp Events
 
+/** Similar to `boolean`, but with a more descriptive name (and string values). */
+export type AcceptDeny = 'ACCEPT' | 'DENY';
+
 export type RegExpEvents = {
   /** When a member receives a punishment and needs to appeal it, this event is fired. */
   AppealPunishment: [punishmentId: string];
+
+  /** Handles the appeal of a punishment response given from some moderator. */
+  AppealPunishmentResponse: [punishmentId: string, status: AcceptDeny];
 
   /** Event for when a member needs to get the attachment(s) of a punishment. */
   GetAttachment: [punishmentId: string];
@@ -101,6 +107,10 @@ export const ModRegExpEvents = new RegExpEvent<RegExpEvents>('MOD');
 
 export const ModAppealPunishmentRegExp =
   ModRegExpEvents.createRegExp('AppealPunishment');
+
+// prettier-ignore
+export const ModAppealPunishmentResponseRegExp =
+  ModRegExpEvents.createRegExp('AppealPunishmentResponse');
 
 export const ModGetAttachmentRegExp =
   ModRegExpEvents.createRegExp('GetAttachment');

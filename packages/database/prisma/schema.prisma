@@ -7,6 +7,10 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+enum GuildFeature {
+  Appealable
+}
+
 /// Guild.id should be unique and the exact same as the guild's ID on Discord.
 model Guild {
   id String @id @unique
@@ -15,11 +19,32 @@ model Guild {
   updatedAt DateTime @updatedAt
 
   User                 User[]
+  Appeal               Appeal[]
   Punishments          Punishment[]
   CustomVoice          CustomVoice[]
   ModerationLimitation ModerationLimitation[]
 
   Quarantine Quarantine?
+
+  features GuildFeature[]
+
+  appealChannelId String?
+}
+
+model Appeal {
+  id String @id @unique @default(cuid())
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  Guild   Guild  @relation(fields: [guildId], references: [id])
+  guildId String
+
+  User   User   @relation(fields: [userId], references: [id])
+  userId String
+
+  reason   String
+  accepted Boolean?
 }
 
 /// User.id should be unique and the exact same as the user's ID on Discord.
@@ -32,6 +57,7 @@ model User {
   Guilds              Guild[]
   Punishments         Punishment[]
   AuthoredPunishments Punishment[] @relation("AuthoredPunishment")
+  Appeal              Appeal[]
 }
 
 enum PunishmentKind {

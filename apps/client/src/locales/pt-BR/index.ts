@@ -3,6 +3,11 @@ import dedent from 'ts-dedent';
 import type { BaseTranslation } from '../i18n-types';
 
 export default {
+  OPEN: 'Abrir',
+
+  ACCEPT: 'Aceitar',
+  DECLINE: 'Recusar',
+
   ANY: 'Qualquer',
   BANS: 'Banimentos',
   WARNS: 'Avisos',
@@ -190,4 +195,33 @@ export default {
 
   MODERATION_LIMIT_CONFIG_LIST_ITEM:
     '{roleId:string} ** • ** {kind|{Any: Qualquer Ação, Ban: Banimento, Kick: Expulsão, Mute: Silenciamento, Warn: Aviso}} ** • ** {amount:number} ** • ** {expiresIn:number}',
+
+  // Moderation (Events/AppealPunishment)
+
+  MODERATION_APPEAL_PUNISHMENT_MODAL_TITLE: '🚏 Apelar Punição',
+
+  MODERATION_APPEAL_PUNISHMENT_MODAL_QUESTION:
+    'Você tem certeza que deseja apelar a punição `{0:number}`? Se sim, clique no botão abaixo e descreva o porquê da apelação.',
+
+  MODERATION_APPEAL_PUNISHMENT_MODAL_PLACEHOLDER:
+    'Descreva o motivo da apelação',
+
+  MODERATION_APPEAL_PUNISHMENT_GUILD_MESSAGE:
+    'O membro {member:string} apelou a punição `{punishmentId:number}`.',
+
+  MODERATION_APPEAL_PUNISHMENT_INFORMATION_TITLE: '🚏 Detalhes da Apelação',
+
+  MODERATION_APPEAL_PUNISHMENT_INFORMATION_DESCRIPTION: dedent`
+  O membro {member:string} apelou a punição \`{punishmentId:number}\` com o seguinte motivo:
+
+  \`\`\`
+  {reason:string}
+  \`\`\`
+  `,
+
+  MODERATION_APPEAL_PUNISHMENT_INFORMATION_FOOTER:
+    'Para aceitar ou recusar, clique em um dos botões abaixo.',
+
+  MODERATION_APPEAL_PUNISHMENT_INFORMATION_SUCCESS:
+    'A apelação foi criada com sucesso! Agora é só esperar a resposta de um moderador do servidor.',
 } satisfies BaseTranslation;

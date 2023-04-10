@@ -1,4 +1,9 @@
-import { GuildFeature, PrismaClient } from '@akane/database';
+import {
+  GuildFeature,
+  PrismaClient,
+  PunishmentKind,
+  PunishmentStatus,
+} from '@akane/database';
 import {
   ActionRowBuilder,
   ButtonBuilder,
@@ -27,6 +32,7 @@ import {
 const MIN_APPEAL_LENGTH = 32;
 const MAX_APPEAL_LENGTH = 128;
 
+// TODO: Make embeds and messages better.
 @Discord()
 export default class Moderation {
   constructor(private readonly prisma: PrismaClient) {}
@@ -182,11 +188,17 @@ export default class Moderation {
       ],
     });
 
+    const appealMessage = await appealChannel.send({
+      content: '\u200b',
+    });
+
     const appeal = await this.prisma.appeal.create({
       data: {
+        Punishment: { connect: { id: punishment.id } },
         Guild: { connect: { id: punishment.guildId } },
         User: { connect: { id: punishment.userId } },
         reason: modalResponse.result.reason,
+        messageId: appealMessage.id,
       },
     });
 
@@ -231,7 +243,7 @@ export default class Moderation {
       denyAppealButton
     );
 
-    await appealChannel.send({
+    await appealMessage.edit({
       content: LL.MODERATION_APPEAL_PUNISHMENT_GUILD_MESSAGE({
         member: `<@${punishment.userId}>`,
         punishmentId: punishment.id,
@@ -249,6 +261,100 @@ export default class Moderation {
   @Guard(inGuild())
   @ButtonComponent({ id: ModAppealPunishmentResponseRegExp })
   async onAppealPunishmentResponse(interaction: ButtonInteraction<CachedType>) {
-    throw new Error('Not implemented yet');
+    if (!interaction.guild) {
+      throw new Error(
+        'Unreachable: Interaction is in guild, but guild is not cached'
+      );
+    }
+
+    const [appealId, response] =
+      ModRegExpEvents.parseEventID<'AppealPunishmentResponse'>(
+        interaction.customId
+      );
+
+    const appeal = await this.prisma.appeal.findUnique({
+      where: { id: appealId },
+      include: {
+        Punishment: { select: { kind: true } },
+      },
+    });
+
+    const LL = getLanguage(interaction);
+
+    if (!appeal) {
+      await interaction.reply({
+        content: LL.ERRORS.MODERATION_APPEAL_PUNISHMENT_RESPONSE_NOT_FOUND(),
+        ephemeral: true,
+      });
+
+      return;
+    }
+
+    const user = await interaction.guild.members.fetch(appeal.userId);
+
+    if (response === 'DENY') {
+      const userDM = await user.createDM();
+
+      await this.prisma.appeal.update({
+        where: { id: appeal.id },
+        data: { accepted: false },
+      });
+
+      await userDM.send({
+        content: LL.MODERATION_APPEAL_PUNISHMENT_RESPONSE_DENIED(),
+        reply: {
+          messageReference: await userDM.messages.fetch(appeal.messageId),
+        },
+      });
+
+      await interaction.reply({
+        content: LL.MODERATION_APPEAL_PUNISHMENT_RESPONSE_DENIED_SUCCESS(),
+        ephemeral: true,
+      });
+
+      return;
+    }
+
+    await this.prisma.$transaction([
+      this.prisma.punishment.update({
+        where: { id: appeal.punishmentId },
+        data: { status: PunishmentStatus.Revoked },
+      }),
+      this.prisma.appeal.update({
+        where: { id: appeal.id },
+        data: { accepted: true },
+      }),
+    ]);
+
+    switch (appeal.Punishment.kind) {
+      case PunishmentKind.Ban:
+        await interaction.guild.members.unban(appeal.userId);
+        break;
+
+      case PunishmentKind.Mute:
+        await user.timeout(null);
+        break;
+
+      // case PunishmentKind.Warn:
+      // case PunishmentKind.Kick:
+      // -> is not appealable because it does not have any effect on Discord.
+
+      default:
+        throw new Error('Invalid punishment kind');
+    }
+
+    const userDM = await user.createDM();
+
+    await userDM.send({
+      content: LL.MODERATION_APPEAL_PUNISHMENT_RESPONSE_SUCCESS(),
+      reply: {
+        messageReference: await userDM.messages.fetch(appeal.messageId),
+      },
+    });
+
+    await interaction.reply({
+      content: LL.MODERATION_APPEAL_PUNISHMENT_RESPONSE_SUCCESS(),
+      ephemeral: true,
+    });
   }
 }

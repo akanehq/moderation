@@ -224,4 +224,13 @@ export default {
 
   MODERATION_APPEAL_PUNISHMENT_INFORMATION_SUCCESS:
     'A apelação foi criada com sucesso! Agora é só esperar a resposta de um moderador do servidor.',
+
+  MODERATION_APPEAL_PUNISHMENT_RESPONSE_DENIED:
+    'Um moderador do servidor recusou a sua apelação da punição. Não será possível apelar novamente esta punição.',
+
+  MODERATION_APPEAL_PUNISHMENT_RESPONSE_DENIED_SUCCESS:
+    'A apelação foi recusada com sucesso e o membro foi notificado.',
+
+  MODERATION_APPEAL_PUNISHMENT_RESPONSE_SUCCESS:
+    'Um moderador do servidor aceitou a sua apelação da punição e a mesma foi removida (caso tenha sido banimento, você pode entrar novamente no servidor).',
 } satisfies BaseTranslation;

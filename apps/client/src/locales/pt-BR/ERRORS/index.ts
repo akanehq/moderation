@@ -72,4 +72,9 @@ export default {
 
   MODERATION_APPEAL_PUNISHMENT_NO_CHANNEL:
     'Não foi possível encontrar o canal de apelações no servidor. É possível que o canal tenha sido excluído. Se possível, entre em contato pessoalmente com a equipe de moderação do servidor e informe o ocorrido.',
+
+  // Moderation (Events/AppealPunishmentResponse)
+
+  MODERATION_APPEAL_PUNISHMENT_RESPONSE_NOT_FOUND:
+    'Não foi possível encontrar a apelação com o ID registrado. Reporte este erro para o suporte do bot.',
 } satisfies BaseTranslation;

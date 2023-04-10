@@ -1,6 +1,7 @@
 akane
 akanehq
 bitfield
+configureappeal
 configuremoderationlimitation
 customvoice
 discordx
@@ -11,5 +12,6 @@ tslog
 tspaths
 typedi
 typesafe
+unban
 unquarantine
 updatetemplate

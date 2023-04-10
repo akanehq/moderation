@@ -248,19 +248,19 @@ export type SlashCommandGroupOptions = {
 
 /** Creates a group of slash commands with localization. */
 export function Group(
-  options: Partial<BaseOptions> & SlashCommandGroupOptions
+  options?: Partial<BaseOptions> & SlashCommandGroupOptions
 ): ClassDecoratorEx {
   return (target, key, descriptor) => {
-    if (!options.name ?? !options.description) {
+    if (!options?.name ?? !options.description) {
       const TargetClass = target as new (...args: any[]) => any;
 
       const { name, description } = getDefaultNameAndDescription(
         new TargetClass()
       );
 
-      options = Object.assign(options, {
-        name: options.name ?? name,
-        description: options.description ?? description,
+      options = Object.assign(options ?? {}, {
+        name: options?.name ?? name,
+        description: options?.description ?? description,
       });
     }
 

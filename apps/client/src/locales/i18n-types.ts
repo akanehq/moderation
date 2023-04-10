@@ -390,6 +390,18 @@ type RootTranslation = {
 	 * A​ ​a​p​e​l​a​ç​ã​o​ ​f​o​i​ ​c​r​i​a​d​a​ ​c​o​m​ ​s​u​c​e​s​s​o​!​ ​A​g​o​r​a​ ​é​ ​s​ó​ ​e​s​p​e​r​a​r​ ​a​ ​r​e​s​p​o​s​t​a​ ​d​e​ ​u​m​ ​m​o​d​e​r​a​d​o​r​ ​d​o​ ​s​e​r​v​i​d​o​r​.
 	 */
 	MODERATION_APPEAL_PUNISHMENT_INFORMATION_SUCCESS: string
+	/**
+	 * U​m​ ​m​o​d​e​r​a​d​o​r​ ​d​o​ ​s​e​r​v​i​d​o​r​ ​r​e​c​u​s​o​u​ ​a​ ​s​u​a​ ​a​p​e​l​a​ç​ã​o​ ​d​a​ ​p​u​n​i​ç​ã​o​.​ ​N​ã​o​ ​s​e​r​á​ ​p​o​s​s​í​v​e​l​ ​a​p​e​l​a​r​ ​n​o​v​a​m​e​n​t​e​ ​e​s​t​a​ ​p​u​n​i​ç​ã​o​.
+	 */
+	MODERATION_APPEAL_PUNISHMENT_RESPONSE_DENIED: string
+	/**
+	 * A​ ​a​p​e​l​a​ç​ã​o​ ​f​o​i​ ​r​e​c​u​s​a​d​a​ ​c​o​m​ ​s​u​c​e​s​s​o​ ​e​ ​o​ ​m​e​m​b​r​o​ ​f​o​i​ ​n​o​t​i​f​i​c​a​d​o​.
+	 */
+	MODERATION_APPEAL_PUNISHMENT_RESPONSE_DENIED_SUCCESS: string
+	/**
+	 * U​m​ ​m​o​d​e​r​a​d​o​r​ ​d​o​ ​s​e​r​v​i​d​o​r​ ​a​c​e​i​t​o​u​ ​a​ ​s​u​a​ ​a​p​e​l​a​ç​ã​o​ ​d​a​ ​p​u​n​i​ç​ã​o​ ​e​ ​a​ ​m​e​s​m​a​ ​f​o​i​ ​r​e​m​o​v​i​d​a​ ​(​c​a​s​o​ ​t​e​n​h​a​ ​s​i​d​o​ ​b​a​n​i​m​e​n​t​o​,​ ​v​o​c​ê​ ​p​o​d​e​r​á​ ​e​n​t​r​a​r​ ​n​o​v​a​m​e​n​t​e​ ​n​o​ ​s​e​r​v​i​d​o​r​)​.
+	 */
+	MODERATION_APPEAL_PUNISHMENT_RESPONSE_SUCCESS: string
 }
 
 export type NamespaceERRORSTranslation = {
@@ -469,9 +481,29 @@ export type NamespaceERRORSTranslation = {
 	 * N​ã​o​ ​f​o​i​ ​p​o​s​s​í​v​e​l​ ​e​n​c​o​n​t​r​a​r​ ​o​ ​c​a​n​a​l​ ​d​e​ ​a​p​e​l​a​ç​õ​e​s​ ​n​o​ ​s​e​r​v​i​d​o​r​.​ ​É​ ​p​o​s​s​í​v​e​l​ ​q​u​e​ ​o​ ​c​a​n​a​l​ ​t​e​n​h​a​ ​s​i​d​o​ ​e​x​c​l​u​í​d​o​.​ ​S​e​ ​p​o​s​s​í​v​e​l​,​ ​e​n​t​r​e​ ​e​m​ ​c​o​n​t​a​t​o​ ​p​e​s​s​o​a​l​m​e​n​t​e​ ​c​o​m​ ​a​ ​e​q​u​i​p​e​ ​d​e​ ​m​o​d​e​r​a​ç​ã​o​ ​d​o​ ​s​e​r​v​i​d​o​r​ ​e​ ​i​n​f​o​r​m​e​ ​o​ ​o​c​o​r​r​i​d​o​.
 	 */
 	MODERATION_APPEAL_PUNISHMENT_NO_CHANNEL: string
+	/**
+	 * N​ã​o​ ​f​o​i​ ​p​o​s​s​í​v​e​l​ ​e​n​c​o​n​t​r​a​r​ ​a​ ​a​p​e​l​a​ç​ã​o​ ​c​o​m​ ​o​ ​I​D​ ​r​e​g​i​s​t​r​a​d​o​.​ ​R​e​p​o​r​t​e​ ​e​s​t​e​ ​e​r​r​o​ ​p​a​r​a​ ​o​ ​s​u​p​o​r​t​e​ ​d​o​ ​b​o​t​.
+	 */
+	MODERATION_APPEAL_PUNISHMENT_RESPONSE_NOT_FOUND: string
 }
 
 export type NamespaceSLASHTranslation = {
+	/**
+	 * q​u​a​r​e​n​t​e​n​a
+	 */
+	ADMINISTRATION_QUARANTINE_NAME: string
+	/**
+	 * C​o​l​o​c​a​ ​o​ ​s​e​r​v​i​d​o​r​ ​e​m​ ​q​u​a​r​e​n​t​e​n​a​.
+	 */
+	ADMINISTRATION_QUARANTINE_DESCRIPTION: string
+	/**
+	 * r​e​m​o​v​e​r​-​q​u​a​r​e​n​t​e​n​a
+	 */
+	ADMINISTRATION_UNQUARANTINE_NAME: string
+	/**
+	 * R​e​m​o​v​e​ ​o​ ​s​e​r​v​i​d​o​r​ ​d​a​ ​q​u​a​r​e​n​t​e​n​a​.
+	 */
+	ADMINISTRATION_UNQUARANTINE_DESCRIPTION: string
 	/**
 	 * c​o​n​f​i​g
 	 */
@@ -489,21 +521,21 @@ export type NamespaceSLASHTranslation = {
 	 */
 	CONFIG_CONFIGUREMODERATIONLIMITATION_DESCRIPTION: string
 	/**
-	 * q​u​a​r​e​n​t​e​n​a
+	 * a​p​e​l​a​ç​ã​o
 	 */
-	ADMINISTRATION_QUARANTINE_NAME: string
+	CONFIG_CONFIGUREAPPEAL_NAME: string
 	/**
-	 * C​o​l​o​c​a​ ​o​ ​s​e​r​v​i​d​o​r​ ​e​m​ ​q​u​a​r​e​n​t​e​n​a​.
+	 * C​o​n​f​i​g​u​r​a​ ​o​ ​m​ó​d​u​l​o​ ​d​e​ ​a​p​e​l​a​ç​ã​o​ ​d​e​ ​p​u​n​i​ç​õ​e​s​ ​d​o​ ​s​e​r​v​i​d​o​r​.
 	 */
-	ADMINISTRATION_QUARANTINE_DESCRIPTION: string
+	CONFIG_CONFIGUREAPPEAL_DESCRIPTION: string
 	/**
-	 * r​e​m​o​v​e​r​-​q​u​a​r​e​n​t​e​n​a
+	 * c​a​n​a​l
 	 */
-	ADMINISTRATION_UNQUARANTINE_NAME: string
+	CONFIG_CONFIGUREAPPEAL_CHANNEL_NAME: string
 	/**
-	 * R​e​m​o​v​e​ ​o​ ​s​e​r​v​i​d​o​r​ ​d​a​ ​q​u​a​r​e​n​t​e​n​a​.
+	 * C​a​n​a​l​ ​p​a​r​a​ ​r​e​c​e​b​e​r​ ​a​s​ ​a​p​e​l​a​ç​õ​e​s​.
 	 */
-	ADMINISTRATION_UNQUARANTINE_DESCRIPTION: string
+	CONFIG_CONFIGUREAPPEAL_CHANNEL_DESCRIPTION: string
 	/**
 	 * v​o​z​-​p​r​i​v​a​d​a
 	 */
@@ -1037,6 +1069,18 @@ Se o número de ações for excedido, o moderador será bloqueado de aplicar nov
 	 * A apelação foi criada com sucesso! Agora é só esperar a resposta de um moderador do servidor.
 	 */
 	MODERATION_APPEAL_PUNISHMENT_INFORMATION_SUCCESS: () => LocalizedString
+	/**
+	 * Um moderador do servidor recusou a sua apelação da punição. Não será possível apelar novamente esta punição.
+	 */
+	MODERATION_APPEAL_PUNISHMENT_RESPONSE_DENIED: () => LocalizedString
+	/**
+	 * A apelação foi recusada com sucesso e o membro foi notificado.
+	 */
+	MODERATION_APPEAL_PUNISHMENT_RESPONSE_DENIED_SUCCESS: () => LocalizedString
+	/**
+	 * Um moderador do servidor aceitou a sua apelação da punição e a mesma foi removida (caso tenha sido banimento, você poderá entrar novamente no servidor).
+	 */
+	MODERATION_APPEAL_PUNISHMENT_RESPONSE_SUCCESS: () => LocalizedString
 	ERRORS: {
 		/**
 		 * Tempo esgotado.
@@ -1114,8 +1158,28 @@ Se o número de ações for excedido, o moderador será bloqueado de aplicar nov
 		 * Não foi possível encontrar o canal de apelações no servidor. É possível que o canal tenha sido excluído. Se possível, entre em contato pessoalmente com a equipe de moderação do servidor e informe o ocorrido.
 		 */
 		MODERATION_APPEAL_PUNISHMENT_NO_CHANNEL: () => LocalizedString
+		/**
+		 * Não foi possível encontrar a apelação com o ID registrado. Reporte este erro para o suporte do bot.
+		 */
+		MODERATION_APPEAL_PUNISHMENT_RESPONSE_NOT_FOUND: () => LocalizedString
 	}
 	SLASH: {
+		/**
+		 * quarentena
+		 */
+		ADMINISTRATION_QUARANTINE_NAME: () => LocalizedString
+		/**
+		 * Coloca o servidor em quarentena.
+		 */
+		ADMINISTRATION_QUARANTINE_DESCRIPTION: () => LocalizedString
+		/**
+		 * remover-quarentena
+		 */
+		ADMINISTRATION_UNQUARANTINE_NAME: () => LocalizedString
+		/**
+		 * Remove o servidor da quarentena.
+		 */
+		ADMINISTRATION_UNQUARANTINE_DESCRIPTION: () => LocalizedString
 		/**
 		 * config
 		 */
@@ -1133,21 +1197,21 @@ Se o número de ações for excedido, o moderador será bloqueado de aplicar nov
 		 */
 		CONFIG_CONFIGUREMODERATIONLIMITATION_DESCRIPTION: () => LocalizedString
 		/**
-		 * quarentena
+		 * apelação
 		 */
-		ADMINISTRATION_QUARANTINE_NAME: () => LocalizedString
+		CONFIG_CONFIGUREAPPEAL_NAME: () => LocalizedString
 		/**
-		 * Coloca o servidor em quarentena.
+		 * Configura o módulo de apelação de punições do servidor.
 		 */
-		ADMINISTRATION_QUARANTINE_DESCRIPTION: () => LocalizedString
+		CONFIG_CONFIGUREAPPEAL_DESCRIPTION: () => LocalizedString
 		/**
-		 * remover-quarentena
+		 * canal
 		 */
-		ADMINISTRATION_UNQUARANTINE_NAME: () => LocalizedString
+		CONFIG_CONFIGUREAPPEAL_CHANNEL_NAME: () => LocalizedString
 		/**
-		 * Remove o servidor da quarentena.
+		 * Canal para receber as apelações.
 		 */
-		ADMINISTRATION_UNQUARANTINE_DESCRIPTION: () => LocalizedString
+		CONFIG_CONFIGUREAPPEAL_CHANNEL_DESCRIPTION: () => LocalizedString
 		/**
 		 * voz-privada
 		 */

@@ -43,6 +43,11 @@ model Appeal {
   User   User   @relation(fields: [userId], references: [id])
   userId String
 
+  Punishment   Punishment @relation(fields: [punishmentId], references: [id])
+  punishmentId Int        @unique
+
+  messageId String
+
   reason   String
   accepted Boolean?
 }
@@ -91,6 +96,8 @@ model Punishment {
 
   User   User   @relation(fields: [userId], references: [id])
   userId String
+
+  Appeal Appeal?
 
   Guild   Guild  @relation(fields: [guildId], references: [id])
   guildId String

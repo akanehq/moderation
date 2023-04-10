@@ -1,13 +1,6 @@
 import { BaseTranslation } from '../../i18n-types';
 
 export default {
-  CONFIG_NAME: 'config',
-  CONFIG_DESCRIPTION: 'Comandos de configuração.',
-
-  CONFIG_CONFIGUREMODERATIONLIMITATION_NAME: 'restrição-de-moderação',
-  CONFIG_CONFIGUREMODERATIONLIMITATION_DESCRIPTION:
-    'Configurações de restrição de moderação.',
-
   // Administration
 
   ADMINISTRATION_QUARANTINE_NAME: 'quarentena',
@@ -15,6 +8,27 @@ export default {
 
   ADMINISTRATION_UNQUARANTINE_NAME: 'remover-quarentena',
   ADMINISTRATION_UNQUARANTINE_DESCRIPTION: 'Remove o servidor da quarentena.',
+
+  // Config
+
+  CONFIG_NAME: 'config',
+  CONFIG_DESCRIPTION: 'Comandos de configuração.',
+
+  // Config (Moderation/Limitation)
+
+  CONFIG_CONFIGUREMODERATIONLIMITATION_NAME: 'restrição-de-moderação',
+  CONFIG_CONFIGUREMODERATIONLIMITATION_DESCRIPTION:
+    'Configurações de restrição de moderação.',
+
+  // Config (Moderation/Appeal)
+
+  CONFIG_CONFIGUREAPPEAL_NAME: 'apelação',
+  CONFIG_CONFIGUREAPPEAL_DESCRIPTION:
+    'Configura o módulo de apelação de punições do servidor.',
+
+  CONFIG_CONFIGUREAPPEAL_CHANNEL_NAME: 'canal',
+  CONFIG_CONFIGUREAPPEAL_CHANNEL_DESCRIPTION:
+    'Canal para receber as apelações.',
 
   // Custom Voice
 

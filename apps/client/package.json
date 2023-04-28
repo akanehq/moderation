@@ -4,14 +4,16 @@
   "scripts": {
     "build": "tsc -p tsconfig.build.json && resolve-tspaths -p tsconfig.build.json",
     "dev": "NODE_ENV=DEVELOPMENT ts-node-dev --respawn --transpile-only -r tsconfig-paths/register src/index.ts",
-    "lint": "prettier --check .",
+    "lint": "eslint --ext .ts src",
     "start": "NODE_ENV=PRODUCTION node build/index.js",
     "typesafe-i18n": "typesafe-i18n",
     "generate-i18n": "typesafe-i18n --no-watch",
     "watch": "watch -p 'src/locales/**/*.ts' -c 'npm run generate-i18n'"
   },
   "devDependencies": {
+    "@akane/eslint-config": "workspace:*",
     "@akane/tsconfig": "workspace:*",
+    "@total-typescript/ts-reset": "^0.4.2",
     "@types/node": "^18.11.18",
     "eslint": "8.33.0",
     "eslint-config-universe": "^11.2.0",
@@ -27,7 +29,6 @@
     "@akane/database": "workspace:*",
     "discord.js": "^14.7.1",
     "discordx": "^11.6.0",
-    "dotenv": "^16.0.3",
     "reflect-metadata": "^0.1.13",
     "ts-dedent": "^2.2.0",
     "tslib": "^2.5.0",

@@ -1,8 +1,11 @@
-import 'dotenv/config';
+require('dotenv-mono').load({
+  cwd: '../../configs',
+});
+
 import 'reflect-metadata';
 
 import { readdir } from 'fs/promises';
-import { resolve } from 'path';
+import { join, resolve } from 'path';
 
 import { PrismaClient } from '@akane/database';
 import { Client, DIService, typeDiDependencyRegistryEngine } from 'discordx';

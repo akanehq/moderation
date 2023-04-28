@@ -1,31 +1,30 @@
 {
   "eslint.packageManager": "pnpm",
   "eslint.workingDirectories": [
-    // You should add every workspace folder here that you want to lint.
-    // This is a workaround for eslint working with pnpm workspaces.
-    "./apps/client",
-    "./apps/web"
+    { "pattern": "apps/*" },
+    { "pattern": "packages/*" }
   ],
-
-  "material-icon-theme.folders.associations": {
-    "administration": "admin",
-    "custom-voice": "audio",
-    "moderation": "tools",
-    "slash": "command",
-    "en-US": "decorators",
-    "pt-BR": "decorators",
-    "tsconfig": "typescript"
-  },
 
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
 
-  "files.associations": {
-    "*.env": "dotenv"
+  "material-icon-theme.folders.associations": {
+    // Packages
+    "tsconfig": "typescript",
+    "eslint-config": "config",
+
+    // Languagues / I18n
+    "en-us": "decorators",
+    "pt-br": "decorators",
+    "slash": "command",
+
+    // Client Modules
+    "administration": "admin",
+    "custom-voice": "audio",
+    "moderation": "tools"
   },
 
-  "[prisma]": {
-    "editor.defaultFormatter": "Prisma.prisma"
-  }
+  "prettier.configPath": "packages/eslint-config/.prettierrc.js",
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

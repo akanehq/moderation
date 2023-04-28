@@ -1,7 +1,8 @@
 import '@total-typescript/ts-reset';
 
-import type { DotenvType } from '../constants/dotenv';
 import type { O } from 'ts-toolbelt';
+
+import type { DotenvType } from '../constants/dotenv';
 
 declare global {
   /** Represents a value that can be null or undefined. */

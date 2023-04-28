@@ -1,5 +1,4 @@
 import { baseLocale } from './i18n-util';
-
 import type { Namespaces, Translation, Translations } from './i18n-types';
 
 export type NamespaceOrRoot = Namespaces | '*';

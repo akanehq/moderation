@@ -1,28 +1,4 @@
 {
-  "extends": "universe/node",
-  "ignorePatterns": ["node_modules/", "build/"],
-  "rules": {
-    "import/order": [
-      "warn",
-      {
-        "newlines-between": "always",
-        "alphabetize": {
-          "order": "asc"
-        },
-        "groups": [
-          "builtin",
-          "external",
-          "internal",
-          ["parent", "index", "sibling"],
-          "type"
-        ],
-        "pathGroups": [
-          {
-            "pattern": "~/**",
-            "group": "internal"
-          }
-        ]
-      }
-    ]
-  }
+  "extends": "@akane/eslint-config",
+  "root": true
 }

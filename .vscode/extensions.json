@@ -2,8 +2,8 @@
   "recommendations": [
     "dbaeumer.vscode-eslint",
     "editorconfig.editorconfig",
+    "EthanSK.restore-terminals",
     "PKief.material-icon-theme",
-    "Prisma.prisma",
-    "streetsidesoftware.code-spell-checker"
+    "Prisma.prisma"
   ]
 }

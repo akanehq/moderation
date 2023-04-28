@@ -10,20 +10,35 @@
   },
 
   "material-icon-theme.folders.associations": {
-    // Packages
-    "tsconfig": "typescript",
+    /* Packages */
     "eslint-config": "config",
+    "tsconfig": "typescript",
 
-    // Languagues / I18n
+    /* I18N */
     "en-us": "decorators",
     "pt-br": "decorators",
     "slash": "command",
 
-    // Client Modules
+    /* Client Modules */
     "administration": "admin",
     "custom-voice": "audio",
     "moderation": "tools"
   },
+
+  "restoreTerminals.terminals": [
+    {
+      "splitTerminals": [
+        { "name": "akane/", "commands": ["clear"] },
+        { "name": "apps/client", "commands": ["cd apps/client", "clear"] }
+      ]
+    },
+    {
+      "splitTerminals": [
+        { "name": "akane/", "commands": ["clear"] },
+        { "name": "apps/web", "commands": ["cd apps/web", "clear"] }
+      ]
+    }
+  ],
 
   "prettier.configPath": "packages/eslint-config/.prettierrc.js",
   "typescript.tsdk": "node_modules/typescript/lib"

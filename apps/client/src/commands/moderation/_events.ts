@@ -9,18 +9,18 @@ import {
   ButtonBuilder,
   ButtonInteraction,
   ButtonStyle,
-  CachedType,
   EmbedBuilder,
   TextInputBuilder,
   TextInputStyle,
+  type CachedType,
 } from 'discord.js';
 import { ButtonComponent, Discord, Guard } from 'discordx';
 
-import { Colors } from '~/constants/colors';
-import { inGuild } from '~/guards/guilds';
-import { Inquirer } from '~/helpers/inquirer';
-import { getLanguage } from '~/helpers/localization';
-import { Pagination } from '~/helpers/pagination';
+import { Colors } from '../../constants/colors';
+import { inGuild } from '../../guards/guilds';
+import { Inquirer } from '../../helpers/inquirer';
+import { getLanguage } from '../../helpers/localization';
+import { Pagination } from '../../helpers/pagination';
 
 import {
   ModAppealPunishmentRegExp,

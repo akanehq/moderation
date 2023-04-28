@@ -2,12 +2,12 @@
 
 import {
   ActionRowBuilder,
-  BaseMessageOptions,
   ButtonBuilder,
   ButtonStyle,
   ChannelType,
   ComponentType,
-  Interaction,
+  type BaseMessageOptions,
+  type Interaction,
 } from 'discord.js';
 
 import { getLanguage } from './localization';

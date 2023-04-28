@@ -1,5 +1,5 @@
 import { PrismaClient } from '@akane/database';
-import { ArgsOf, Client, Discord, On } from 'discordx';
+import { Client, Discord, On, type ArgsOf } from 'discordx';
 import { Logger } from 'tslog';
 
 import CustomVoice from './custom-voice';

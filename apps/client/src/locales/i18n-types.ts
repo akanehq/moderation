@@ -399,7 +399,7 @@ type RootTranslation = {
 	 */
 	MODERATION_APPEAL_PUNISHMENT_RESPONSE_DENIED_SUCCESS: string
 	/**
-	 * U​m​ ​m​o​d​e​r​a​d​o​r​ ​d​o​ ​s​e​r​v​i​d​o​r​ ​a​c​e​i​t​o​u​ ​a​ ​s​u​a​ ​a​p​e​l​a​ç​ã​o​ ​d​a​ ​p​u​n​i​ç​ã​o​ ​e​ ​a​ ​m​e​s​m​a​ ​f​o​i​ ​r​e​m​o​v​i​d​a​ ​(​c​a​s​o​ ​t​e​n​h​a​ ​s​i​d​o​ ​b​a​n​i​m​e​n​t​o​,​ ​v​o​c​ê​ ​p​o​d​e​r​á​ ​e​n​t​r​a​r​ ​n​o​v​a​m​e​n​t​e​ ​n​o​ ​s​e​r​v​i​d​o​r​)​.
+	 * U​m​ ​m​o​d​e​r​a​d​o​r​ ​d​o​ ​s​e​r​v​i​d​o​r​ ​a​c​e​i​t​o​u​ ​a​ ​s​u​a​ ​a​p​e​l​a​ç​ã​o​ ​d​a​ ​p​u​n​i​ç​ã​o​ ​e​ ​a​ ​m​e​s​m​a​ ​f​o​i​ ​r​e​m​o​v​i​d​a​ ​(​c​a​s​o​ ​t​e​n​h​a​ ​s​i​d​o​ ​b​a​n​i​m​e​n​t​o​,​ ​v​o​c​ê​ ​p​o​d​e​ ​e​n​t​r​a​r​ ​n​o​v​a​m​e​n​t​e​ ​n​o​ ​s​e​r​v​i​d​o​r​)​.
 	 */
 	MODERATION_APPEAL_PUNISHMENT_RESPONSE_SUCCESS: string
 }
@@ -1078,7 +1078,7 @@ Se o número de ações for excedido, o moderador será bloqueado de aplicar nov
 	 */
 	MODERATION_APPEAL_PUNISHMENT_RESPONSE_DENIED_SUCCESS: () => LocalizedString
 	/**
-	 * Um moderador do servidor aceitou a sua apelação da punição e a mesma foi removida (caso tenha sido banimento, você poderá entrar novamente no servidor).
+	 * Um moderador do servidor aceitou a sua apelação da punição e a mesma foi removida (caso tenha sido banimento, você pode entrar novamente no servidor).
 	 */
 	MODERATION_APPEAL_PUNISHMENT_RESPONSE_SUCCESS: () => LocalizedString
 	ERRORS: {

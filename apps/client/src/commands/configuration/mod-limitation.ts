@@ -2,7 +2,6 @@ import { ModerationLimitationKind, PrismaClient } from '@akane/database';
 import {
   ActionRowBuilder,
   ButtonStyle,
-  CachedType,
   ChatInputCommandInteraction,
   Colors,
   EmbedBuilder,
@@ -11,14 +10,15 @@ import {
   StringSelectMenuOptionBuilder,
   TextInputBuilder,
   TextInputStyle,
+  type CachedType,
 } from 'discord.js';
 import { Discord, Guard, SelectMenuComponent } from 'discordx';
 
-import { GuardFor, hasPermission, inGuild } from '~/guards/guilds';
-import { replyOrFollowUp } from '~/helpers/discord';
-import { Inquirer } from '~/helpers/inquirer';
-import { Command, Group, getLanguage } from '~/helpers/localization';
-import { Pagination } from '~/helpers/pagination';
+import { GuardFor, hasPermission, inGuild } from '../../guards/guilds';
+import { replyOrFollowUp } from '../../helpers/discord';
+import { Inquirer } from '../../helpers/inquirer';
+import { Command, Group, getLanguage } from '../../helpers/localization';
+import { Pagination } from '../../helpers/pagination';
 
 enum ModerationLimitationAction {
   Create = 'Create',

@@ -1,19 +1,24 @@
 import { PrismaClient } from '@akane/database';
 import {
   ApplicationCommandOptionType,
-  CachedType,
   CategoryChannel,
   ChannelType,
   ChatInputCommandInteraction,
   Collection,
   GuildMember,
   VoiceChannel,
+  type CachedType,
 } from 'discord.js';
-import { ArgsOf, Discord, Guard, On } from 'discordx';
+import { Discord, Guard, On, type ArgsOf } from 'discordx';
 import { Logger } from 'tslog';
 
-import { GuardFor, hasPermission, inGuild } from '~/guards/guilds';
-import { Command, Group, Option, getLanguage } from '~/helpers/localization';
+import { GuardFor, hasPermission, inGuild } from '../../guards/guilds';
+import {
+  Command,
+  Group,
+  Option,
+  getLanguage,
+} from '../../helpers/localization';
 
 interface DeletionValidatorOptions {
   member: GuildMember;

@@ -3,10 +3,10 @@ import {
   ButtonBuilder,
   ButtonStyle,
 } from 'discord.js';
-import { ParameterDecoratorEx } from 'discordx';
+import type { ParameterDecoratorEx } from 'discordx';
 
-import { Option } from '~/helpers/localization';
-import RegExpEvent from '~/helpers/regexp-event';
+import { Option } from '../../helpers/localization';
+import RegExpEvent from '../../helpers/regexp-event';
 
 // Custom Buttons
 

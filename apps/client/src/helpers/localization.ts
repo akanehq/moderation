@@ -14,10 +14,9 @@ import type { Interaction, LocaleString, LocalizationMap } from 'discord.js';
 import type { O, S } from 'ts-toolbelt';
 import type { LocalizedString } from 'typesafe-i18n';
 
-import L from '~/locales/i18n-node';
-import { Locales, TranslationFunctions } from '~/locales/i18n-types';
-import { baseLocale, loadedLocales } from '~/locales/i18n-util';
-
+import L from '../locales/i18n-node';
+import { baseLocale, loadedLocales } from '../locales/i18n-util';
+import type { Locales, TranslationFunctions } from '../locales/i18n-types';
 
 const SLASH_NS = 'SLASH';
 const KEY_PATH_SEPARATOR = '.';

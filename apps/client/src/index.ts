@@ -1,11 +1,8 @@
-require('dotenv-mono').load({
-  cwd: '../../configs',
-});
-
 import 'reflect-metadata';
+import './helpers/dotenv-mono';
 
 import { readdir } from 'fs/promises';
-import { join, resolve } from 'path';
+import { resolve } from 'path';
 
 import { PrismaClient } from '@akane/database';
 import { Client, DIService, typeDiDependencyRegistryEngine } from 'discordx';
@@ -17,7 +14,7 @@ import {
   LOG_LEVEL,
   LOG_TYPE,
   NODE_ENV,
-} from '~/constants/dotenv';
+} from './constants/dotenv';
 
 export default async function main() {
   DIService.engine = typeDiDependencyRegistryEngine

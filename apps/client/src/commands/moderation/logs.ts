@@ -5,19 +5,19 @@ import {
 } from '@akane/database';
 import {
   ActionRowBuilder,
-  CachedType,
   ChatInputCommandInteraction,
   EmbedBuilder,
   GuildMember,
   StringSelectMenuBuilder,
   StringSelectMenuOptionBuilder,
   time,
+  type CachedType,
 } from 'discord.js';
 import { Discord, Guard } from 'discordx';
 
-import { inGuild, hasPermission, GuardFor } from '~/guards/guilds';
-import { Command, getLanguage } from '~/helpers/localization';
-import { Pagination } from '~/helpers/pagination';
+import { GuardFor, hasPermission, inGuild } from '../../guards/guilds';
+import { Command, getLanguage } from '../../helpers/localization';
+import { Pagination } from '../../helpers/pagination';
 
 import { MemberOption } from './_shared';
 

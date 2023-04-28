@@ -1,16 +1,16 @@
 import { PrismaClient } from '@akane/database';
 import {
-  ChatInputCommandInteraction,
-  CachedType,
   ButtonStyle,
+  ChatInputCommandInteraction,
   PermissionsBitField,
+  type CachedType,
 } from 'discord.js';
 import { Discord } from 'discordx';
 import { z } from 'zod';
 
-import { MODERATION_PERMISSIONS } from '~/constants/permissions';
-import { Inquirer } from '~/helpers/inquirer';
-import { Command, getLanguage } from '~/helpers/localization';
+import { MODERATION_PERMISSIONS } from '../../constants/permissions';
+import { Inquirer } from '../../helpers/inquirer';
+import { Command, getLanguage } from '../../helpers/localization';
 
 const QuarantineDataSchema = z.array(
   z.object({

@@ -1,9 +1,9 @@
 import { PrismaClient, PunishmentStatus } from '@akane/database';
-import { CachedType, ChatInputCommandInteraction } from 'discord.js';
+import { ChatInputCommandInteraction, type CachedType } from 'discord.js';
 import { Discord, Guard } from 'discordx';
 
-import { inGuild, hasPermission, GuardFor } from '~/guards/guilds';
-import { Command, getLanguage } from '~/helpers/localization';
+import { GuardFor, hasPermission, inGuild } from '../../guards/guilds';
+import { Command, getLanguage } from '../../helpers/localization';
 
 import { PunishmentIdOption } from './_shared';
 

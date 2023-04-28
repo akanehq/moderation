@@ -1,15 +1,47 @@
 {
-  "extends": "@akane/tsconfig/base.json",
+  "compileOnSave": true,
   "compilerOptions": {
-    "target": "es2021",
-    "module": "commonjs",
-    "emitDecoratorMetadata": true,
+    /* Language and Environment */
+    "target": "es2020",
+    "lib": ["esnext"],
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "exactOptionalPropertyTypes": false,
+    "useDefineForClassFields": true,
+    "noImplicitOverride": true,
     "experimentalDecorators": true,
-    "typeRoots": ["node_modules/@types", "src/@types"],
-    "rootDir": "src",
-    "baseUrl": "src",
-    "paths": {
-      "~/*": ["*"]
-    }
+    "emitDecoratorMetadata": true,
+
+    /* Modules */
+    "module": "node16",
+    "moduleResolution": "node",
+    "verbatimModuleSyntax": true,
+
+    /* Type Checking */
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "noEmitHelpers": true,
+    "declaration": true,
+    "declarationMap": true,
+    "preserveConstEnums": true,
+    "typeRoots": ["node_modules/@types", "@types"],
+
+    /* Emit */
+    "incremental": true,
+    "removeComments": false,
+    "sourceMap": false,
+    "pretty": true,
+    "newLine": "lf",
+    "outDir": "dist",
+
+    /* Other */
+    "resolveJsonModule": true,
+    "importHelpers": true,
+    "noEmit": false
   }
 }

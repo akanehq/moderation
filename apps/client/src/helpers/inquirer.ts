@@ -19,8 +19,8 @@ import {
   type ModalSubmitInteraction,
 } from 'discord.js';
 
-import { Colors } from '~/constants/colors';
-import { getLanguage } from '~/helpers/localization';
+import { Colors } from '../constants/colors';
+import { getLanguage } from '../helpers/localization';
 
 function getChoiceById<T extends Inquirer.BaseValue>(
   choices: T[],

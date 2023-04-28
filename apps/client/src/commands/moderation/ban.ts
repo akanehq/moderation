@@ -2,28 +2,28 @@ import { PrismaClient, PunishmentKind } from '@akane/database';
 import {
   ActionRowBuilder,
   ButtonBuilder,
-  CachedType,
   ChatInputCommandInteraction,
   EmbedBuilder,
   GuildMember,
+  type CachedType,
 } from 'discord.js';
 import { Discord, Guard } from 'discordx';
 
-import { GuardFor, hasPermission, inGuild } from '~/guards/guilds';
-import { Command, getLanguage } from '~/helpers/localization';
-import { catchPromiseError } from '~/helpers/promises';
+import { GuardFor, hasPermission, inGuild } from '../../guards/guilds';
+import { Command, getLanguage } from '../../helpers/localization';
+import { catchPromiseError } from '../../helpers/promises';
 
 import {
+  AppealButton,
+  AttachmentsOption,
+  DeleteDaysOption,
+  ExpiresAtOption,
+  GetAttachmentButton,
   MemberOption,
+  ModRegExpEvents,
   ReasonOption,
   SilentOption,
-  ExpiresAtOption,
-  AttachmentsOption,
   parseMediaUrlsInput,
-  DeleteDaysOption,
-  GetAttachmentButton,
-  ModRegExpEvents,
-  AppealButton,
 } from './_shared';
 
 @Discord()

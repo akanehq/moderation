@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
 const DotenvSchema = z.object({
-  NODE_ENV: z.enum(['DEVELOPMENT', 'PRODUCTION']).default('DEVELOPMENT'),
+  NODE_ENV: z.enum(['development', 'production']).default('development'),
   LOG_LEVEL: z.enum(['0', '1', '2', '3', '4', '5', '6']).transform(Number),
   LOG_TYPE: z.enum(['json', 'pretty', 'hidden']).default('pretty'),
   DISCORD_TOKEN: z.string().regex(/^[\w-]+\.[\w-]+\.[\w-]+$/),

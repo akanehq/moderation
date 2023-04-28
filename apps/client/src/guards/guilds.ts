@@ -1,8 +1,12 @@
-import { GuildMember, Interaction, PermissionsString } from 'discord.js';
-import { GuardFunction } from 'discordx';
+import {
+  GuildMember,
+  type Interaction,
+  type PermissionsString,
+} from 'discord.js';
+import type { GuardFunction } from 'discordx';
 
-import { replyOrFollowUp } from '~/helpers/discord';
-import { getLanguage } from '~/helpers/localization';
+import { replyOrFollowUp } from '../helpers/discord';
+import { getLanguage } from '../helpers/localization';
 
 export enum GuardFor {
   Client,

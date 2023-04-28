@@ -1,27 +1,33 @@
 {
   "private": true,
-  "name": "client",
+  "name": "@akane/client",
   "scripts": {
-    "build": "tsc -p tsconfig.build.json && resolve-tspaths -p tsconfig.build.json",
-    "dev": "NODE_ENV=DEVELOPMENT ts-node-dev --respawn --transpile-only -r tsconfig-paths/register src/index.ts",
-    "lint": "eslint --ext .ts src",
-    "start": "NODE_ENV=PRODUCTION node build/index.js",
-    "typesafe-i18n": "typesafe-i18n",
+    "build": "tsup",
+    "build:w": "tsup --watch",
+    "lint": "eslint --ext .ts .",
+    "start": "node dist/index.js",
+    "dev": "run-p build:w start -ln",
+    "watch": "watch -p 'src/locales/**/*.ts' -c 'npm run generate-i18n'",
     "generate-i18n": "typesafe-i18n --no-watch",
-    "watch": "watch -p 'src/locales/**/*.ts' -c 'npm run generate-i18n'"
+    "typesafe-i18n": "typesafe-i18n"
+  },
+  "engines": {
+    "node": "16.9.0",
+    "pnpm": "7.29.1"
   },
   "devDependencies": {
     "@akane/eslint-config": "workspace:*",
     "@akane/tsconfig": "workspace:*",
+    "@swc/core": "^1.3.55",
     "@total-typescript/ts-reset": "^0.4.2",
     "@types/node": "^18.11.18",
     "eslint": "8.33.0",
     "eslint-config-universe": "^11.2.0",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.8.3",
-    "resolve-tspaths": "^0.8.8",
     "ts-node-dev": "^2.0.0",
     "ts-toolbelt": "^9.6.0",
-    "tsconfig-paths": "^4.2.0",
+    "tsup": "^6.7.0",
     "typescript": "4.9.4",
     "watch-cli": "^0.2.3"
   },
@@ -29,6 +35,7 @@
     "@akane/database": "workspace:*",
     "discord.js": "^14.7.1",
     "discordx": "^11.6.0",
+    "dotenv-mono": "^1.3.10",
     "reflect-metadata": "^0.1.13",
     "ts-dedent": "^2.2.0",
     "tslib": "^2.5.0",
